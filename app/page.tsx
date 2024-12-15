@@ -1,4 +1,4 @@
-import NeuroCube from './components/NeuroCube';
+
 import TypewriterText from './components/TypewriterText';
 import NavbarCube2 from './components/NavbarCube2';
 import AINodeGraph from './components/AINodeGraph';

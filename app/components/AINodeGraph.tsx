@@ -129,7 +129,7 @@ const AINodeGraph = () => {
 
       // Draw text
       ctx.shadowBlur = 0;
-      ctx.font = '14px Arial';
+      ctx.font = "14px 'Blogger Sans Light'";
       ctx.fillStyle = 'white';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
@@ -162,8 +162,8 @@ const AINodeGraph = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Draw background
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.9)';
+      // Draw background (fully transparent)
+      ctx.fillStyle = 'rgba(0, 0, 0, 0)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       
       drawGrid();

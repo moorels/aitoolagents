@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        sans: ['Blogger Sans Light', 'Blogger Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Blogger Sans Light', 'Blogger Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       animation: {
         'infinityColor': 'infinityColor 8s ease-in-out infinite',
       },

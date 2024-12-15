@@ -23,7 +23,7 @@ export default function TypewriterText({ text, delay = 150 }: TypewriterTextProp
   }, [currentIndex, delay, text])
 
   return (
-    <span className="text-1xl font-bold text-white">
+    <span className="text-1xl font-light text-white font-['Blogger_Sans']">
       {displayText}
       <span className="animate-blink">|</span>
     </span>
