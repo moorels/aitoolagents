@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import AnimatedBackground from './AnimatedBackground'
 import { useState } from 'react'
+import NavbarCube from './NavbarCube'
 
 const NavLink = ({ 
   children, 
@@ -37,21 +38,29 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      className="fixed w-full h-12 bg-black/90 backdrop-blur-sm z-50 border-b border-blue-500/20"
+      className="fixed w-full h-20 bg-black/90 backdrop-blur-sm z-50 border-b border-blue-500/20"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
       <AnimatedBackground />
       <div className="relative max-w-7xl mx-auto px-4 h-full">
+        
         <div className="flex h-full items-center justify-between">
           <div className="flex items-center space-x-8">
-            <button
-              onClick={() => router.push('/')}
-              className="text-sm font-medium text-white"
-            >
-              AI TOOL AGENTS
-            </button>
+            
+            <div className="flex items-center space-x-2">
+              <div className="flex-shrink-0 mr-12 ">
+              <NavbarCube />
+              </div>
+              
+              <button
+                onClick={() => router.push('/')}
+                className="text-sm font-medium text-white"
+              >
+                AI TOOL AGENTS
+              </button>
+            </div>
             <div className="hidden md:flex items-center space-x-1">
               {Links.map((link, index) => (
                 <NavLink key={link} href={paths[index]}>
@@ -59,6 +68,7 @@ export default function Navbar() {
                 </NavLink>
               ))}
             </div>
+            
           </div>
           
           {/* Mobile menu button */}
