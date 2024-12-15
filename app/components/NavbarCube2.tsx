@@ -10,7 +10,7 @@ interface CubeInfo {
   z: number;
 }
 
-export default function NeuroCube() {
+export default function NavbarCube() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -18,9 +18,9 @@ export default function NeuroCube() {
 
     // Scene setup
     const scene = new THREE.Scene()
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
+    const camera = new THREE.PerspectiveCamera(70, 1, 0.1, 1000) // Square aspect ratio
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2)  // Half the size
+    renderer.setSize(200, 200) // Small size for navbar
     containerRef.current.appendChild(renderer.domElement)
 
     // Array of colors
@@ -28,9 +28,9 @@ export default function NeuroCube() {
     const cubes: CubeInfo[] = [];
 
     const createMiniCubes = () => {
-      const size = 0.1; // Size of the smaller cubes
-      const spacing = 0.2; // Space between cubes
-      const gridSize = 5; // Number of cubes along each dimension
+      const size = 0.1; // Larger cubes for better visibility at small size
+      const spacing = 0.2;
+      const gridSize = 2; // 3x3x3 grid
 
       for (let x = -gridSize; x <= gridSize; x++) {
         for (let y = -gridSize; y <= gridSize; y++) {
@@ -39,7 +39,7 @@ export default function NeuroCube() {
             const material = new THREE.MeshBasicMaterial({
               color: colors[0],
               transparent: true,
-              opacity: 0.5
+              opacity: 0.8
             });
             const cube = new THREE.Mesh(geometry, material);
             cube.position.set(x * spacing, y * spacing, z * spacing);
@@ -53,56 +53,42 @@ export default function NeuroCube() {
     createMiniCubes();
 
     // Position camera
-    camera.position.z = 5;
+    camera.position.z = 2;
+    camera.position.y = 0.3;
+    camera.position.x = 0.3;
 
     // Animation
     let time = 0;
     const animate = () => {
       requestAnimationFrame(animate);
-      time += 0.05; // Control the speed of the color wave
+      time += 0.03; // Slower animation
 
       // Update cube colors based on position and time
       cubes.forEach(({ mesh, x, y, z }) => {
         if (mesh.material instanceof THREE.MeshBasicMaterial) {
-          // Create a wave pattern using sine waves
           const wave = Math.sin(x * 0.5 + y * 0.3 + z * 0.4 + time);
           const colorIndex = Math.floor(((wave + 1) / 2) * colors.length);
           
-          // Smoothly interpolate between colors
           const currentColor = new THREE.Color(colors[colorIndex]);
           const nextColor = new THREE.Color(colors[(colorIndex + 1) % colors.length]);
           const mixFactor = ((wave + 1) / 2) * colors.length - colorIndex;
           
           mesh.material.color.copy(currentColor).lerp(nextColor, mixFactor);
-          
-          // Adjust opacity based on the wave
-          mesh.material.opacity = 0.3 + ((wave + 1) / 2) * 0.4;
+          mesh.material.opacity = 0.6 + ((wave + 1) / 2) * 0.3;
         }
       });
 
-      // Rotate the scene around the vertical axis
+      // Rotate the scene
       scene.rotation.y += 0.01;
+      scene.rotation.x = 0.3; // Fixed tilt
 
       renderer.render(scene, camera);
     };
 
     animate();
 
-    // Handle window resize
-    const handleResize = () => {
-      if (!containerRef.current) return
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-      renderer.setSize(width / 2, height / 2)  // Half the size
-    };
-
-    window.addEventListener('resize', handleResize);
-
     // Cleanup
     return () => {
-      window.removeEventListener('resize', handleResize);
       scene.traverse((object) => {
         if (object instanceof THREE.Mesh) {
           object.geometry.dispose();
@@ -115,5 +101,5 @@ export default function NeuroCube() {
     };
   }, []);
 
-  return <div ref={containerRef} className="relative m-0 p-0" style={{ margin: 0, padding: 0 }} />
+  return <div ref={containerRef} className="w-10 h-10" />
 }

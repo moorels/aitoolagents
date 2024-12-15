@@ -23,7 +23,7 @@ const NavLink = ({
         router.push(href)
         onClick?.()
       }}
-      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200"
+      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 border-2 border-[#A9A9A9] rounded bg-[#808080] hover:bg-[#707070]"
     >
       {children}
     </button>
@@ -56,7 +56,7 @@ export default function Navbar() {
               
               <button
                 onClick={() => router.push('/')}
-                className="text-sm font-medium text-white"
+                className="text-sm font-medium text-white border-2 border-[#A9A9A9] rounded px-3 py-1 bg-[#808080] hover:bg-[#707070]"
               >
                 AI TOOL AGENTS
               </button>
