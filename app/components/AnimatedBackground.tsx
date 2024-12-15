@@ -3,17 +3,6 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
-interface Particle {
-  id: number
-  x: number
-  y: number
-  size: number
-  velocity: {
-    x: number
-    y: number
-  }
-}
-
 interface FloatingText {
   id: number
   x: number
@@ -23,10 +12,60 @@ interface FloatingText {
     x: number
     y: number
   }
+  scale: number
   opacity: number
+  rotation: number
+  rotationVelocity: number
+}
+
+interface NeuralNode {
+  id: number
+  x: number
+  y: number
+  layer: number
+  color: string
+  connections: Array<{
+    targetId: number
+    opacity: number
+    color: string
+  }>
 }
 
 const mathEquations = [
+  // Machine Learning Equations
+  'y = σ(Wx + b)',
+  'H(p,q) = -Σ p(x)log(q(x))',
+  'L = -Σ yᵢlog(ŷᵢ)',
+  '∇θJ(θ)',
+  'P(y|x) = softmax(z)',
+  'ReLU(x) = max(0,x)',
+  'θ = θ - α∇θJ(θ)',
+  'MSE = 1/n Σ(yᵢ-ŷᵢ)²',
+  'KL(P||Q) = Σ P(x)log(P(x)/Q(x))',
+  'tanh(x) = (eˣ-e⁻ˣ)/(eˣ+e⁻ˣ)',
+  'accuracy = (TP+TN)/(TP+TN+FP+FN)',
+  'R² = 1 - SSres/SStot',
+  'z = W·a + b',
+  'dropout(x) = x·Bernoulli(p)',
+  'L₂ = λΣθᵢ²',
+  
+  // Linear Algebra Equations
+  'A⃗ × B⃗ = |A⃗||B⃗|sin(θ)n̂',
+  'det(A) = ad - bc',
+  'A = QR',
+  'Ax = λx',
+  'A = UΣVᵀ',
+  'tr(A) = λ₁ + λ₂ + ... + λₙ',
+  '|A - λI| = 0',
+  'ker(A) = {x | Ax = 0}',
+  'rank(A) + null(A) = n',
+  'A⁻¹A = AA⁻¹ = I',
+  '[x]ᵦ = P⁻¹[x]ₐ',
+  '⟨u,v⟩ = uᵀv',
+  'span{v₁,...,vₙ}',
+  '∥v∥ = √(v₁² + v₂²)',
+  
+  // Classic Physics/Math
   'E = mc²',
   '∫ f(x)dx',
   'eiπ + 1 = 0',
@@ -41,90 +80,187 @@ const mathEquations = [
   'F = ma',
   'PV = nRT',
   '∮ E·dℓ',
-  'i∂ψ/∂t = Ĥψ'
+  'i∂ψ/∂t = Ĥψ',
+  '∇ · B = 0',
+  'Δx·Δp ≥ ℏ/2',
+  'S = k·ln(W)',
+  'c = λf',
+  'E = hf'
 ]
 
-const FloatingDot = ({ x, y, size }: { x: number; y: number; size: number }) => (
-  <motion.circle
-    cx={x}
-    cy={y}
-    r={size}
-    fill="rgb(191, 219, 254)"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: [0.2, 0.5, 0.2] }}
+const COLORS = [
+  'rgb(147, 197, 253)', // blue
+  'rgb(167, 139, 250)', // purple
+  'rgb(248, 113, 113)', // red
+  'rgb(52, 211, 153)',  // green
+  'rgb(251, 146, 60)',  // orange
+  'rgb(236, 72, 153)',  // pink
+  'rgb(251, 191, 36)',  // yellow
+  'rgb(79, 70, 229)'    // indigo
+]
+
+const getRandomColor = () => COLORS[Math.floor(Math.random() * COLORS.length)]
+
+const NETWORK_CONFIG = {
+  layers: [3, 4, 4, 2], // Number of nodes in each layer
+  nodeRadius: 4,
+  layerSpacing: 80,
+  verticalSpacing: 30,
+}
+
+const generateNetwork = (width: number, height: number): NeuralNode[] => {
+  const nodes: NeuralNode[] = []
+  let nodeId = 0
+  
+  // Calculate starting x position to center the network
+  const totalWidth = (NETWORK_CONFIG.layers.length - 1) * NETWORK_CONFIG.layerSpacing
+  const startX = (width - totalWidth) / 2
+
+  NETWORK_CONFIG.layers.forEach((nodeCount, layerIndex) => {
+    const layerHeight = (nodeCount - 1) * NETWORK_CONFIG.verticalSpacing
+    const startY = (height - layerHeight) / 2
+
+    for (let i = 0; i < nodeCount; i++) {
+      nodes.push({
+        id: nodeId++,
+        x: startX + layerIndex * NETWORK_CONFIG.layerSpacing,
+        y: startY + i * NETWORK_CONFIG.verticalSpacing,
+        layer: layerIndex,
+        color: getRandomColor(),
+        connections: []
+      })
+    }
+  })
+
+  // Create connections between layers
+  for (let layerIndex = 0; layerIndex < NETWORK_CONFIG.layers.length - 1; layerIndex++) {
+    const currentLayerNodes = nodes.filter(n => n.layer === layerIndex)
+    const nextLayerNodes = nodes.filter(n => n.layer === layerIndex + 1)
+
+    currentLayerNodes.forEach(sourceNode => {
+      nextLayerNodes.forEach(targetNode => {
+        sourceNode.connections.push({
+          targetId: targetNode.id,
+          opacity: Math.random() * 0.5 + 0.1,
+          color: getRandomColor()
+        })
+      })
+    })
+  }
+
+  return nodes
+}
+
+const NeuralNetwork = ({ nodes, width, height }: { nodes: NeuralNode[], width: number, height: number }) => {
+  return (
+    <g>
+      {/* Draw connections first */}
+      {nodes.map(node =>
+        node.connections.map((conn, idx) => {
+          const targetNode = nodes.find(n => n.id === conn.targetId)
+          if (!targetNode) return null
+          
+          return (
+            <motion.path
+              key={`${node.id}-${conn.targetId}-${idx}`}
+              d={`M ${node.x} ${node.y} L ${targetNode.x} ${targetNode.y}`}
+              stroke={conn.color}
+              strokeWidth="0.5"
+              initial={{ opacity: 0 }}
+              animate={{ 
+                opacity: [conn.opacity, conn.opacity * 0.3, conn.opacity],
+                pathLength: [0, 1],
+                stroke: [conn.color, getRandomColor(), conn.color]
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+          )
+        })
+      )}
+      
+      {/* Draw nodes */}
+      {nodes.map(node => (
+        <motion.circle
+          key={node.id}
+          cx={node.x}
+          cy={node.y}
+          r={NETWORK_CONFIG.nodeRadius}
+          fill={node.color}
+          initial={{ opacity: 0 }}
+          animate={{ 
+            opacity: [0.4, 0.8, 0.4],
+            scale: [1, 1.2, 1],
+            fill: [node.color, getRandomColor(), node.color]
+          }}
+          transition={{
+            duration: 2 + Math.random() * 1,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          style={{
+            filter: 'drop-shadow(0 0 2px currentColor)'
+          }}
+        />
+      ))}
+    </g>
+  )
+}
+
+const FloatingEquation = ({ 
+  x, 
+  y, 
+  text, 
+  opacity, 
+  scale, 
+  rotation 
+}: { 
+  x: number
+  y: number
+  text: string
+  opacity: number
+  scale: number
+  rotation: number
+}) => (
+  <motion.g
+    style={{
+      transformOrigin: `${x}px ${y}px`,
+      filter: 'drop-shadow(0 0 3px rgb(147, 197, 253))'
+    }}
+    animate={{
+      opacity: [opacity, opacity * 1.5, opacity],
+      scale: [scale, scale * 1.1, scale],
+      rotate: rotation
+    }}
     transition={{
-      duration: 2,
+      duration: 3 + Math.random() * 2,
       repeat: Infinity,
       ease: "easeInOut"
     }}
-    style={{
-      filter: 'blur(1px) drop-shadow(0 0 2px rgb(147, 197, 253))'
-    }}
-  />
-)
-
-const FloatingEquation = ({ x, y, text, opacity }: { x: number; y: number; text: string; opacity: number }) => (
-  <motion.text
-    x={x}
-    y={y}
-    fill="rgb(191, 219, 254)"
-    fontSize="8"
-    fontFamily="monospace"
-    opacity={opacity}
-    style={{
-      filter: 'drop-shadow(0 0 2px rgb(147, 197, 253))'
-    }}
   >
-    {text}
-  </motion.text>
+    <motion.text
+      x={x}
+      y={y}
+      fill="rgb(191, 219, 254)"
+      fontSize="10"
+      fontFamily="monospace"
+      textAnchor="middle"
+      dominantBaseline="middle"
+    >
+      {text}
+    </motion.text>
+  </motion.g>
 )
 
 export default function AnimatedBackground() {
-  const [particles, setParticles] = useState<Particle[]>([])
   const [equations, setEquations] = useState<FloatingText[]>([])
   const [dimensions, setDimensions] = useState({ width: 0, height: 48 })
+  const [network, setNetwork] = useState<NeuralNode[]>([])
 
   useEffect(() => {
-    // Initialize particles and equations
-    const initParticles = () => {
-      const newParticles: Particle[] = []
-      const newEquations: FloatingText[] = []
-      const numParticles = Math.floor(dimensions.width / 100) // Reduced density for particles
-      const numEquations = Math.floor(dimensions.width / 200) // One equation per 200px width
-      
-      // Initialize particles
-      for (let i = 0; i < numParticles; i++) {
-        newParticles.push({
-          id: i,
-          x: Math.random() * dimensions.width,
-          y: Math.random() * dimensions.height,
-          size: Math.random() * 1.5 + 0.5,
-          velocity: {
-            x: (Math.random() - 0.5) * 0.3,
-            y: (Math.random() - 0.5) * 0.3
-          }
-        })
-      }
-
-      // Initialize equations
-      for (let i = 0; i < numEquations; i++) {
-        newEquations.push({
-          id: i,
-          x: Math.random() * dimensions.width,
-          y: Math.random() * dimensions.height,
-          text: mathEquations[Math.floor(Math.random() * mathEquations.length)],
-          velocity: {
-            x: (Math.random() - 0.5) * 0.2,
-            y: (Math.random() - 0.5) * 0.2
-          },
-          opacity: Math.random() * 0.3 + 0.1
-        })
-      }
-
-      setParticles(newParticles)
-      setEquations(newEquations)
-    }
-
     const updateDimensions = () => {
       setDimensions({
         width: window.innerWidth,
@@ -133,57 +269,63 @@ export default function AnimatedBackground() {
     }
 
     updateDimensions()
-    initParticles()
+    
+    // Generate initial network
+    setNetwork(generateNetwork(window.innerWidth, 48))
+
+    const initEquations = () => {
+      const newEquations: FloatingText[] = []
+      const numEquations = Math.floor(dimensions.width / 150)
+      
+      for (let i = 0; i < numEquations; i++) {
+        newEquations.push({
+          id: i,
+          x: Math.random() * dimensions.width,
+          y: Math.random() * dimensions.height,
+          text: mathEquations[Math.floor(Math.random() * mathEquations.length)],
+          velocity: {
+            x: (Math.random() - 0.5) * 0.4,
+            y: (Math.random() - 0.5) * 0.4
+          },
+          scale: 0.8 + Math.random() * 0.4,
+          opacity: 0.2 + Math.random() * 0.3,
+          rotation: Math.random() * 360,
+          rotationVelocity: (Math.random() - 0.5) * 0.5
+        })
+      }
+      setEquations(newEquations)
+    }
+
+    initEquations()
 
     window.addEventListener('resize', () => {
       updateDimensions()
-      initParticles()
+      initEquations()
+      setNetwork(generateNetwork(window.innerWidth, 48))
     })
 
     // Animation loop
     const animationFrame = setInterval(() => {
-      // Update particles
-      setParticles(prevParticles => {
-        return prevParticles.map(particle => {
-          let newX = particle.x + particle.velocity.x
-          let newY = particle.y + particle.velocity.y
-
-          if (newX <= 0 || newX >= dimensions.width) {
-            particle.velocity.x *= -1
-            newX = particle.x + particle.velocity.x
-          }
-          if (newY <= 0 || newY >= dimensions.height) {
-            particle.velocity.y *= -1
-            newY = particle.y + particle.velocity.y
-          }
-
-          return {
-            ...particle,
-            x: newX,
-            y: newY
-          }
-        })
-      })
-
-      // Update equations
       setEquations(prevEquations => {
         return prevEquations.map(eq => {
           let newX = eq.x + eq.velocity.x
           let newY = eq.y + eq.velocity.y
+          let newRotation = eq.rotation + eq.rotationVelocity
 
-          if (newX <= 0 || newX >= dimensions.width) {
-            eq.velocity.x *= -1
-            newX = eq.x + eq.velocity.x
-          }
-          if (newY <= 10 || newY >= dimensions.height - 5) {
-            eq.velocity.y *= -1
-            newY = eq.y + eq.velocity.y
-          }
+          // Smooth wrapping around edges
+          if (newX < -50) newX = dimensions.width + 50
+          if (newX > dimensions.width + 50) newX = -50
+          if (newY < -20) newY = dimensions.height + 20
+          if (newY > dimensions.height + 20) newY = -20
+
+          // Keep rotation between 0 and 360
+          newRotation = newRotation % 360
 
           return {
             ...eq,
             x: newX,
-            y: newY
+            y: newY,
+            rotation: newRotation
           }
         })
       })
@@ -199,14 +341,7 @@ export default function AnimatedBackground() {
     <div className="absolute inset-0 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-blue-400/5 to-blue-500/5" />
       <svg className="w-full h-full">
-        {particles.map(particle => (
-          <FloatingDot
-            key={particle.id}
-            x={particle.x}
-            y={particle.y}
-            size={particle.size}
-          />
-        ))}
+        <NeuralNetwork nodes={network} width={dimensions.width} height={dimensions.height} />
         {equations.map(eq => (
           <FloatingEquation
             key={eq.id}
@@ -214,6 +349,8 @@ export default function AnimatedBackground() {
             y={eq.y}
             text={eq.text}
             opacity={eq.opacity}
+            scale={eq.scale}
+            rotation={eq.rotation}
           />
         ))}
       </svg>
