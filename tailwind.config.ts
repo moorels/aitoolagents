@@ -12,6 +12,20 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        'infinityColor': 'infinityColor 8s ease-in-out infinite',
+      },
+      keyframes: {
+        infinityColor: {
+          '0%, 100%': { stroke: '#3b82f6', filter: 'drop-shadow(0 0 8px #3b82f6)' },
+          '25%': { stroke: '#10b981', filter: 'drop-shadow(0 0 8px #10b981)' },
+          '50%': { stroke: '#6366f1', filter: 'drop-shadow(0 0 8px #6366f1)' },
+          '75%': { stroke: '#ec4899', filter: 'drop-shadow(0 0 8px #ec4899)' },
+        },
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],
