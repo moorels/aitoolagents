@@ -1,6 +1,6 @@
 import NeuroCube from './components/NeuroCube';
 import TypewriterText from './components/TypewriterText';
-import InfinityLogo from './components/InfinityLogo';
+import NavbarCube2 from './components/NavbarCube2';
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       {/* Side Navigation Bar */}
       <div className="w-[220px] bg-slate-900 min-h-screen fixed left-0 top-16 p-8">
         <div className="flex flex-col gap-4 items-center">
-          <InfinityLogo />
+          <NavbarCube2 />
         </div>
         <TypewriterText text="AI Tool Agents" />
       </div>

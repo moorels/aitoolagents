@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import AnimatedBackground from './AnimatedBackground'
 import { useState } from 'react'
-import NavbarCube from './NavbarCube'
+import InfinityLogo from './InfinityLogo'
 
 const NavLink = ({ 
   children, 
@@ -50,8 +50,8 @@ export default function Navbar() {
           <div className="flex items-center space-x-8">
             
             <div className="flex items-center space-x-2">
-              <div className="flex-shrink-0 mr-12 ">
-              <NavbarCube />
+              <div className="flex-shrink-0 mr-1 ">
+              <InfinityLogo />
               </div>
               
               <button

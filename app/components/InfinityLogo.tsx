@@ -34,7 +34,7 @@ const InfinityLogo = () => {
       update() {
         this.t += this.speed;
         // Infinity curve parametric equations
-        const a = 60;
+        const a = 30;
         const b = 30;
         this.x = canvas.width/2 + a * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
         this.y = canvas.height/2 + b * Math.sin(this.t) * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
