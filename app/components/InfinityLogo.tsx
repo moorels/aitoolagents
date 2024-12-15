@@ -29,6 +29,12 @@ const InfinityLogo = () => {
         this.size = 2 + Math.random() * 2;
         this.speed = 0.02 + Math.random() * 0.01;
         this.color = `hsl(${Math.random() * 360}, 80%, 60%)`;
+        
+        // Initialize x and y with initial position on infinity curve
+        const a = 30;
+        const b = 30;
+        this.x = canvas.width/2 + a * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
+        this.y = canvas.height/2 + b * Math.sin(this.t) * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
       }
 
       update() {
