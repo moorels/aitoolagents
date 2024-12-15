@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 
 // Import OrbitControls
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+
 
 interface AnimatedLine {
   line: THREE.Line
@@ -138,34 +138,34 @@ export default function NeuroCube() {
     renderer.setSize(window.innerWidth, window.innerHeight)
     containerRef.current.appendChild(renderer.domElement)
 
-    // Add orbit controls
-    const controls = new OrbitControls(camera, renderer.domElement)
-    controls.enableDamping = true
-    controls.dampingFactor = 0.05
-    controls.rotateSpeed = 0.5
-    controls.autoRotate = true
-    controls.autoRotateSpeed = 2.0
+    // Remove orbit controls
+    // const controls = new OrbitControls(camera, renderer.domElement);
+    // controls.enableDamping = true;
+    // controls.dampingFactor = 0.05;
+    // controls.rotateSpeed = 0.5;
+    // controls.autoRotate = true;
+    // controls.autoRotateSpeed = 2.0;
 
     // Ensure auto-rotation does not interfere with user interaction
-    controls.addEventListener('start', () => {
-      controls.autoRotate = false
-    })
+    // controls.addEventListener('start', () => {
+    //   controls.autoRotate = false
+    // })
 
-    controls.addEventListener('end', () => {
-      controls.autoRotate = true
-    })
+    // controls.addEventListener('end', () => {
+    //   controls.autoRotate = true
+    // })
 
     // Optional: Reset auto-rotation after a period of inactivity
-    let autoRotateTimeout: NodeJS.Timeout
-    controls.addEventListener('end', () => {
-      clearTimeout(autoRotateTimeout)
-      autoRotateTimeout = setTimeout(() => {
-        controls.autoRotate = true
-      }, 3000) // Resume after 3 seconds of inactivity
-    })
+    // let autoRotateTimeout: NodeJS.Timeout
+    // controls.addEventListener('end', () => {
+    //   clearTimeout(autoRotateTimeout)
+    //   autoRotateTimeout = setTimeout(() => {
+    //     controls.autoRotate = true
+    //   }, 3000) // Resume after 3 seconds of inactivity
+    // })
 
     // Set the controls to update the camera position
-    controls.update();
+    // controls.update();
 
     // Create animated lines inside the cube
     const createAnimatedLine = (): AnimatedLine => {
@@ -215,7 +215,7 @@ export default function NeuroCube() {
       requestAnimationFrame(animate)
 
       // Update controls
-      controls.update()
+      // controls.update()
 
       // Remove random rotation
       // cube.rotation.x += (Math.random() - 0.5) * 0.02;
@@ -270,7 +270,7 @@ export default function NeuroCube() {
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize)
-      clearTimeout(autoRotateTimeout)
+      // clearTimeout(autoRotateTimeout)
       if (containerRef.current) {
         containerRef.current.removeChild(renderer.domElement)
       }
@@ -284,7 +284,7 @@ export default function NeuroCube() {
         ;(line.material as THREE.Material).dispose()
       })
       
-      controls.dispose()
+      // controls.dispose()
     }
   }, [])
 
