@@ -50,7 +50,7 @@ export default function Navbar() {
               onClick={() => router.push('/')}
               className="text-sm font-medium text-white"
             >
-              LOGO
+              AO TOOL AGENTS
             </button>
             <div className="hidden md:flex items-center space-x-1">
               {Links.map((link, index) => (
