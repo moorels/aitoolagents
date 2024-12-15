@@ -23,8 +23,12 @@ const InfinityLogo = () => {
       color: string;
       size: number;
       speed: number;
+      canvasWidth: number;
+      canvasHeight: number;
 
       constructor() {
+        this.canvasWidth = canvas?.width || 200;
+        this.canvasHeight = canvas?.height || 100;
         this.t = Math.random() * Math.PI * 2;
         this.size = 2 + Math.random() * 2;
         this.speed = 0.02 + Math.random() * 0.01;
@@ -33,8 +37,8 @@ const InfinityLogo = () => {
         // Initialize x and y with initial position on infinity curve
         const a = 30;
         const b = 30;
-        this.x = canvas.width/2 + a * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
-        this.y = canvas.height/2 + b * Math.sin(this.t) * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
+        this.x = this.canvasWidth/2 + a * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
+        this.y = this.canvasHeight/2 + b * Math.sin(this.t) * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
       }
 
       update() {
@@ -42,8 +46,8 @@ const InfinityLogo = () => {
         // Infinity curve parametric equations
         const a = 30;
         const b = 30;
-        this.x = canvas.width/2 + a * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
-        this.y = canvas.height/2 + b * Math.sin(this.t) * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
+        this.x = this.canvasWidth/2 + a * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
+        this.y = this.canvasHeight/2 + b * Math.sin(this.t) * Math.cos(this.t) / (1 + Math.sin(this.t) * Math.sin(this.t));
       }
 
       draw() {
