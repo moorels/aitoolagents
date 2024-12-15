@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
+
+// Import OrbitControls
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 interface AnimatedLine {
@@ -143,13 +145,17 @@ export default function NeuroCube() {
     controls.rotateSpeed = 0.5
     controls.autoRotate = true
     controls.autoRotateSpeed = 2.0
-    
-    // Optional: Stop auto-rotation when user interacts
+
+    // Ensure auto-rotation does not interfere with user interaction
     controls.addEventListener('start', () => {
       controls.autoRotate = false
     })
 
-    // Optional: Resume auto-rotation after a period of inactivity
+    controls.addEventListener('end', () => {
+      controls.autoRotate = true
+    })
+
+    // Optional: Reset auto-rotation after a period of inactivity
     let autoRotateTimeout: NodeJS.Timeout
     controls.addEventListener('end', () => {
       clearTimeout(autoRotateTimeout)
@@ -157,6 +163,9 @@ export default function NeuroCube() {
         controls.autoRotate = true
       }, 3000) // Resume after 3 seconds of inactivity
     })
+
+    // Set the controls to update the camera position
+    controls.update();
 
     // Create animated lines inside the cube
     const createAnimatedLine = (): AnimatedLine => {
@@ -207,6 +216,9 @@ export default function NeuroCube() {
 
       // Update controls
       controls.update()
+
+      // Remove random rotation
+      // cube.rotation.x += (Math.random() - 0.5) * 0.02;
 
       // Update animated lines
       animatedLines.forEach(line => {
@@ -276,5 +288,7 @@ export default function NeuroCube() {
     }
   }, [])
 
-  return <div ref={containerRef} className="fixed inset-0 -z-10" />
+  return (
+    <div ref={containerRef} className="fixed inset-0 -z-10" />
+  )
 }
