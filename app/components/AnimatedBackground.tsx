@@ -8,27 +8,14 @@ interface FloatingText {
   x: number
   y: number
   text: string
+  opacity: number
+  scale: number
+  rotation: number
   velocity: {
     x: number
     y: number
   }
-  scale: number
-  opacity: number
-  rotation: number
   rotationVelocity: number
-}
-
-interface NeuralNode {
-  id: number
-  x: number
-  y: number
-  layer: number
-  color: string
-  connections: Array<{
-    targetId: number
-    opacity: number
-    color: string
-  }>
 }
 
 const mathEquations = [
@@ -88,142 +75,13 @@ const mathEquations = [
   'E = hf'
 ]
 
-const COLORS = [
-  'rgb(147, 197, 253)', // blue
-  'rgb(167, 139, 250)', // purple
-  'rgb(248, 113, 113)', // red
-  'rgb(52, 211, 153)',  // green
-  'rgb(251, 146, 60)',  // orange
-  'rgb(236, 72, 153)',  // pink
-  'rgb(251, 191, 36)',  // yellow
-  'rgb(79, 70, 229)'    // indigo
-]
-
-const getRandomColor = () => COLORS[Math.floor(Math.random() * COLORS.length)]
-
-const NETWORK_CONFIG = {
-  layers: [3, 4, 4, 2], // Number of nodes in each layer
-  nodeRadius: 4,
-  layerSpacing: 80,
-  verticalSpacing: 30,
-}
-
-const generateNetwork = (width: number, height: number): NeuralNode[] => {
-  const nodes: NeuralNode[] = []
-  let nodeId = 0
-  
-  // Calculate starting x position to center the network
-  const totalWidth = (NETWORK_CONFIG.layers.length - 1) * NETWORK_CONFIG.layerSpacing
-  const startX = (width - totalWidth) / 2
-
-  NETWORK_CONFIG.layers.forEach((nodeCount, layerIndex) => {
-    const layerHeight = (nodeCount - 1) * NETWORK_CONFIG.verticalSpacing
-    const startY = (height - layerHeight) / 2
-
-    for (let i = 0; i < nodeCount; i++) {
-      nodes.push({
-        id: nodeId++,
-        x: startX + layerIndex * NETWORK_CONFIG.layerSpacing,
-        y: startY + i * NETWORK_CONFIG.verticalSpacing,
-        layer: layerIndex,
-        color: getRandomColor(),
-        connections: []
-      })
-    }
-  })
-
-  // Create connections between layers
-  for (let layerIndex = 0; layerIndex < NETWORK_CONFIG.layers.length - 1; layerIndex++) {
-    const currentLayerNodes = nodes.filter(n => n.layer === layerIndex)
-    const nextLayerNodes = nodes.filter(n => n.layer === layerIndex + 1)
-
-    currentLayerNodes.forEach(sourceNode => {
-      nextLayerNodes.forEach(targetNode => {
-        sourceNode.connections.push({
-          targetId: targetNode.id,
-          opacity: Math.random() * 0.5 + 0.1,
-          color: getRandomColor()
-        })
-      })
-    })
-  }
-
-  return nodes
-}
-
-const NeuralNetwork = ({ nodes, width, height }: { nodes: NeuralNode[], width: number, height: number }) => {
-  return (
-    <g>
-      {/* Draw connections first */}
-      {nodes.map(node =>
-        node.connections.map((conn, idx) => {
-          const targetNode = nodes.find(n => n.id === conn.targetId)
-          if (!targetNode) return null
-          
-          return (
-            <motion.path
-              key={`${node.id}-${conn.targetId}-${idx}`}
-              d={`M ${node.x} ${node.y} L ${targetNode.x} ${targetNode.y}`}
-              stroke={conn.color}
-              strokeWidth="0.5"
-              initial={{ opacity: 0 }}
-              animate={{ 
-                opacity: [conn.opacity, conn.opacity * 0.3, conn.opacity],
-                pathLength: [0, 1],
-                stroke: [conn.color, getRandomColor(), conn.color]
-              }}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-          )
-        })
-      )}
-      
-      {/* Draw nodes */}
-      {nodes.map(node => (
-        <motion.circle
-          key={node.id}
-          cx={node.x}
-          cy={node.y}
-          r={NETWORK_CONFIG.nodeRadius}
-          fill={node.color}
-          initial={{ opacity: 0 }}
-          animate={{ 
-            opacity: [0.4, 0.8, 0.4],
-            scale: [1, 1.2, 1],
-            fill: [node.color, getRandomColor(), node.color]
-          }}
-          transition={{
-            duration: 2 + Math.random() * 1,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            filter: 'drop-shadow(0 0 2px currentColor)'
-          }}
-        />
-      ))}
-    </g>
-  )
-}
-
 const FloatingEquation = ({ 
   x, 
   y, 
-  text, 
-  opacity, 
-  scale, 
-  rotation 
-}: { 
-  x: number
-  y: number
-  text: string
-  opacity: number
-  scale: number
-  rotation: number
+  text,
+  opacity,
+  scale,
+  rotation
 }) => (
   <motion.g
     style={{
@@ -258,7 +116,6 @@ const FloatingEquation = ({
 export default function AnimatedBackground() {
   const [equations, setEquations] = useState<FloatingText[]>([])
   const [dimensions, setDimensions] = useState({ width: 0, height: 48 })
-  const [network, setNetwork] = useState<NeuralNode[]>([])
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -269,28 +126,25 @@ export default function AnimatedBackground() {
     }
 
     updateDimensions()
-    
-    // Generate initial network
-    setNetwork(generateNetwork(window.innerWidth, 48))
 
     const initEquations = () => {
       const newEquations: FloatingText[] = []
-      const numEquations = Math.floor(dimensions.width / 150)
-      
+      const numEquations = Math.floor(window.innerWidth / 200)
+
       for (let i = 0; i < numEquations; i++) {
         newEquations.push({
           id: i,
           x: Math.random() * dimensions.width,
           y: Math.random() * dimensions.height,
           text: mathEquations[Math.floor(Math.random() * mathEquations.length)],
-          velocity: {
-            x: (Math.random() - 0.5) * 0.4,
-            y: (Math.random() - 0.5) * 0.4
-          },
-          scale: 0.8 + Math.random() * 0.4,
-          opacity: 0.2 + Math.random() * 0.3,
+          opacity: Math.random() * 0.5 + 0.3,
+          scale: Math.random() * 0.3 + 0.8,
           rotation: Math.random() * 360,
-          rotationVelocity: (Math.random() - 0.5) * 0.5
+          velocity: {
+            x: (Math.random() - 0.5) * 2,
+            y: (Math.random() - 0.5) * 2
+          },
+          rotationVelocity: (Math.random() - 0.5) * 2
         })
       }
       setEquations(newEquations)
@@ -301,7 +155,6 @@ export default function AnimatedBackground() {
     window.addEventListener('resize', () => {
       updateDimensions()
       initEquations()
-      setNetwork(generateNetwork(window.innerWidth, 48))
     })
 
     // Animation loop
@@ -341,7 +194,6 @@ export default function AnimatedBackground() {
     <div className="absolute inset-0 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-blue-400/5 to-blue-500/5" />
       <svg className="w-full h-full">
-        <NeuralNetwork nodes={network} width={dimensions.width} height={dimensions.height} />
         {equations.map(eq => (
           <FloatingEquation
             key={eq.id}
