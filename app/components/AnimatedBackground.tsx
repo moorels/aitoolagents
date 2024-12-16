@@ -16,6 +16,8 @@ interface FloatingText {
     y: number
   }
   rotationVelocity: number
+  lastUpdateTime: number
+  fadeDuration: number
 }
 
 interface FloatingEquationProps {
@@ -25,6 +27,7 @@ interface FloatingEquationProps {
   opacity: number
   scale: number
   rotation: number
+  fadeDuration: number
 }
 
 const mathEquations = [
@@ -90,7 +93,8 @@ const FloatingEquation = ({
   text,
   opacity,
   scale,
-  rotation
+  rotation,
+  fadeDuration
 }: FloatingEquationProps) => (
   <motion.g
     style={{
@@ -98,12 +102,12 @@ const FloatingEquation = ({
       filter: 'drop-shadow(0 0 3px rgb(147, 197, 253))'
     }}
     animate={{
-      opacity: [opacity, opacity * 1.5, opacity],
+      opacity: [0.1, opacity * 2, 0.1],
       scale: [scale, scale * 1.1, scale],
       rotate: rotation
     }}
     transition={{
-      duration: 3 + Math.random() * 2,
+      duration: fadeDuration,
       repeat: Infinity,
       ease: "easeInOut"
     }}
@@ -111,7 +115,18 @@ const FloatingEquation = ({
     <motion.text
       x={x}
       y={y}
-      fill="rgb(191, 219, 254)"
+      animate={{
+        fill: [
+          'rgb(191, 219, 254)',
+          'rgb(59, 130, 246)',
+          'rgb(191, 219, 254)'
+        ]
+      }}
+      transition={{
+        duration: fadeDuration * 0.5,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }}
       fontSize="10"
       fontFamily="monospace"
       textAnchor="middle"
@@ -126,6 +141,25 @@ export default function AnimatedBackground() {
   const [equations, setEquations] = useState<FloatingText[]>([])
   const [dimensions, setDimensions] = useState({ width: 0, height: 48 })
 
+  const createNewEquation = (id: number) => {
+    return {
+      id,
+      x: Math.random() * dimensions.width,
+      y: Math.random() * dimensions.height,
+      text: mathEquations[Math.floor(Math.random() * mathEquations.length)],
+      opacity: Math.random() * 0.3 + 0.4,
+      scale: Math.random() * 0.3 + 0.8,
+      rotation: Math.random() * 360,
+      velocity: {
+        x: (Math.random() - 1) * 0,
+        y: (Math.random() - 1) * 0
+      },
+      rotationVelocity: (Math.random() - 0.5) * 1,
+      lastUpdateTime: Date.now(),
+      fadeDuration: Math.random() * 6 + 4 // Random duration between 4 and 10 seconds
+    }
+  }
+
   useEffect(() => {
     const updateDimensions = () => {
       setDimensions({
@@ -138,23 +172,10 @@ export default function AnimatedBackground() {
 
     const initEquations = () => {
       const newEquations: FloatingText[] = []
-      const numEquations = Math.floor(window.innerWidth / 200)
+      const numEquations = Math.floor(window.innerWidth / 400)
 
       for (let i = 0; i < numEquations; i++) {
-        newEquations.push({
-          id: i,
-          x: Math.random() * dimensions.width,
-          y: Math.random() * dimensions.height,
-          text: mathEquations[Math.floor(Math.random() * mathEquations.length)],
-          opacity: Math.random() * 0.5 + 0.3,
-          scale: Math.random() * 0.3 + 0.8,
-          rotation: Math.random() * 360,
-          velocity: {
-            x: (Math.random() - 0.5) * 2,
-            y: (Math.random() - 0.5) * 2
-          },
-          rotationVelocity: (Math.random() - 0.5) * 2
-        })
+        newEquations.push(createNewEquation(i))
       }
       setEquations(newEquations)
     }
@@ -166,22 +187,29 @@ export default function AnimatedBackground() {
       initEquations()
     })
 
-    // Animation loop
     const animationFrame = setInterval(() => {
+      const currentTime = Date.now()
+      
       setEquations(prevEquations => {
         return prevEquations.map(eq => {
+          // Check if enough time has passed based on equation's fade duration
+          if (currentTime - eq.lastUpdateTime > eq.fadeDuration * 1000) {
+            return {
+              ...createNewEquation(eq.id),
+              lastUpdateTime: currentTime
+            }
+          }
+
           let newX = eq.x + eq.velocity.x
           let newY = eq.y + eq.velocity.y
           let newRotation = eq.rotation + eq.rotationVelocity
 
-          // Smooth wrapping around edges
           if (newX < -50) newX = dimensions.width + 50
           if (newX > dimensions.width + 50) newX = -50
           if (newY < -20) newY = dimensions.height + 20
           if (newY > dimensions.height + 20) newY = -20
 
-          // Keep rotation between 0 and 360
-          newRotation = newRotation % 360
+          newRotation = newRotation % 0
 
           return {
             ...eq,
@@ -191,7 +219,7 @@ export default function AnimatedBackground() {
           }
         })
       })
-    }, 1000 / 60)
+    }, 10000/120)
 
     return () => {
       window.removeEventListener('resize', updateDimensions)
@@ -205,13 +233,14 @@ export default function AnimatedBackground() {
       <svg className="w-full h-full">
         {equations.map(eq => (
           <FloatingEquation
-            key={eq.id}
+            key={`${eq.id}-${eq.lastUpdateTime}`}
             x={eq.x}
             y={eq.y}
             text={eq.text}
             opacity={eq.opacity}
             scale={eq.scale}
             rotation={eq.rotation}
+            fadeDuration={eq.fadeDuration}
           />
         ))}
       </svg>
