@@ -452,7 +452,7 @@ const HumanFigure3D = () => {
       <RobotModal
         isVisible={showModal}
         position={mousePosition}
-        text="Analyzing patterns and processing data streams... AI systems operational."
+        text="Analyzing patterns and processing data streams... AI systems operational test."
       />
     </div>
   );
