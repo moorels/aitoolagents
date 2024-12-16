@@ -24,7 +24,7 @@ const NavLink = ({
         router.push(href)
         onClick?.()
       }}
-      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 border-2 border-[#A9A9A9] rounded bg-[#808080] hover:bg-[#707070]"
+      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
     >
       {children}
     </button>
@@ -38,11 +38,8 @@ export default function Navbar() {
   const paths = ['/', '/projects', '/about', '/contact']
 
   return (
-    <motion.nav
-      className="fixed w-full h-20 bg-black/90 backdrop-blur-sm z-50 border-b border-blue-500/20"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
+    <nav
+      className="fixed top-0 left-0 right-0 z-50 border-b border-blue-500/20 bg-gradient-to-b from-black/50 to-transparent backdrop-blur-sm"
     >
       <AnimatedBackground />
       <div className="relative max-w-7xl mx-auto px-4 h-full">
@@ -58,7 +55,7 @@ export default function Navbar() {
               
               <button
                 onClick={() => router.push('/')}
-                className="text-sm font-medium text-white border-2 border-[#A9A9A9] rounded px-3 py-1 bg-[#808080] hover:bg-[#707070]"
+                className="text-sm font-medium text-white px-3 py-1 bg-gray-800 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
               >
                 AI TOOL AGENTS
               </button>
@@ -123,6 +120,6 @@ export default function Navbar() {
           </div>
         </motion.div>
       </div>
-    </motion.nav>
+    </nav>
   )
 }
