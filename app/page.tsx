@@ -6,7 +6,7 @@ import PixelTitle from './components/PixelTitle';
 export default function Home() {
   return (
     <div className="pt-10">
-      <div className="py-8">
+      <div className="py-14 ">
         <PixelTitle />
       </div>
 
