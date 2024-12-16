@@ -3,9 +3,6 @@ import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import dynamic from 'next/dynamic';
 
-const CSS2DRenderer = dynamic(() => import('three/examples/jsm/renderers/CSS2DRenderer').then(mod => mod.CSS2DRenderer), { ssr: false });
-const CSS2DObject = dynamic(() => import('three/examples/jsm/renderers/CSS2DRenderer').then(mod => mod.CSS2DObject), { ssr: false });
-
 interface Node {
   x: number;
   y: number;
@@ -16,7 +13,8 @@ interface Node {
 
 interface CubeInfo {
   mesh: THREE.Mesh;
-  label: CSS2DObject;
+  label: HTMLDivElement;
+  labelContainer: HTMLDivElement;
 }
 
 interface Particle {
@@ -29,9 +27,10 @@ interface Particle {
 
 const AINodeGraph = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const labelsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!containerRef.current) return;
+    if (!containerRef.current || !labelsRef.current) return;
 
     // Scene setup
     const scene = new THREE.Scene();
@@ -47,17 +46,14 @@ const AINodeGraph = () => {
     renderer.domElement.style.left = '0';
     containerRef.current.appendChild(renderer.domElement);
 
-    // Label renderer for text
-    const labelRenderer = new CSS2DRenderer();
-    labelRenderer.setSize(width, height);
-    labelRenderer.domElement.style.position = 'absolute';
-    labelRenderer.domElement.style.top = '0';
-    labelRenderer.domElement.style.left = '0';
-    labelRenderer.domElement.style.pointerEvents = 'none';
-    containerRef.current.appendChild(labelRenderer.domElement);
-
-    // Create grid
-    
+    // Labels container
+    const labelsContainer = labelsRef.current;
+    labelsContainer.style.position = 'absolute';
+    labelsContainer.style.top = '0';
+    labelsContainer.style.left = '0';
+    labelsContainer.style.width = `${width}px`;
+    labelsContainer.style.height = `${height}px`;
+    labelsContainer.style.pointerEvents = 'none';
 
     // Business tasks nodes
     const tasks: Node[] = [
@@ -101,14 +97,19 @@ const AINodeGraph = () => {
       cube.position.set(worldX, worldY, 0);
       scene.add(cube);
 
+      // Create label container
+      const labelContainer = document.createElement('div');
+      labelContainer.style.position = 'absolute';
+      labelContainer.style.transform = 'translate(-50%, -50%)';
+      labelsContainer.appendChild(labelContainer);
+
       // Create label
       const labelDiv = document.createElement('div');
       labelDiv.className = 'text-white text-sm';
       labelDiv.textContent = task.text;
-      const label = new CSS2DObject(labelDiv);
-      cube.add(label);
+      labelContainer.appendChild(labelDiv);
 
-      cubes.push({ mesh: cube, label });
+      cubes.push({ mesh: cube, label: labelDiv, labelContainer });
     });
 
     // Create connections
@@ -173,9 +174,19 @@ const AINodeGraph = () => {
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Rotate cubes
-      cubes.forEach(({ mesh }) => {
+      // Update label positions
+      cubes.forEach(({ mesh, labelContainer }) => {
         mesh.rotation.y += 0.01;
+        
+        // Project 3D position to 2D screen coordinates
+        const vector = mesh.position.clone();
+        vector.project(camera);
+        
+        const x = (vector.x * width / 2) + width / 2;
+        const y = -(vector.y * height / 2) + height / 2;
+        
+        labelContainer.style.left = `${x}px`;
+        labelContainer.style.top = `${y}px`;
       });
 
       // Update particles
@@ -217,7 +228,6 @@ const AINodeGraph = () => {
       });
 
       renderer.render(scene, camera);
-      labelRenderer.render(scene, camera);
     };
 
     animate();
@@ -233,15 +243,20 @@ const AINodeGraph = () => {
         }
       });
       renderer.dispose();
-      labelRenderer.dispose();
       if (containerRef.current) {
         containerRef.current.innerHTML = '';
+      }
+      if (labelsRef.current) {
+        labelsRef.current.innerHTML = '';
       }
     };
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-[350px] h-[700px] flex items-center justify-center" />
+    <div className="relative w-[400px] h-[800px]">
+      <div ref={containerRef} className="absolute inset-0" />
+      <div ref={labelsRef} className="absolute inset-0 pointer-events-none" />
+    </div>
   );
 };
 
