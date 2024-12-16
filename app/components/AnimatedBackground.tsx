@@ -18,6 +18,15 @@ interface FloatingText {
   rotationVelocity: number
 }
 
+interface FloatingEquationProps {
+  x: number
+  y: number
+  text: string
+  opacity: number
+  scale: number
+  rotation: number
+}
+
 const mathEquations = [
   // Machine Learning Equations
   'y = σ(Wx + b)',
@@ -82,7 +91,7 @@ const FloatingEquation = ({
   opacity,
   scale,
   rotation
-}) => (
+}: FloatingEquationProps) => (
   <motion.g
     style={{
       transformOrigin: `${x}px ${y}px`,
