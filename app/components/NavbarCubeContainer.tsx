@@ -7,7 +7,11 @@ export default function NavbarCubeContainer() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   return (
-    <div className="fixed top-0 left-0 w-[200px] h-[200px] z-50" ref={containerRef}>
+    <div 
+      className="fixed left-0 w-[100px] h-[300px] z-40" 
+      ref={containerRef}
+      style={{ top: '80px' }}  // Position it just below the navbar
+    >
       <NavbarCube2 />
     </div>
   )

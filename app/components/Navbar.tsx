@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import AnimatedBackground from './AnimatedBackground'
 import { useState } from 'react'
 import InfinityLogo from './InfinityLogo'
+import PixelAILogo from '../components/PixelAILogo';
 
 const NavLink = ({ 
   children, 
@@ -47,10 +48,11 @@ export default function Navbar() {
       <div className="relative max-w-7xl mx-auto px-4 h-full">
         
         <div className="flex h-full items-center justify-between">
-          <div className="flex items-center space-x-8">
-            
-            <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2">
+          <PixelAILogo />
+            <div className="flex items-center">
               <div className="flex-shrink-0 mr-1 ">
+              
               <InfinityLogo />
               </div>
               

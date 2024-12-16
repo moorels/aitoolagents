@@ -32,7 +32,8 @@ const InfinityLogo = () => {
         this.t = Math.random() * Math.PI * 2;
         this.size = 2 + Math.random() * 2;
         this.speed = 0.02 + Math.random() * 0.01;
-        this.color = `hsl(${Math.random() * 360}, 80%, 60%)`;
+        const colors = ['#9CA3AF', '#4B5563', '#1F2937', '#111827'];
+        this.color = colors[Math.floor(Math.random() * colors.length)];
         
         // Initialize x and y with initial position on infinity curve
         const a = 30;
@@ -86,7 +87,7 @@ const InfinityLogo = () => {
   }, []);
 
   return (
-    <div className="relative w-[200px] h-[100px] flex items-center justify-center">
+    <div className="relative w-[150px] h-[100px] flex items-center justify-center">
       <canvas
         ref={canvasRef}
         className="w-full h-full"

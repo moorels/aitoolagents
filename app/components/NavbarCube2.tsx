@@ -10,7 +10,7 @@ interface CubeInfo {
   z: number;
 }
 
-export default function NavbarCube() {
+export default function NavbarCube2() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -20,11 +20,16 @@ export default function NavbarCube() {
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(70, 1, 0.1, 1000) // Square aspect ratio
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-    renderer.setSize(200, 200) // Small size for navbar
+    renderer.setSize(100, 100) // Small size for navbar
     containerRef.current.appendChild(renderer.domElement)
 
     // Array of colors
-    const colors = [0x4F46E5, 0xEC4899, 0x10B981, 0xF59E0B, 0x6366F1, 0xEF4444];
+    const colors = [
+      '#9CA3AF',  // gray-400
+      '#4B5563',  // gray-600
+      '#1F2937',  // gray-800
+      '#111827',  // gray-900
+    ];
     const cubes: CubeInfo[] = [];
 
     const createMiniCubes = () => {
@@ -69,7 +74,7 @@ export default function NavbarCube() {
           const wave = Math.sin(x * 0.5 + y * 0.3 + z * 0.4 + time);
           const colorIndex = Math.floor(((wave + 1) / 2) * colors.length);
           
-          const currentColor = new THREE.Color(colors[colorIndex]);
+          const currentColor = new THREE.Color(colors[colorIndex % colors.length]);
           const nextColor = new THREE.Color(colors[(colorIndex + 1) % colors.length]);
           const mixFactor = ((wave + 1) / 2) * colors.length - colorIndex;
           

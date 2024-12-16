@@ -79,13 +79,21 @@ const AINodeGraph = () => {
       { x: 300, y: 740, text: "Optimize", color: "#14b8a6", connections: [] }
     ];
 
+    const colors = [
+      '#9CA3AF',  // gray-400
+      '#4B5563',  // gray-600
+      '#1F2937',  // gray-800
+      '#111827',  // gray-900
+      '#4B5563',  // back to gray-600
+    ];
+
     // Create cubes and labels
     const cubes: CubeInfo[] = [];
-    tasks.forEach(task => {
+    tasks.forEach((task, index) => {
       // Create cube
       const geometry = new THREE.BoxGeometry(40, 40, 40);
       const material = new THREE.MeshBasicMaterial({
-        color: new THREE.Color(task.color),
+        color: new THREE.Color(colors[index % colors.length]),
         transparent: true,
         opacity: 0.8
       });
@@ -230,6 +238,19 @@ const AINodeGraph = () => {
         positions[1] = currentPos.y;
         positions[2] = currentPos.z;
         particle.mesh.geometry.attributes.position.needsUpdate = true;
+      });
+
+      // Update cube colors
+      cubes.forEach((cube, index) => {
+        const time = Date.now() * 0.001;
+        const wave = Math.sin(cube.mesh.position.x * 0.01 + cube.mesh.position.y * 0.01 + time);
+        const colorIndex = Math.floor(((wave + 1) / 2) * colors.length);
+        
+        const currentColor = new THREE.Color(colors[colorIndex % colors.length]);
+        const nextColor = new THREE.Color(colors[(colorIndex + 1) % colors.length]);
+        const mixFactor = ((wave + 1) / 2) * colors.length - colorIndex;
+        
+        cube.mesh.material.color.copy(currentColor).lerp(nextColor, mixFactor);
       });
 
       renderer.render(scene, camera);
