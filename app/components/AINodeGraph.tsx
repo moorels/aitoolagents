@@ -250,7 +250,7 @@ const AINodeGraph = () => {
         const nextColor = new THREE.Color(colors[(colorIndex + 1) % colors.length]);
         const mixFactor = ((wave + 1) / 2) * colors.length - colorIndex;
         
-        cube.mesh.material.color.copy(currentColor).lerp(nextColor, mixFactor);
+        
       });
 
       renderer.render(scene, camera);
