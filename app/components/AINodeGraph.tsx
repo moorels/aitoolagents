@@ -105,7 +105,12 @@ const AINodeGraph = () => {
 
       // Create label
       const labelDiv = document.createElement('div');
-      labelDiv.className = 'text-white text-sm';
+      labelDiv.className = 'text-white text-sm px-3 py-0 rounded';
+      labelDiv.style.background = 'linear-gradient(145deg, rgba(31, 41, 55, 0.95), rgba(17, 24, 39, 0.95))';
+      labelDiv.style.border = '1px solid';
+      labelDiv.style.borderImage = 'linear-gradient(145deg, rgba(192, 192, 192, 0.8), rgba(128, 128, 128, 0.4)) 1';
+      labelDiv.style.backdropFilter = 'blur(4px)';
+      labelDiv.style.boxShadow = '0 2px 1px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.1)';
       labelDiv.textContent = task.text;
       labelContainer.appendChild(labelDiv);
 

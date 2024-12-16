@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen">
       {/* Side Navigation Bar */}
-      <div className="w-[200px] bg-slate-900 min-h-screen fixed left-0 top-2 p-8">
+      <div className="w-[250px] bg-slate-900 min-h-screen fixed left-0 top-2 p-8">
         <div className="flex flex-col gap-4 items-center">
           <TypewriterText text="AI Tool Agents" />
           <AINodeGraph />
