@@ -3,6 +3,7 @@ import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./styles/fonts.css";
 import Navbar from './components/Navbar'
+import NavbarCubeContainer from './components/NavbarCubeContainer'
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body
         className={`${geistMono.variable} font-['Blogger_Sans'] font-light antialiased bg-gray-900`}
       >
+        <NavbarCubeContainer />
         <Navbar />
         {children}
       </body>
