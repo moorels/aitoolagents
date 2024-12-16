@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react'
 
 interface TypewriterTextProps {
-  text: string
+  text?: string
   delay?: number
 }
 
-export default function TypewriterText({ text, delay = 150 }: TypewriterTextProps) {
+const defaultText = "Welcome to the future of AI. Where innovation meets intelligence, and possibilities are limitless."
+
+export default function TypewriterText({ text = defaultText, delay = 150 }: TypewriterTextProps) {
   const [displayText, setDisplayText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -23,9 +25,9 @@ export default function TypewriterText({ text, delay = 150 }: TypewriterTextProp
   }, [currentIndex, delay, text])
 
   return (
-    <span className="text-1xl font-bold text-white">
+    <div className="text-3xl font-bold text-gray-200">
       {displayText}
-      <span className="animate-blink">|</span>
-    </span>
+      <span className="animate-pulse">|</span>
+    </div>
   )
 }
