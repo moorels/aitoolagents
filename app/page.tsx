@@ -5,17 +5,13 @@ import HumanFigure3D from './components/HumanFigure3D';
 export default function Home() {
   return (
     <>
-      <div className="fixed inset-0 bg-gradient-to-b from-gray-900 to-black">
-        <div className="absolute inset-0">
-          <AINodeGraph />
-        </div>
-      </div>
+      
 
       <div className="relative z-10">
         <div className="min-h-screen p-8 sm:p-20">
           <main className="flex items-center justify-center h-full">
             <div className="w-full max-w-7xl mx-auto flex items-center justify-between gap-8">
-              <div className="w-[600px] h-[600px] relative">
+              <div className="w-[80px] h-[600px] relative">
                 <HumanFigure3D />
               </div>
               <div className="flex-1">
