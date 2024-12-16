@@ -74,6 +74,20 @@ const HumanFigure3D = () => {
         emissiveIntensity: 0.5,
         transparent: true,
         opacity: 0.8,
+      }),
+      glow1: new THREE.MeshPhysicalMaterial({
+        color: new THREE.Color('#d22323'),
+        emissive: new THREE.Color('#d22323'),
+        emissiveIntensity: 0.5,
+        transparent: true,
+        opacity: 1,
+      }),
+      glow2: new THREE.MeshPhysicalMaterial({
+        color: new THREE.Color('#60A5FA'),
+        emissive: new THREE.Color('#60A5FA'),
+        emissiveIntensity: 0.5,
+        transparent: true,
+        opacity: 1,
       })
     };
 
@@ -126,19 +140,19 @@ const HumanFigure3D = () => {
       const visor = createSegment(
         new THREE.BoxGeometry(0.8, 0.2, 0.3),
         new THREE.Vector3(0, 3, 0.6),
-        materials.glow
+        materials.glow1
       );
 
       const antenna1 = createSegment(
         new THREE.CylinderGeometry(0.05, 0.05, 0.4),
         new THREE.Vector3(-0.4, 3.5, 0),
-        materials.secondary
+        materials.glow2
       );
 
       const antenna2 = createSegment(
         new THREE.CylinderGeometry(0.05, 0.05, 0.4),
         new THREE.Vector3(0.4, 3.5, 0),
-        materials.secondary
+        materials.glow2
       );
 
       const neckJoint = createJoint(
