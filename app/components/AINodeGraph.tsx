@@ -1,7 +1,10 @@
 'use client'
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import dynamic from 'next/dynamic';
 
+const CSS2DRenderer = dynamic(() => import('three/examples/jsm/renderers/CSS2DRenderer').then(mod => mod.CSS2DRenderer), { ssr: false });
+const CSS2DObject = dynamic(() => import('three/examples/jsm/renderers/CSS2DRenderer').then(mod => mod.CSS2DObject), { ssr: false });
 
 interface Node {
   x: number;
