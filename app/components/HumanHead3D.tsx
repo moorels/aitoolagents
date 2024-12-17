@@ -115,8 +115,22 @@ const HumanHead3D = () => {
     controls.maxDistance = 10;
 
     // Animation loop
+    let time = 0;
     const animate = () => {
       requestAnimationFrame(animate);
+      
+      // Update visor color
+      time += 0.02;
+      const intensity = (Math.sin(time) + 1) / 2; // Oscillates between 0 and 1
+      const color = new THREE.Color().setRGB(intensity, 0, 0); // Red to black transition
+      
+      // Update visor material
+      if (visor.material instanceof THREE.MeshPhysicalMaterial) {
+        visor.material.color = color;
+        visor.material.emissive = color;
+        visor.material.emissiveIntensity = intensity * 2; // Adjust glow intensity
+      }
+      
       controls.update();
       renderer.render(scene, camera);
     };
