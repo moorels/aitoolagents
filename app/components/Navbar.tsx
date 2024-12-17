@@ -35,7 +35,9 @@ export default function Navbar() {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const [showDesktopSolutions, setShowDesktopSolutions] = useState(false)
+  const [showDesktopPlatforms, setShowDesktopPlatforms] = useState(false)
   const [showMobileSolutions, setShowMobileSolutions] = useState(false)
+  const [showMobilePlatforms, setShowMobilePlatforms] = useState(false)
   const Links = ['Home', 'Platforms', 'Solutions', 'About', 'Contact']
   const paths = ['/', '/platforms', '/solutions', '/about', '/contact']
   
@@ -48,6 +50,15 @@ export default function Navbar() {
     { name: 'Property Management', path: '/solutions/property-management' },
     { name: 'Customer Care', path: '/solutions/customer-care' },
     { name: 'Custom AI Solutions', path: '/solutions/custom-ai' },
+  ]
+
+  const platformsLinks = [
+    { name: 'AI Agents', path: '/platforms/ai-agents' },
+    { name: 'AI Agentic Solutions', path: '/platforms/agentic-solutions' },
+    { name: 'AI Process Automation', path: '/platforms/process-automation' },
+    { name: 'AI Integrations', path: '/platforms/integrations' },
+    { name: 'Security', path: '/platforms/security' },
+    { name: 'Deployment', path: '/platforms/deployment' },
   ]
 
   return (
@@ -77,8 +88,14 @@ export default function Navbar() {
                 <div
                   key={link}
                   className="relative"
-                  onMouseEnter={() => link === 'Solutions' && setShowDesktopSolutions(true)}
-                  onMouseLeave={() => link === 'Solutions' && setShowDesktopSolutions(false)}
+                  onMouseEnter={() => {
+                    if (link === 'Solutions') setShowDesktopSolutions(true)
+                    if (link === 'Platforms') setShowDesktopPlatforms(true)
+                  }}
+                  onMouseLeave={() => {
+                    if (link === 'Solutions') setShowDesktopSolutions(false)
+                    if (link === 'Platforms') setShowDesktopPlatforms(false)
+                  }}
                 >
                   <NavLink href={paths[index]}>
                     {link}
@@ -95,6 +112,22 @@ export default function Navbar() {
                           className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
                         >
                           {solution.name}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  {link === 'Platforms' && showDesktopPlatforms && (
+                    <div className="absolute left-0 w-64 bg-gray-800 shadow-lg py-1">
+                      {platformsLinks.map((platform) => (
+                        <button
+                          key={platform.path}
+                          onClick={() => {
+                            router.push(platform.path)
+                            setShowDesktopPlatforms(false)
+                          }}
+                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                        >
+                          {platform.name}
                         </button>
                       ))}
                     </div>
@@ -167,6 +200,32 @@ export default function Navbar() {
                             className="block w-full text-left px-3 py-1 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
                           >
                             {solution.name}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : link === 'Platforms' ? (
+                  <div>
+                    <button
+                      onClick={() => setShowMobilePlatforms(!showMobilePlatforms)}
+                      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                    >
+                      {link}
+                    </button>
+                    {showMobilePlatforms && (
+                      <div className="pl-4 mt-1 space-y-1">
+                        {platformsLinks.map((platform) => (
+                          <button
+                            key={platform.path}
+                            onClick={() => {
+                              router.push(platform.path)
+                              setIsOpen(false)
+                              setShowMobilePlatforms(false)
+                            }}
+                            className="block w-full text-left px-3 py-1 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                          >
+                            {platform.name}
                           </button>
                         ))}
                       </div>
