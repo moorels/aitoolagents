@@ -87,7 +87,7 @@ export default function ContactPage() {
     <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-blue-500 mb-4">Contact Us</h1>
           <p className="text-lg text-gray-300">
             We&apos;re here to help and answer any questions you might have.
           </p>
