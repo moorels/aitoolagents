@@ -57,13 +57,13 @@ export default function TypeWriter({
   };
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-0">
       {displayedMessages.map((message, index) => (
         <motion.div
           key={index}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
         >
           <button
             onClick={() => handleServiceClick(message)}
@@ -75,8 +75,9 @@ export default function TypeWriter({
       ))}
       {isTyping && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
           className="text-gray-300"
         >
           {currentText}

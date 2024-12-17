@@ -11,6 +11,8 @@ interface TypewriterTextProps {
 const defaultText = "Welcome to AI Tool Agents Australia Business Solutions, your trusted partner in the future of AI. Where innovation meets intelligence, and possibilities are limitless."
 
 const services = [
+  "Our company can offer a variety of business service solutions to its clients. Including :",
+"",
   "Virtual Customer Service Agents",
   "AI-Powered Sales Assistants",
   "Automated Data Entry & Processing",
@@ -22,7 +24,9 @@ const services = [
   "AI-Driven Content Creation",
   "Predictive Analytics & Forecasting",
   "AI-Powered Lead Scoring & Qualification",
-  "Real-Time Translation Services"
+  "Real-Time Translation Services",
+"",
+  "Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries."
 ]
 
 export default function TypewriterText({ text = defaultText, delay = 70 }: TypewriterTextProps) {
@@ -55,9 +59,9 @@ export default function TypewriterText({ text = defaultText, delay = 70 }: Typew
       </div>
       {showServices && (
         <div className="text-[15px] text-gray-300 mt-8">
-          <p className="mb-4">Our company can offer a variety of business service solutions to its clients. Including:</p>
+         
           <TypeWriter messages={services} typingSpeed={30} delayBetweenMessages={100} />
-          <p className="mt-4">Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries.</p>
+        
         </div>
       )}
     </div>
