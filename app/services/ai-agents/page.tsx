@@ -1,43 +1,49 @@
 'use client'
 import ServicePage from '../../components/ServicePage';
+import Chat from '../../components/Chat';
 
 export default function AIAgentsPage() {
   return (
-    <ServicePage
-      title="AI Agents"
-      description="Empower your operations with intelligent AI agents that work alongside your team to enhance productivity and decision-making. Our advanced AI agents adapt to your business processes and continuously learn to provide better results over time."
-      features={[
-        "Autonomous Task Execution",
-        "Natural Language Processing",
-        "Adaptive Learning Capabilities",
-        "Multi-Agent Coordination",
-        "Process Automation",
-        "Decision Support",
-        "Real-time Monitoring",
-        "Performance Analytics"
-      ]}
-      benefits={[
-        "Increased Productivity",
-        "24/7 Operation Capability",
-        "Reduced Human Error",
-        "Scalable Operations",
-        "Consistent Performance",
-        "Continuous Improvement"
-      ]}
-      useCases={[
-        {
-          title: "Automated Customer Support",
-          description: "AI agents that handle customer inquiries and support tickets automatically, learning and improving from each interaction."
-        },
-        {
-          title: "Process Automation",
-          description: "Intelligent agents that automate complex business processes while adapting to changing conditions."
-        },
-        {
-          title: "Decision Support",
-          description: "AI agents that assist human decision-makers by analyzing data and providing actionable insights."
-        }
-      ]}
-    />
+    <div>
+      <ServicePage
+        title="AI Agents Solutions"
+        description="Empower your operations with intelligent AI agents that automate complex tasks and decision-making processes. Our advanced agents combine machine learning, natural language processing, and autonomous decision-making capabilities to handle sophisticated workflows and interactions."
+        features={[
+          "Autonomous Decision Making",
+          "Natural Language Understanding",
+          "Task Automation",
+          "Learning and Adaptation",
+          "Multi-Agent Coordination",
+          "Process Optimization",
+          "Real-time Response",
+          "Contextual Awareness"
+        ]}
+        benefits={[
+          "Enhanced Operational Efficiency",
+          "Reduced Manual Intervention",
+          "Improved Decision Making",
+          "24/7 Operation Capability",
+          "Scalable Performance",
+          "Consistent Service Delivery"
+        ]}
+        useCases={[
+          {
+            title: "Intelligent Process Automation",
+            description: "Deploy AI agents to automate complex business processes with intelligent decision-making capabilities."
+          },
+          {
+            title: "Customer Interaction Management",
+            description: "Implement AI agents that handle customer inquiries and support requests with natural language understanding."
+          },
+          {
+            title: "Workflow Optimization",
+            description: "Utilize AI agents to analyze and optimize business workflows for maximum efficiency and effectiveness."
+          }
+        ]}
+      />
+      <div className="fixed bottom-8 right-8 z-50">
+        <Chat />
+      </div>
+    </div>
   );
 }

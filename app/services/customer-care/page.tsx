@@ -1,43 +1,49 @@
 'use client'
 import ServicePage from '../../components/ServicePage';
+import Chat from '../../components/Chat';
 
 export default function CustomerCarePage() {
   return (
-    <ServicePage
-      title="Customer Care Excellence"
-      description="Elevate your customer care to new heights with AI-powered solutions that provide personalized, proactive support. Our intelligent systems help you build stronger customer relationships while maintaining efficiency and consistency across all touchpoints."
-      features={[
-        "Proactive Customer Support",
-        "Personalized Interaction Management",
-        "Customer Journey Tracking",
-        "Sentiment Analysis",
-        "Multi-channel Support Integration",
-        "Customer Feedback Analysis",
-        "Service Quality Monitoring",
-        "Customer Retention Tools"
-      ]}
-      benefits={[
-        "Enhanced Customer Loyalty",
-        "Improved First Contact Resolution",
-        "Personalized Customer Experience",
-        "Reduced Response Times",
-        "Better Customer Insights",
-        "Increased Customer Satisfaction"
-      ]}
-      useCases={[
-        {
-          title: "Proactive Customer Engagement",
-          description: "Identify and address customer needs before they become issues using predictive analytics and behavior patterns."
-        },
-        {
-          title: "Personalized Support Experience",
-          description: "Deliver tailored support based on customer history, preferences, and behavior patterns."
-        },
-        {
-          title: "Customer Feedback Management",
-          description: "Automatically collect, analyze, and act on customer feedback to improve service quality."
-        }
-      ]}
-    />
+    <div>
+      <ServicePage
+        title="Customer Care Solutions"
+        description="Elevate your customer care with advanced AI-powered solutions that provide personalized, proactive support across all channels. Our intelligent systems help you build stronger relationships with your customers while optimizing support operations."
+        features={[
+          "Multi-channel Support Integration",
+          "AI-powered Response Suggestions",
+          "Customer Sentiment Analysis",
+          "Automated Issue Resolution",
+          "Proactive Customer Outreach",
+          "Performance Analytics Dashboard",
+          "Knowledge Base Management",
+          "Quality Assurance Automation"
+        ]}
+        benefits={[
+          "Enhanced Customer Experience",
+          "Faster Resolution Times",
+          "Improved Agent Efficiency",
+          "Consistent Service Quality",
+          "Reduced Support Costs",
+          "Increased Customer Loyalty"
+        ]}
+        useCases={[
+          {
+            title: "Intelligent Support Routing",
+            description: "Automatically direct customer inquiries to the most qualified agents based on expertise, availability, and issue complexity."
+          },
+          {
+            title: "Proactive Customer Support",
+            description: "Identify and address potential customer issues before they escalate using predictive analytics and behavior patterns."
+          },
+          {
+            title: "Automated Quality Management",
+            description: "Monitor and analyze customer interactions to ensure service quality and compliance with support standards."
+          }
+        ]}
+      />
+      <div className="fixed bottom-8 right-8 z-50">
+        <Chat />
+      </div>
+    </div>
   );
 }

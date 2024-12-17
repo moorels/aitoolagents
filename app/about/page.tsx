@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Chat from '../components/Chat';
 
 interface TeamMember {
   name: string;
@@ -119,6 +120,11 @@ export default function AboutPage() {
           </p>
         </div>
       </motion.section>
+
+      {/* Chat Component */}
+      <div className="fixed bottom-8 right-8 z-50">
+        <Chat />
+      </div>
     </div>
   );
 }

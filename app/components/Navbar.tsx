@@ -40,7 +40,7 @@ export default function Navbar() {
   const [showMobileSolutions, setShowMobileSolutions] = useState(false)
   const [showMobilePlatforms, setShowMobilePlatforms] = useState(false)
   const Links = ['Home', 'Platforms', 'Solutions', 'About', 'Contact']
-  const paths = ['/', '/platforms', '/solutions', '/about', '/contact']
+  const paths = ['/', '#', '#', '/about', '/contact']
   
   const solutionsLinks = [
     { name: 'Customer Service', path: '/services/customer-service' },
