@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import TypeWriter from './TypeWriter'
 
 interface TypewriterTextProps {
   text?: string
@@ -9,45 +10,20 @@ interface TypewriterTextProps {
 
 const defaultText = "Welcome to AI Tool Agents Australia Business Solutions, your trusted partner in the future of AI. Where innovation meets intelligence, and possibilities are limitless."
 
-const servicesText = `Our company can offer a variety of business service solutions to its clients. Including:
-
-Virtual Customer Service Agents.
-AI-Powered Sales Assistants.
-Automated Data Entry & Processing.
-Customer Segmentation & Profiling.
-Automated Email Processing.
-Chatbot Development & Customization.
-AI-Powered Order Fulfillment.
-Intelligent Scheduling & Appointment Setting.
-AI-Driven Content Creation.
-Predictive Analytics & Forecasting.
-AI-Powered Lead Scoring & Qualification.
-Real-Time Translation Services.
-
-Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries.`
-
-function TypewriterServices({ delay = 30 }: { delay?: number }) {
-  const [displayText, setDisplayText] = useState('')
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  useEffect(() => {
-    if (currentIndex < servicesText.length) {
-      const timeout = setTimeout(() => {
-        setDisplayText(prev => prev + servicesText[currentIndex])
-        setCurrentIndex(prev => prev + 1)
-      }, delay)
-
-      return () => clearTimeout(timeout)
-    }
-  }, [currentIndex, delay])
-
-  return (
-    <div className="text-[15px]  text-gray-300 mt-8 whitespace-pre-line">
-      {displayText}
-      <span className="animate-pulse">|</span>
-    </div>
-  )
-}
+const services = [
+  "Virtual Customer Service Agents",
+  "AI-Powered Sales Assistants",
+  "Automated Data Entry & Processing",
+  "Customer Segmentation & Profiling",
+  "Automated Email Processing",
+  "Chatbot Development & Customization",
+  "AI-Powered Order Fulfillment",
+  "Intelligent Scheduling & Appointment Setting",
+  "AI-Driven Content Creation",
+  "Predictive Analytics & Forecasting",
+  "AI-Powered Lead Scoring & Qualification",
+  "Real-Time Translation Services"
+]
 
 export default function TypewriterText({ text = defaultText, delay = 70 }: TypewriterTextProps) {
   const [displayText, setDisplayText] = useState('')
@@ -63,10 +39,9 @@ export default function TypewriterText({ text = defaultText, delay = 70 }: Typew
 
       return () => clearTimeout(timeout)
     } else {
-      // Start services typewriter after main text is done
       const timeout = setTimeout(() => {
         setShowServices(true)
-      }, 500) // Wait 500ms after main text finishes
+      }, 500)
 
       return () => clearTimeout(timeout)
     }
@@ -78,7 +53,13 @@ export default function TypewriterText({ text = defaultText, delay = 70 }: Typew
         {displayText}
         <span className="animate-pulse">|</span>
       </div>
-      {showServices && <TypewriterServices />}
+      {showServices && (
+        <div className="text-[15px] text-gray-300 mt-8">
+          <p className="mb-4">Our company can offer a variety of business service solutions to its clients. Including:</p>
+          <TypeWriter messages={services} typingSpeed={30} delayBetweenMessages={100} />
+          <p className="mt-4">Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries.</p>
+        </div>
+      )}
     </div>
   )
 }
