@@ -6,32 +6,22 @@ import Chat from './components/Chat'
 
 export default function Home() {
   return (
-    <div className="pt-10">
-      <div className="py-2">
-       
-      </div>
-
-      <div className="relative z-10">
-        <div className="min-h-screen p-8 sm:p-0">
-          <main className="flex items-center justify-center h-full">
-            <div className="w-full max-w-7xl mx-auto flex items-center justify-between gap-8 px-8">
-              <div className="w-[80px] h-[600px] relative">
-                <HumanFigure3D />
-              </div>
-              <div className="flex-1">
-                <TypewriterText />
-               
-              </div>
+    <main className="flex min-h-screen flex-col items-center justify-between relative overflow-hidden">
+      <div className="w-full">
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4">
+          <div className="w-full max-w-7xl mx-auto flex items-center justify-between gap-8 px-8">
+            <div className="w-[80px] h-[600px] relative">
+              <HumanFigure3D />
             </div>
+            <div className="flex-1">
+              <TypewriterText />
+            </div>
+          </div>
+          <div className="mt-8">
             <Chat />
-          </main>
-          <footer className="absolute bottom-8 left-8">
-            <p className="text-xs text-gray-400">
-              
-            </p>
-          </footer>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

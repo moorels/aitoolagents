@@ -22,13 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${geistMono.variable} font-['Blogger_Sans'] font-light antialiased bg-gray-900`}
+        className={`${geistMono.variable} font-['Blogger_Sans'] font-light antialiased bg-gray-900 min-h-full overflow-x-hidden`}
       >
-        <NavbarCubeContainer />
-        <Navbar />
-        {children}
+        <div className="fixed top-0 left-0 right-0 z-50">
+          <NavbarCubeContainer />
+          <Navbar />
+        </div>
+        <div className="pt-16">
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
