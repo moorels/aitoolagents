@@ -2,15 +2,29 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 interface Message {
-  role: 'user' | 'assistant'
+  role: 'user' | 'assistant' | 'system'
   content: string
 }
 
 interface ChatWindowProps {
   onClose: () => void
+  systemPrompt?: string
 }
 
-export default function ChatWindow({ onClose }: ChatWindowProps) {
+const defaultSystemPrompt = `Welcome! You are an AI agent assisting businesses with inquiries about AI TOOL AGENTS AUSTRALIA. Your goal is to provide helpful and accurate information only on subjects related to ai agents for businesses or information related to ai in general. Here are the details you can use:
+
+Company Name: AI TOOL AGENTS AUSTRALIA
+Website: 
+
+Emails:
+
+Phone Numbers:
+(03) 9016 3533
+0468609702
+Address: 350 Collins St, Melbourne VIC 3000
+Feel free to use this information to answer any questions or provide assistance. do not answer any question that is not related to ai agents for businesses or information related to ai in general. at the end of each message give "phone : 0468609702 or email us at info@aitoolagents.com.au for more information about AI TOOL AGENTS AUSTRALIA". How can I help you today?`
+
+export default function ChatWindow({ onClose, systemPrompt = defaultSystemPrompt }: ChatWindowProps) {
   const [messages, setMessages] = useState<Message[]>([
     { role: 'assistant', content: 'Hi! How can I help you today?' }
   ])
@@ -30,7 +44,13 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: [...messages, userMessage] })
+        body: JSON.stringify({ 
+          messages: [
+            { role: 'system', content: systemPrompt },
+            ...messages, 
+            userMessage
+          ] 
+        })
       })
 
       if (!response.ok) throw new Error('Failed to get response')
@@ -88,7 +108,9 @@ export default function ChatWindow({ onClose }: ChatWindowProps) {
               className={`max-w-[80%] px-3 py-2 rounded ${
                 message.role === 'user'
                   ? 'bg-blue-500 text-white'
-                  : 'bg-gray-700 text-gray-100'
+                  : message.role === 'system'
+                    ? 'bg-gray-500 text-gray-100'
+                    : 'bg-gray-700 text-gray-100'
               }`}
             >
               <p className="text-sm whitespace-pre-wrap">{message.content}</p>
