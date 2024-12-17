@@ -43,23 +43,23 @@ export default function Navbar() {
   const paths = ['/', '/platforms', '/solutions', '/about', '/contact']
   
   const solutionsLinks = [
-    { name: 'Customer Service', path: '/solutions/customer-service' },
-    { name: 'Office Automation', path: '/solutions/office-automation' },
-    { name: 'Retail Automation', path: '/solutions/retail-automation' },
-    { name: 'HealthCare', path: '/solutions/healthcare' },
-    { name: 'Insurance', path: '/solutions/insurance' },
-    { name: 'Property Management', path: '/solutions/property-management' },
-    { name: 'Customer Care', path: '/solutions/customer-care' },
-    { name: 'Custom AI Solutions', path: '/solutions/custom-ai' },
+    { name: 'Customer Service', path: '/services/customer-service' },
+    { name: 'Office Automation', path: '/services/office-automation' },
+    { name: 'Retail Automation', path: '/services/retail-automation' },
+    { name: 'HealthCare', path: '/services/healthcare' },
+    { name: 'Insurance', path: '/services/insurance' },
+    { name: 'Property Management', path: '/services/property-management' },
+    { name: 'Customer Care', path: '/services/customer-care' },
+    { name: 'Custom AI Solutions', path: '/services/custom-ai-solutions' },
   ]
 
   const platformsLinks = [
-    { name: 'AI Agents', path: '/platforms/ai-agents' },
-    { name: 'AI Agentic Solutions', path: '/platforms/agentic-solutions' },
-    { name: 'AI Process Automation', path: '/platforms/process-automation' },
-    { name: 'AI Integrations', path: '/platforms/integrations' },
-    { name: 'Security', path: '/platforms/security' },
-    { name: 'Deployment', path: '/platforms/deployment' },
+    { name: 'AI Agents', path: '/services/ai-agents' },
+    { name: 'AI Agentic Solutions', path: '/services/ai-agentic-solutions' },
+    { name: 'AI Process Automation', path: '/services/ai-process-automation' },
+    { name: 'AI Integrations', path: '/services/ai-integrations' },
+    { name: 'Security', path: '/services/security' },
+    { name: 'Deployment', path: '/services/deployment' },
   ]
 
   return (
