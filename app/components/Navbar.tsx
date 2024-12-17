@@ -34,8 +34,21 @@ const NavLink = ({
 export default function Navbar() {
   const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
-  const Links = ['Home', 'Projects', 'About', 'Contact']
-  const paths = ['/', '/projects', '/about', '/contact']
+  const [showDesktopSolutions, setShowDesktopSolutions] = useState(false)
+  const [showMobileSolutions, setShowMobileSolutions] = useState(false)
+  const Links = ['Home', 'Platforms', 'Solutions', 'About', 'Contact']
+  const paths = ['/', '/platforms', '/solutions', '/about', '/contact']
+  
+  const solutionsLinks = [
+    { name: 'Customer Service', path: '/solutions/customer-service' },
+    { name: 'Office Automation', path: '/solutions/office-automation' },
+    { name: 'Retail Automation', path: '/solutions/retail-automation' },
+    { name: 'HealthCare', path: '/solutions/healthcare' },
+    { name: 'Insurance', path: '/solutions/insurance' },
+    { name: 'Property Management', path: '/solutions/property-management' },
+    { name: 'Customer Care', path: '/solutions/customer-care' },
+    { name: 'Custom AI Solutions', path: '/solutions/custom-ai' },
+  ]
 
   return (
     <nav
@@ -46,11 +59,10 @@ export default function Navbar() {
         
         <div className="flex h-full items-center justify-between">
           <div className="flex items-center space-x-2">
-          <PixelAILogo />
+            <PixelAILogo />
             <div className="flex items-center">
-              <div className="flex-shrink-0 mr-1 ">
-              
-              <InfinityLogo />
+              <div className="flex-shrink-0 mr-1">
+                <InfinityLogo />
               </div>
               
               <button
@@ -62,12 +74,34 @@ export default function Navbar() {
             </div>
             <div className="hidden md:flex items-center space-x-1">
               {Links.map((link, index) => (
-                <NavLink key={link} href={paths[index]}>
-                  {link}
-                </NavLink>
+                <div
+                  key={link}
+                  className="relative"
+                  onMouseEnter={() => link === 'Solutions' && setShowDesktopSolutions(true)}
+                  onMouseLeave={() => link === 'Solutions' && setShowDesktopSolutions(false)}
+                >
+                  <NavLink href={paths[index]}>
+                    {link}
+                  </NavLink>
+                  {link === 'Solutions' && showDesktopSolutions && (
+                    <div className="absolute left-0 w-64 bg-gray-800 shadow-lg py-1">
+                      {solutionsLinks.map((solution) => (
+                        <button
+                          key={solution.path}
+                          onClick={() => {
+                            router.push(solution.path)
+                            setShowDesktopSolutions(false)
+                          }}
+                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                        >
+                          {solution.name}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
-            
           </div>
           
           {/* Mobile menu button */}
@@ -112,9 +146,37 @@ export default function Navbar() {
           <div className="px-4 py-3 space-y-1">
             {Links.map((link, index) => (
               <div key={link} className="block">
-                <NavLink href={paths[index]} onClick={() => setIsOpen(false)}>
-                  {link}
-                </NavLink>
+                {link === 'Solutions' ? (
+                  <div>
+                    <button
+                      onClick={() => setShowMobileSolutions(!showMobileSolutions)}
+                      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                    >
+                      {link}
+                    </button>
+                    {showMobileSolutions && (
+                      <div className="pl-4 mt-1 space-y-1">
+                        {solutionsLinks.map((solution) => (
+                          <button
+                            key={solution.path}
+                            onClick={() => {
+                              router.push(solution.path)
+                              setIsOpen(false)
+                              setShowMobileSolutions(false)
+                            }}
+                            className="block w-full text-left px-3 py-1 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                          >
+                            {solution.name}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <NavLink href={paths[index]} onClick={() => setIsOpen(false)}>
+                    {link}
+                  </NavLink>
+                )}
               </div>
             ))}
           </div>
