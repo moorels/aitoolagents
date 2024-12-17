@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Chat from '../components/Chat';
 
+
 interface TeamMember {
   name: string;
   role: string;
@@ -65,7 +66,7 @@ export default function AboutPage() {
             variants={fadeInUp}
             initial="initial"
             animate="animate"
-          >
+          > 
             <h1 className="text-4xl font-bold mb-6 text-blue-500">
               About Our Team
             </h1>
