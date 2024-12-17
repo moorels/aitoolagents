@@ -4,6 +4,7 @@ import AINodeGraph from './components/AINodeGraph';
 import HumanFigure3D from './components/HumanFigure3D';
 import Chat from './components/Chat'
 
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative overflow-hidden">
@@ -15,6 +16,7 @@ export default function Home() {
             </div>
             <div className="flex-1">
               <TypewriterText />
+              
             </div>
           </div>
           <div className="mt-8">

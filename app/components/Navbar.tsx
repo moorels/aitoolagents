@@ -6,6 +6,7 @@ import AnimatedBackground from './AnimatedBackground'
 import { useState } from 'react'
 import InfinityLogo from './InfinityLogo'
 import PixelAILogo from '../components/PixelAILogo';
+import HumanHead3D from '../components/HumanHead3D';
 
 const NavLink = ({ 
   children, 
@@ -70,7 +71,9 @@ export default function Navbar() {
         
         <div className="flex h-full items-center justify-between">
           <div className="flex items-center space-x-2">
-            <PixelAILogo />
+            <div className="w-24 h-24">
+              <HumanHead3D />
+            </div>
             <div className="flex items-center">
               <div className="flex-shrink-0 mr-1">
                 <InfinityLogo />
