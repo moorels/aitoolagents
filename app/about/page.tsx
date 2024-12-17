@@ -15,31 +15,31 @@ const teamMembers: TeamMember[] = [
     name: 'Robert Morels',
     role: 'Founding Member & Software Developer',
     description: 'As one of the founding members, Robert brings over 10 years of experience in software development and a deep-seated love for AI. He holds a Bachelor&apos;s degree in Computer Science from the University of Technology Sydney and has worked with several startups to bring their ideas to life.',
-    imageUrl: '/team/robert.jpg'
+    imageUrl: '/team/Robert.jpg'
   },
   {
     name: 'Sophia White',
     role: 'AI Research Lead',
     description: 'With a Masters degree in Artificial Intelligence from Monash University, Sophia is our go-to expert on all things AI. Her background includes roles at Google and IBM, where she developed and deployed machine learning models to solve complex business problems.',
-    imageUrl: '/team/sophia.jpg'
+    imageUrl: '/team/Sophia.jpg'
   },
   {
     name: 'Ethan Brown',
     role: 'AI Solutions Architect',
     description: 'Ethan combines his Bachelors degree in Computer Science with a wealth of experience in AI solutions for retail businesses. His work has been recognized by both local startups and Fortune 500 companies, making him a key player on our team.',
-    imageUrl: '/team/ethan.jpg'
+    imageUrl: '/team/Ethan.jpg'
   },
   {
     name: 'Morgan Lee',
     role: 'Project Manager & Software Engineer',
     description: 'Morgans journey began at the University of New South Wales, where she earned her degree in Information Technology. Her extensive background in software engineering and project management has made her an invaluable asset to our team, ensuring that every client receives the best possible solution.',
-    imageUrl: '/team/morgan.jpg'
+    imageUrl: '/team/Morgan.jpg'
   },
   {
-    name: 'Ava Chen',
+    name: 'Brett Doherty',
     role: 'AI Development Specialist',
-    description: 'Avas Bachelors in Computer Science from Macquarie University complements her natural affinity for AI. She has worked across various sectors, including healthcare and finance, helping businesses leverage data-driven insights to drive growth.',
-    imageUrl: '/team/ava.jpg'
+    description: 'Brett, our AI development specialist, holds a Bachelors in Computer Science from Macquarie University complements her natural affinity for AI. She has worked across various sectors, including healthcare and finance, helping businesses leverage data-driven insights to drive growth.',
+    imageUrl: '/team/Brett.jpg'
   }
 ];
 
@@ -88,10 +88,14 @@ export default function AboutPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
               >
-                <div className="w-48 h-48 relative flex-shrink-0">
-                  <div className="w-full h-full bg-blue-500 rounded-full flex items-center justify-center text-4xl font-bold">
-                    {member.name[0]}
-                  </div>
+                <div className="w-32 h-32 relative flex-shrink-0">
+                  <Image
+                    src={member.imageUrl}
+                    alt={member.name}
+                    fill
+                    className="rounded-full object-cover"
+                  />
+                  <div className="absolute inset-0 rounded-full border-2 border-blue-500/50"></div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl font-bold mb-2 text-blue-400">{member.name}</h3>
