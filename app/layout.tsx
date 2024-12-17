@@ -4,6 +4,7 @@ import "./globals.css";
 import "./styles/fonts.css";
 import Navbar from './components/Navbar'
 import NavbarCubeContainer from './components/NavbarCubeContainer'
+import Footer from './components/Footer'
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -28,6 +29,7 @@ export default function RootLayout({
         <NavbarCubeContainer />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

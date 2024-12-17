@@ -27,7 +27,7 @@ export default function Home() {
           </main>
           <footer className="absolute bottom-8 left-8">
             <p className="text-xs text-gray-400">
-              Built with Next.js, TypeScript, and Tailwind CSS
+              
             </p>
           </footer>
         </div>
