@@ -89,7 +89,7 @@ export default function ContactPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
           <p className="text-lg text-gray-300">
-            We're here to help and answer any questions you might have.
+            We&apos;re here to help and answer any questions you might have.
           </p>
         </div>
 
