@@ -10,6 +10,15 @@ interface TypeWriterProps {
   delayBetweenMessages?: number;
 }
 
+type ServiceModalContent = {
+  [key: string]: {
+    description: string;
+    benefits: string[];
+    implementation: string[];
+    metrics: string[];
+  };
+};
+
 export default function TypeWriter({
   messages,
   typingSpeed = 50,
@@ -75,12 +84,12 @@ export default function TypeWriter({
         </motion.div>
       )}
 
-      {selectedService && serviceModalContent[selectedService] && (
+      {selectedService && (serviceModalContent as ServiceModalContent)[selectedService] && (
         <ServiceModal
           isOpen={true}
           onClose={() => setSelectedService(null)}
           title={selectedService}
-          content={serviceModalContent[selectedService]}
+          content={(serviceModalContent as ServiceModalContent)[selectedService]}
         />
       )}
     </div>
