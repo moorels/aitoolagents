@@ -1,11 +1,11 @@
 'use client'
-import ServicePage from '../../components/ServicePage';
+import ProcessAutomationPage from '../../components/ProcessAutomationPage';
 import Chat from '../../components/Chat';
 
 export default function AIProcessAutomationPage() {
   return (
     <div>
-      <ServicePage
+      <ProcessAutomationPage
         title="AI Process Automation"
         description="Transform your business operations with intelligent process automation powered by AI. Our solutions streamline workflows, reduce manual intervention, and optimize business processes through advanced machine learning and automation technologies."
         features={[

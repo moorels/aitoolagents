@@ -67,6 +67,7 @@ export default function AboutPage() {
             initial="initial"
             animate="animate"
           > 
+            
             <h1 className="text-4xl font-bold mb-6 text-blue-500">
               About Our Team
             </h1>

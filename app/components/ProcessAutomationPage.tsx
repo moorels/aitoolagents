@@ -1,10 +1,10 @@
 'use client'
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Modal from './Modal';
-import { aiServicesDescriptions } from '../data/aiServicesData';
+import ProcessAutomationModal from './ProcessAutomationModal';
+import { processAutomationDescriptions } from '../data/processAutomationData';
 
-interface ServicePageProps {
+interface ProcessAutomationPageProps {
   title: string;
   description: string;
   features: string[];
@@ -18,12 +18,12 @@ const fadeInUp = {
   transition: { duration: 0.6 }
 };
 
-export default function ServicePage({ title, description, features, benefits, useCases }: ServicePageProps) {
+export default function ProcessAutomationPage({ title, description, features, benefits, useCases }: ProcessAutomationPageProps) {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState({ title: '', content: '' });
 
   const handleItemClick = (title: string) => {
-    const content = aiServicesDescriptions[title];
+    const content = processAutomationDescriptions[title];
     if (content) {
       setModalContent({ title, content });
       setModalOpen(true);
@@ -64,13 +64,13 @@ export default function ServicePage({ title, description, features, benefits, us
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="p-6 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-colors duration-300 cursor-pointer"
+                className="group p-6 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-all duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleItemClick(feature)}
               >
-                <p className="text-gray-300">{feature}</p>
+                <p className="text-gray-300 group-hover:text-blue-300 transition-colors">{feature}</p>
               </motion.div>
             ))}
           </div>
@@ -85,13 +85,13 @@ export default function ServicePage({ title, description, features, benefits, us
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="p-6 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-colors duration-300 cursor-pointer"
+                className="group p-6 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-all duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleItemClick(benefit)}
               >
-                <p className="text-gray-300">{benefit}</p>
+                <p className="text-gray-300 group-hover:text-blue-300 transition-colors">{benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -106,14 +106,14 @@ export default function ServicePage({ title, description, features, benefits, us
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                className="p-8 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-colors duration-300 cursor-pointer"
+                className="group p-8 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-all duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleItemClick(useCase.title)}
               >
-                <h3 className="text-xl font-bold text-blue-300 mb-4">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+                <h3 className="text-xl font-bold text-blue-300 mb-4 group-hover:text-blue-400 transition-colors">{useCase.title}</h3>
+                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -141,7 +141,7 @@ export default function ServicePage({ title, description, features, benefits, us
       </motion.section>
 
       {/* Modal */}
-      <Modal
+      <ProcessAutomationModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
         title={modalContent.title}
