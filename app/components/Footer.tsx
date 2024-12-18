@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="flex flex-col items-center md:items-start">
                 <div className="flex items-center mb-3">
                   <FaGlobe className="text-blue-400 mr-2 text-xl" />
-                  <a href="http://www.aitoolagents.com.au" className="hover:text-blue-400 transition-colors">
+                  <a href="https://www.aitoolagents.com.au" className="hover:text-blue-400 transition-colors">
                     www.aitoolagents.com.au
                   </a>
                 </div>
