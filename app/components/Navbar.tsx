@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import AnimatedBackground from './AnimatedBackground'
 import { useState } from 'react'
 import InfinityLogo from './InfinityLogo'
-import PixelAILogo from '../components/PixelAILogo';
 import HumanHead3D from '../components/HumanHead3D';
 
 const NavLink = ({ 

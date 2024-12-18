@@ -9,7 +9,7 @@ export default function NavbarCubeContainer() {
 
   return (
     <div 
-      className="fixed left-0 w-[100px] h-[100px] z-40" 
+      className="fixed left-0 w-[100px] h-[100px] z-40 hidden md:block" 
       ref={containerRef}
       style={{ top: '100px' }}  // Position it just below the navbar
     >
