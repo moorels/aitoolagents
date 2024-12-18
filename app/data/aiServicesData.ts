@@ -67,5 +67,109 @@ export const aiServicesDescriptions: Record<string, string> = {
 
   "Autonomous Operations": "Transform your business with self-managing AI systems that handle complex operational tasks independently. Our agentic solutions monitor, adjust, and optimize operations in real-time, ensuring efficient and effective performance while minimizing the need for human intervention.",
 
-  "Intelligent Resource Management": "Optimize your resource utilization with AI-driven management solutions. Our agentic systems intelligently allocate and manage resources across your organization, ensuring maximum efficiency and effectiveness while reducing waste and operational costs."
+  "Intelligent Resource Management": "Optimize your resource utilization with AI-driven management solutions. Our agentic systems intelligently allocate and manage resources across your organization, ensuring maximum efficiency and effectiveness while reducing waste and operational costs.",
+  
+   // AI Intergrationsnpm
+  "API Integration Framework": "Our comprehensive API Integration Framework provides a robust foundation for connecting diverse systems and applications. It offers standardized protocols, authentication mechanisms, and data transformation capabilities, enabling seamless communication between different software platforms while ensuring reliability and security.",
+
+  "Custom Connectors": "Develop and deploy tailored integration solutions with our Custom Connectors platform. These specialized adapters bridge the gap between unique systems and standard interfaces, supporting proprietary protocols and custom data formats. They enable seamless integration with legacy systems and specialized applications while maintaining data integrity.",
+
+  "Real-time Data Sync": "Enable instantaneous data synchronization across multiple systems and platforms with our Real-time Data Sync technology. This solution ensures consistent information across your entire infrastructure, supporting real-time updates, bidirectional synchronization, and conflict resolution to maintain data accuracy and reliability.",
+
+  "Secure Data Transfer": "Implement enterprise-grade security measures for all data movements with our Secure Data Transfer system. It incorporates advanced encryption protocols, secure authentication methods, and comprehensive audit trails to protect sensitive information during transmission and ensure compliance with data protection regulations.",
+
+  "Scalable Architecture": "Build future-ready solutions with our Scalable Architecture design. This flexible framework adapts to growing data volumes and increasing processing demands while maintaining optimal performance. It supports horizontal and vertical scaling, ensuring your integration infrastructure grows seamlessly with your business needs.",
+
+  "Multi-platform Support": "Achieve seamless integration across diverse operating systems and platforms with our comprehensive Multi-platform Support. This capability ensures consistent functionality across different environments, enabling unified operations regardless of the underlying technology stack.",
+
+  "Error Handling": "Maintain robust system reliability with our sophisticated Error Handling framework. It provides comprehensive error detection, logging, and recovery mechanisms, ensuring system stability and continuity even during unexpected events. This proactive approach minimizes downtime and maintains service quality.",
+
+  "Performance Monitoring": "Gain deep insights into your integration systems with our Performance Monitoring tools. Track key metrics, system health, and resource utilization in real-time. This capability enables proactive optimization, early problem detection, and informed capacity planning.",
+
+  "Seamless System Integration": "Achieve smooth interoperability between different applications and platforms with our Seamless System Integration approach. This solution eliminates data silos and streamlines information flow, creating a unified ecosystem that enhances operational efficiency and data accessibility.",
+
+  "Enhanced Functionality": "Expand your system capabilities with our Enhanced Functionality features. These advanced tools and features augment your existing infrastructure, adding new capabilities and improving system performance while maintaining compatibility with your current operations.",
+
+  "Improved Data Flow": "Optimize information movement across your organization with our Improved Data Flow solutions. This system ensures efficient data routing, processing, and delivery, reducing latency and enhancing the overall responsiveness of your integrated systems.",
+
+  "Reduced Implementation Time": "Accelerate your integration projects with our streamlined deployment processes. Our Reduced Implementation Time approach combines pre-built components, automated configuration tools, and best practices to significantly shorten the time from concept to production.",
+
+  "Cost-effective Solutions": "Maximize your return on investment with our Cost-effective Solutions. These optimized integration approaches reduce operational overhead, minimize resource requirements, and provide efficient scaling options while maintaining high-quality service delivery.",
+
+  "Future-proof Architecture": "Invest in long-term stability with our Future-proof Architecture design. This forward-thinking approach incorporates flexible technologies, extensible frameworks, and industry standards to ensure your integration infrastructure remains viable and adaptable to emerging technologies.",
+
+  "Enterprise System Integration": "Transform your enterprise infrastructure with our comprehensive System Integration solutions. This enterprise-grade framework connects complex business systems, applications, and data sources, creating a cohesive and efficient operational environment.",
+
+  "Data Pipeline Integration": "Streamline your data workflows with our Data Pipeline Integration platform. This solution enables efficient data collection, transformation, and distribution across your organization, supporting both batch processing and real-time data streaming requirements.",
+
+  "API Integration Services": "Leverage our comprehensive API Integration Services to connect and optimize your digital ecosystem. These services provide expert implementation, customization, and maintenance of API integrations, ensuring reliable and efficient system interactions while reducing development complexity.",
+
+// Security
+  "AI Model Protection": "Safeguard your AI models with our comprehensive protection framework. This solution implements advanced techniques including model encryption, access controls, and versioning to prevent unauthorized access, tampering, or theft of your valuable AI assets. It includes monitoring systems to detect and prevent model extraction attacks while ensuring legitimate model serving remains efficient.",
+
+  "Data Encryption": "Secure your sensitive data with state-of-the-art encryption technologies. Our solution provides end-to-end encryption for data at rest and in transit, utilizing industry-standard algorithms and key management systems. This comprehensive approach ensures your data remains protected across all storage locations and during transmission.",
+
+  "Access Control": "Implement granular access management with our sophisticated Access Control system. This solution provides role-based access control (RBAC), multi-factor authentication, and detailed audit logging. It ensures that only authorized personnel can access specific resources while maintaining comprehensive access records for security and compliance purposes.",
+
+  "Threat Detection": "Stay ahead of security threats with our advanced Threat Detection system. This solution employs AI-powered analysis to identify potential security breaches, unusual behavior patterns, and emerging threats in real-time. It provides early warning systems and automated response mechanisms to protect your infrastructure proactively.",
+
+  "Security Monitoring": "Maintain continuous oversight of your security posture with our comprehensive Security Monitoring platform. This system provides real-time visibility into security events, system health, and potential vulnerabilities across your entire infrastructure. It includes advanced analytics and alerting mechanisms to ensure rapid response to security incidents.",
+
+  "Compliance Management": "Streamline regulatory compliance with our integrated Compliance Management solution. This platform automates compliance monitoring, documentation, and reporting processes across multiple regulatory frameworks. It helps maintain continuous compliance while reducing the administrative burden of regulatory requirements.",
+
+  "Vulnerability Assessment": "Identify and address security weaknesses with our thorough Vulnerability Assessment tools. This solution conducts regular automated scans, penetration testing, and security evaluations to discover potential vulnerabilities before they can be exploited. It provides detailed reports and remediation recommendations to strengthen your security posture.",
+
+  "Incident Response": "React swiftly and effectively to security incidents with our automated Incident Response system. This solution provides predefined response protocols, automated containment measures, and coordinated recovery procedures to minimize the impact of security breaches and ensure rapid service restoration.",
+
+  "Enhanced Data Protection": "Elevate your data security with our Enhanced Data Protection framework. This comprehensive solution combines multiple security layers including encryption, access controls, and data loss prevention mechanisms to ensure maximum protection for your sensitive information while maintaining operational efficiency.",
+
+  "Regulatory Compliance": "Meet complex regulatory requirements with our automated Regulatory Compliance solutions. This platform provides tools and frameworks for maintaining compliance with various international standards and regulations, including automated assessments, documentation generation, and compliance reporting.",
+
+  "Risk Mitigation": "Minimize security risks with our proactive Risk Mitigation strategies. This solution employs advanced risk assessment methodologies, continuous monitoring, and automated response mechanisms to identify and address potential security threats before they impact your operations.",
+
+  "Operational Security": "Maintain robust security across all operational aspects with our comprehensive Operational Security framework. This solution integrates security best practices into daily operations, ensuring continuous protection while maintaining operational efficiency and productivity.",
+
+  "Trust and Reliability": "Build and maintain stakeholder confidence with our Trust and Reliability framework. This solution implements transparent security measures, regular security assessments, and clear communication channels to demonstrate your commitment to protecting sensitive information and maintaining system integrity.",
+
+  "Business Continuity": "Ensure uninterrupted operations with our Business Continuity solutions. This comprehensive approach combines disaster recovery planning, redundant systems, and automated failover mechanisms to maintain critical business functions during security incidents or system disruptions.",
+
+  "AI Model Security": "Protect your AI investments with our specialized AI Model Security framework. This solution provides comprehensive protection for machine learning models, including secure training environments, model integrity verification, and protection against adversarial attacks while ensuring model performance and accessibility.",
+
+  "Data Security": "Implement comprehensive protection for your sensitive information with our Data Security platform. This solution provides multi-layered security measures including encryption, access controls, data masking, and continuous monitoring to ensure data integrity and confidentiality throughout its lifecycle.",
+
+  "Automated Deployment": "Streamline your deployment process with our comprehensive Automated Deployment solution. This system orchestrates the entire deployment pipeline, from code compilation to production release, using intelligent automation that reduces human error and accelerates delivery. It includes built-in validation checks, automated testing, and deployment verification to ensure reliable releases.",
+
+// Deployment
+
+  "Environment Management": "Optimize your development and production environments with our Environment Management platform. This solution provides automated provisioning, configuration management, and environment synchronization capabilities. It ensures consistency across development, staging, and production environments while simplifying the management of complex infrastructure setups.",
+
+  "Version Control": "Maintain complete control over your codebase with our advanced Version Control system. This solution provides comprehensive version tracking, branching strategies, and merge management capabilities. It includes automated conflict resolution, code review workflows, and detailed change history to ensure code quality and team collaboration.",
+
+
+  "Scalability Options": "Adapt to changing demands with our flexible Scalability Options. This solution provides both horizontal and vertical scaling capabilities, with automated resource allocation and load balancing. It ensures your applications can handle increasing workloads while maintaining performance and cost efficiency.",
+
+  "Rollback Capabilities": "Maintain system stability with our robust Rollback Capabilities. This solution provides instant rollback mechanisms for code, configuration, and database changes. It includes automated state verification and recovery procedures to minimize downtime and ensure business continuity during deployment issues.",
+
+  "Deployment Testing": "Ensure deployment reliability with our comprehensive Deployment Testing framework. This solution automates pre-deployment validation, integration testing, and post-deployment verification. It includes automated test suite execution, environment validation, and performance testing to prevent deployment-related issues.",
+
+  "Infrastructure Management": "Optimize your infrastructure with our advanced Infrastructure Management platform. This solution provides automated resource provisioning, configuration management, and infrastructure monitoring capabilities. It ensures efficient resource utilization while maintaining system reliability and security.",
+
+  "Faster Time-to-Market": "Accelerate your product delivery with our Faster Time-to-Market solutions. This platform streamlines the entire deployment pipeline, reducing deployment cycles and automating manual processes. It enables rapid feature delivery while maintaining quality and reliability standards.",
+
+  "Reduced Deployment Risks": "Minimize deployment-related issues with our Reduced Deployment Risks framework. This solution implements automated risk assessment, staged deployments, and comprehensive testing procedures. It includes automated rollback capabilities and impact analysis to ensure safe and reliable deployments.",
+
+  "Improved Reliability": "Enhance system stability with our Improved Reliability solutions. This platform implements automated health checks, redundancy management, and failure recovery mechanisms. It ensures consistent system performance and minimizes service disruptions during deployments.",
+
+  "Cost Optimization": "Maximize resource efficiency with our Cost Optimization strategies. This solution provides intelligent resource allocation, usage monitoring, and cost analysis tools. It helps optimize infrastructure costs while maintaining system performance and reliability.",
+
+  "Seamless Updates": "Implement smooth system updates with our Seamless Updates platform. This solution provides zero-downtime deployment capabilities, automated update verification, and intelligent traffic management. It ensures continuous service availability during system updates and maintenance.",
+
+  "Enhanced Monitoring": "Maintain comprehensive system oversight with our Enhanced Monitoring tools. This solution provides real-time performance metrics, automated alerting, and detailed analytics capabilities. It helps identify and resolve potential issues before they impact your operations.",
+
+  "Production Deployment": "Execute reliable production releases with our Production Deployment system. This solution provides automated deployment pipelines, environment validation, and release management capabilities. It ensures consistent and reliable production deployments while minimizing risks and downtime.",
+
+  "Scalable Infrastructure": "Build flexible and resilient systems with our Scalable Infrastructure platform. This solution provides automated scaling capabilities, load balancing, and resource optimization features. It ensures your infrastructure can adapt to changing demands while maintaining performance and reliability.",
+
+  "Continuous Integration": "Streamline your development workflow with our Continuous Integration platform. This solution automates code integration, testing, and validation processes. It includes automated build pipelines, test execution, and quality checks to ensure consistent code quality and rapid development cycles."
+ 
 };
