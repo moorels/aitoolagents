@@ -74,7 +74,7 @@ export default function Navbar() {
               <HumanHead3D />
             </div>
             <div className="flex items-center">
-              <div className="flex-shrink-0 mr-1">
+              <div className="flex-shrink-0 mr-1 hidden md:block">
                 <InfinityLogo />
               </div>
               
