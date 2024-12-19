@@ -2,8 +2,7 @@
 import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
-import { generatePropertyManagementMetadata } from '../../metadata-config';
-export const metadata = generatePropertyManagementMetadata();
+
 
 export default function PropertyManagementPage() {
   return (
