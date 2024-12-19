@@ -2,10 +2,6 @@
 import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
-
-import { generateCustomerServiceMetadata } from '../../metadata-config';
-export const metadata = generateCustomerServiceMetadata();
-
 export default function CustomerServicePage() {
   return (
     <div>

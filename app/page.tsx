@@ -1,6 +1,5 @@
 'use client'
 import TypewriterText from './components/TypewriterText';
-import AINodeGraph from './components/AINodeGraph';
 import HumanFigure3D from './components/HumanFigure3D';
 import Chat from './components/Chat'
 

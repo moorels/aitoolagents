@@ -3,8 +3,7 @@ import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
 
-import { generateRetailAutomationMetadata } from '../../metadata-config';
-export const metadata = generateRetailAutomationMetadata();
+
 
 export default function RetailAutomationPage() {
   return (

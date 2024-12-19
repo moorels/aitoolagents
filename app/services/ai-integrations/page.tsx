@@ -2,8 +2,7 @@
 import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
-import { generateAiIntegrationsMetadata } from '../../metadata-config';
-export const metadata = generateAiIntegrationsMetadata(); 
+
 
 export default function AIIntegrationsPage() {
   return (
