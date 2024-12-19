@@ -2,6 +2,9 @@
 import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
+import { generateInsuranceMetadata } from '../../metadata-config';
+export const metadata = generateInsuranceMetadata();
+
 export default function InsurancePage() {
   return (
     <div>

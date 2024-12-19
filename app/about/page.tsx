@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Chat from '../components/Chat';
 
 
+
 interface TeamMember {
   name: string;
   role: string;

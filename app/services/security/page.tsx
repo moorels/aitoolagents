@@ -2,6 +2,9 @@
 import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
+import { generateSecurityMetadata } from '../../metadata-config';
+export const metadata = generateSecurityMetadata();
+
 export default function SecurityPage() {
   return (
     <div>

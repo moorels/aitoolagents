@@ -2,6 +2,10 @@
 import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
+
+import { generateDeploymentMetadata } from '../../metadata-config';
+export const metadata = generateDeploymentMetadata();
+
 export default function DeploymentPage() {
   return (
     <div>

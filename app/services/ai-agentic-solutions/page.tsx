@@ -2,6 +2,11 @@
 import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
+import { generateAIAgenticSolutionsMetadata } from '../../metadata-config';
+export const metadata = generateAIAgenticSolutionsMetadata();
+
+
+
 export default function AIAgenticSolutionsPage() {
   return (
     <div>

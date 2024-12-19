@@ -2,6 +2,10 @@
 import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
+
+import { generateCustomerCareMetadata } from '../../metadata-config';
+export const metadata = generateCustomerCareMetadata();
+
 export default function CustomerCarePage() {
   return (
     <div>

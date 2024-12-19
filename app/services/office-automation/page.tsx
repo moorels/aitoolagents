@@ -2,6 +2,9 @@
 import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
+import { generateOfficeAutomationMetadata } from '../../metadata-config';
+export const metadata = generateOfficeAutomationMetadata();
+
 export default function OfficeAutomationPage() {
   return (
     <div>

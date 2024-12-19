@@ -2,6 +2,10 @@
 import ServicePage from '../../components/ServicePage';
 import Chat from '../../components/Chat';
 
+import { generateHealthcareMetadata } from '../../metadata-config';
+export const metadata = generateHealthcareMetadata();
+
+
 export default function HealthcarePage() {
   return (
     <div>
