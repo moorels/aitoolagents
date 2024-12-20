@@ -70,6 +70,7 @@ export default function Sitemap() {
                 <Link href="/services/deployment" className="text-blue-600 hover:underline">
                   Deployment
                 </Link>
+                
               </li>
               <li>
                 <Link href="/services/healthcare" className="text-blue-600 hover:underline">
@@ -100,18 +101,10 @@ export default function Sitemap() {
                 <Link href="/services/security" className="text-blue-600 hover:underline">
                   Security
                 </Link>
+                
               </li>
             </ul>
           </div>
-        </section>
-
-        {/* Resources */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Legal & Resources</h2>
-          <ul className="space-y-2">
-            <li><Link href="/privacy-policy" className="text-blue-600 hover:underline">Privacy Policy</Link></li>
-            <li><Link href="/terms-of-service" className="text-blue-600 hover:underline">Terms of Service</Link></li>
-          </ul>
         </section>
       </div>
 
