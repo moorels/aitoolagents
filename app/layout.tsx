@@ -5,6 +5,7 @@ import "./styles/fonts.css";
 import Navbar from './components/Navbar'
 import NavbarCubeContainer from './components/NavbarCubeContainer'
 import Footer from './components/Footer'
+import { HoverSound } from './components/HoverSound';
 import { generateHomeMetadata } from './metadata-config';
 
 const geistMono = Geist_Mono({
@@ -28,6 +29,7 @@ export default function RootLayout({
           <NavbarCubeContainer />
           <Navbar />
         </div>
+        <HoverSound />
         <div className="pt-16">
           {children}
         </div>
