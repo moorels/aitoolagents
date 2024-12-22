@@ -21,7 +21,7 @@ export default function Home() {
               className="relative inline-flex items-center justify-center w-full h-full text-white hover:text-white/90 transition-colors duration-300"
             >
               <span className="flex items-center text-lg font-light">
-                <span className="mr-2 text-2xl md:text-1xl text-white-900 bg-blue-500/30 bg-opacity-70 rounded px-2 md:px-4 py-1 md:py-2">Click here to learn about AI Agents.</span>
+                <span className="mr-2 text-2xl md:text-1xl text-white-900 bg-blue-500/30 bg-opacity-70 rounded px-2 md:px-4 py-1 md:py-2">Click here to learn about AI Agents</span>
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </span>
             </Link>
