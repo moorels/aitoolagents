@@ -72,8 +72,8 @@ export default function AboutPage() {
             <h1 className="text-4xl font-bold mb-6 text-blue-500">
               About Our Team
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              We&apos;re not just a team of five; we&apos;re a passionate community dedicated to transforming the way businesses operate through cutting-edge AI solutions. Our journey began with a shared vision: to harness the power of artificial intelligence to help organizations thrive in an ever-evolving digital landscape.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">AI Tool Agents was founded in 2021 with a vision to make business automation accessible and efficient for companies of all sizes. Since then, we have helped over 70 businesses streamline their operations and enhance customer experiences.
+              We&apos;re a passionate community dedicated to transforming the way businesses operate through cutting-edge AI solutions. Our journey began with a shared vision, and we&apos;re committed to harness the power of artificial intelligence to help organizations thrive in an ever-evolving digital landscape.
             </p>
           </motion.div>
         </div>

@@ -8,9 +8,10 @@ interface TypewriterTextProps {
   delay?: number
 }
 
-const defaultText = "Welcome to AI Tool Agents Australia Business Solutions, your trusted partner in the future of AI. Where innovation meets intelligence, and possibilities are limitless."
+const defaultText = "Welcome to AI Tool Agents Australia Business Solutions, your trusted partner in the future of AI. Where innovation meets intelligence, and possibilities are limitless." 
 
-const services = [
+
+  const services = [
   "Our company can offer a variety of business service solutions to its clients. Including :",
 "",
   "Virtual Customer Service Agents",
@@ -53,7 +54,7 @@ export default function TypewriterText({ text = defaultText, delay = 70 }: Typew
 
   return (
     <div>
-      <div className="text-3xl font-medium text-gray-200">
+      <div className="text-3xl font-thin text-gray-200">
         {displayText}
         <span className="animate-pulse">|</span>
       </div>
