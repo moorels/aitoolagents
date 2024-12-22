@@ -24,17 +24,17 @@ const implementationSteps: ImplementationStep[] = [
     steps: [
       {
         title: "Starting Small: Basic Customer Support",
-        description: "Begin with simple chatbots that can answer frequently asked questions like 'What are your business hours?' or 'How do I reset my password?' These AI agents work like a very smart FAQ system that can understand questions even when they're asked in different ways.",
-        example: "For example, if someone asks 'When do you close?' or 'Are you open now?', the AI understands they're asking about business hours."
+        description: "Begin with simple chatbots that can answer frequently asked questions like What are your business hours? or How do I reset my password? These AI agents work like a very smart FAQ system that can understand questions even when they are asked in different ways.",
+        example: "For example, if someone asks When do you close ? or Are you open now ?, the AI understands they are asking about business hours."
       },
       {
         title: "Building the Knowledge Base",
-        description: "Next, we teach the AI agent about your specific business. This is like creating a digital library of all your company's information, products, and services. The AI learns to use this information to give accurate, helpful answers about your specific offerings.",
-        example: "If you're a retail store, the AI can learn about your return policy, shipping options, and current inventory to provide precise answers about these topics."
+        description: "Next, we teach the AI agent about your specific business. This is like creating a digital library of all your company, information, products, and services. The AI learns to use this information to give accurate, helpful answers about your specific offerings.",
+        example: "If you have a retail store, the AI can learn about your return policy, shipping options, and current inventory to provide precise answers about these topics."
       },
       {
         title: "Adding Problem-Solving Abilities",
-        description: "Now we give the AI agent more capabilities, like helping customers track orders, process returns, or solve technical issues. It's like training a virtual employee who can handle multiple tasks at once.",
+        description: "Now we give the AI agent more capabilities, like helping customers track orders, process returns, or solve technical issues. It is like training a virtual employee who can handle multiple tasks at once.",
         example: "The AI can now help a customer track their package, initiate a return, and suggest similar products they might like - all in one conversation."
       },
       {
@@ -50,29 +50,29 @@ const implementationSteps: ImplementationStep[] = [
     steps: [
       {
         title: "Watching and Learning",
-        description: "First, AI agents observe how your business operates. They collect and analyze data about things like how long tasks take, where delays happen, and what patterns exist in your daily operations. It's like having a very attentive assistant who never misses a detail.",
+        description: "First, AI agents observe how your business operates. They collect and analyze data about things like how long tasks take, where delays happen, and what patterns exist in your daily operations. It is like having a very attentive assistant who never misses a detail.",
         example: "The AI might notice that shipping delays often occur on Mondays due to weekend order buildups, allowing you to adjust staffing accordingly."
       },
       {
         title: "Predictive Planning",
-        description: "Next, the AI starts predicting what might happen in the future based on past patterns. This helps prevent problems before they occur and helps you plan better. It's similar to having a weather forecast, but for your business operations.",
+        description: "Next, the AI starts predicting what might happen in the future based on past patterns. This helps prevent problems before they occur and helps you plan better. It is similar to having a weather forecast, but for your business operations.",
         example: "The AI can predict when a machine might need maintenance based on its performance patterns, helping you schedule repairs before it breaks down."
       },
       {
         title: "Smart Inventory Management",
-        description: "The AI then helps manage your inventory by automatically tracking stock levels, predicting when you'll need to reorder, and even suggesting optimal quantities. It's like having a manager who always knows exactly what's in stock and what's needed.",
+        description: "The AI then helps manage your inventory by automatically tracking stock levels, predicting when you might need to reorder, and even suggesting optimal quantities. It is like having a manager who always knows exactly what is in stock and what is needed.",
         example: "If a product typically sells more during summer, the AI will automatically suggest ordering more stock as summer approaches."
       },
       {
         title: "Process Automation",
         description: "Finally, the AI can start automating routine tasks and making real-time adjustments to improve efficiency. This is like having a skilled coordinator who can instantly respond to changes and keep everything running smoothly.",
-        example: "If a delivery truck is running late, the AI can automatically adjust the day's schedule and notify affected customers."
+        example: "If a delivery truck is running late, the AI can automatically adjust the day of schedule and notify affected customers."
       }
     ]
   },
   {
     sector: "Finance & Accounting",
-    description: "In finance and accounting, AI agents serve as highly accurate assistants that can process numbers, detect patterns, and help make financial decisions. They're like having a team of accountants who can work instantly and never make calculation errors.",
+    description: "In finance and accounting, AI agents serve as highly accurate assistants that can process numbers, detect patterns, and help make financial decisions. They help make everything run more smoothly and efficiently. They like having a team of accountants who can work instantly and never make calculation errors.",
     steps: [
       {
         title: "Basic Document Processing",
@@ -86,7 +86,7 @@ const implementationSteps: ImplementationStep[] = [
       },
       {
         title: "Automated Reporting",
-        description: "The AI then starts generating automated financial reports and analysis. It can create daily, weekly, or monthly reports automatically, saving time and ensuring consistency. It's like having a financial analyst who can instantly create detailed reports whenever needed.",
+        description: "The AI then starts generating automated financial reports and analysis. It can create daily, weekly, or monthly reports automatically, saving time and ensuring consistency. It is like having a financial analyst who can instantly create detailed reports whenever needed.",
         example: "At the end of each month, the AI can automatically generate profit and loss statements, expense reports, and budget comparisons."
       },
       {
@@ -119,10 +119,10 @@ export default function AIAgentsExplainedPage() {
               Understanding AI Agents: Your Digital Workforce
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6">
-              Imagine having helpful assistants who never get tired, can work 24/7, and keep getting better at their jobs. That's what AI agents are - they're like smart digital employees that can help your business in many different ways.
+              Imagine having helpful assistants who never get tired, can work 24/7, and keep getting better at their jobs. That is what AI agents are - they are like smart digital employees that can help your business in many different ways.
             </p>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Whether you're new to AI or just exploring possibilities, we'll explain everything in simple terms and show you how these digital helpers can transform your business operations.
+              Whether you are new to AI or just exploring possibilities, we want to explain everything in simple terms and show you how these digital helpers can transform your business operations.
             </p>
           </motion.div>
         </div>
@@ -145,7 +145,7 @@ export default function AIAgentsExplainedPage() {
               </p>
             </div>
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-blue-300">They're Always Learning</h3>
+              <h3 className="text-xl font-semibold mb-4 text-blue-300">They Are Always Learning</h3>
               <p className="text-gray-300">
                 Just like new employees learn and improve over time, AI agents get better at their tasks the more they work. They learn from every interaction and can adapt to new situations, making them increasingly valuable to your business.
               </p>
@@ -171,8 +171,8 @@ export default function AIAgentsExplainedPage() {
                 icon: "🌙"
               },
               {
-                title: "They're Fast and Accurate",
-                description: "AI agents can process information and complete tasks much faster than humans, and they don't make mistakes from being tired or distracted. They can handle hundreds of tasks simultaneously with consistent accuracy.",
+                title: "They Are Fast and Accurate",
+                description: "AI agents can process information and complete tasks much faster than humans, and they can never make mistakes from being tired or distracted. They can handle hundreds of tasks simultaneously with consistent accuracy.",
                 icon: "⚡"
               },
               {
@@ -222,7 +222,7 @@ export default function AIAgentsExplainedPage() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-blue-400">Getting Started with AI Agents</h2>
           <p className="text-xl text-gray-300 mb-12">
-            Starting with AI agents doesn't mean completely changing how your business works overnight. Instead, we recommend a step-by-step approach in different areas of your business. Here's how we can help you begin:
+            Starting with AI agents does not mean completely changing how your business works overnight. Instead, we recommend a step-by-step approach in different areas of your business. Here is how we can help you begin:
           </p>
           <div className="space-y-16">
             {implementationSteps.map((sector, sectorIndex) => (
@@ -308,7 +308,7 @@ export default function AIAgentsExplainedPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-blue-400">Ready to Explore AI Agents?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's start with a friendly chat about your business and how AI agents could help. We'll explain everything in plain language and help you find the perfect starting point for your journey into AI.
+            Let us start with a friendly chat about your business and how AI agents could help. We will explain everything in plain language and help you find the perfect starting point for your journey into AI.
           </p>
           
         </div>
