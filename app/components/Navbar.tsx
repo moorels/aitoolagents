@@ -24,7 +24,7 @@ const NavLink = ({
         router.push(href)
         onClick?.()
       }}
-      className="px-3 py-1 text-sm text-gold hover:text-green transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-gold transition-colors duration-200"
+      className="px-3 py-1 text-sm text-gold hover:text-green transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-gold transition-colors duration-100"
     >
       {children}
     </button>
