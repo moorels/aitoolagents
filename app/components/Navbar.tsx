@@ -63,7 +63,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 border-b border-blue-500/20 bg-gradient-to-b from-black/50 to-transparent backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 z-50 border-b border-blue-500/20 bg-[#FFD700] backdrop-blur-sm"
     >
       <AnimatedBackground />
       <div className="relative max-w-7xl mx-auto px-4 h-full">
@@ -80,7 +80,7 @@ export default function Navbar() {
               
               <button
                 onClick={() => router.push('/')}
-                className="text-sm font-medium text-white px-3 py-1 bg-gold hover:bg-gold-500/20 hover:text-white transition-colors duration-200"
+                className="text-sm font-medium text-white px-3 py-1 bg-[#FFD700] hover:bg-[#FFe700] hover:text-white transition-colors duration-200"
               >
                 AI TOOL AGENTS
               </button>
@@ -103,7 +103,7 @@ export default function Navbar() {
                     {link}
                   </NavLink>
                   {link === 'Solutions' && showDesktopSolutions && (
-                    <div className="absolute left-0 w-64 bg-gold shadow-lg py-1">
+                    <div className="absolute left-0 w-64 bg-[#FFD700] shadow-lg py-1">
                       {solutionsLinks.map((solution) => (
                         <button
                           key={solution.path}
@@ -111,7 +111,7 @@ export default function Navbar() {
                             router.push(solution.path)
                             setShowDesktopSolutions(false)
                           }}
-                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-gold-500/20 hover:text-white transition-colors duration-200"
+                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-[#FFe700] hover:text-white transition-colors duration-200"
                         >
                           {solution.name}
                         </button>
@@ -119,7 +119,7 @@ export default function Navbar() {
                     </div>
                   )}
                   {link === 'Platforms' && showDesktopPlatforms && (
-                    <div className="absolute left-0 w-64 bg-gold shadow-lg py-1">
+                    <div className="absolute left-0 w-64 bg-[#FFD700] shadow-lg py-1">
                       {platformsLinks.map((platform) => (
                         <button
                           key={platform.path}
@@ -127,7 +127,7 @@ export default function Navbar() {
                             router.push(platform.path)
                             setShowDesktopPlatforms(false)
                           }}
-                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-[#FFe700] hover:text-white transition-colors duration-200"
                         >
                           {platform.name}
                         </button>
