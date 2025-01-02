@@ -83,8 +83,8 @@ const HumanFigure3D = () => {
         opacity: 1,
       }),
       glow2: new THREE.MeshPhysicalMaterial({
-        color: new THREE.Color('#60A5FA'),
-        emissive: new THREE.Color('#60A5FA'),
+        color: new THREE.Color('#FFD700'),
+        emissive: new THREE.Color('#FFD700'),
         emissiveIntensity: 0.5,
         transparent: true,
         opacity: 1,

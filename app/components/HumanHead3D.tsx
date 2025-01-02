@@ -45,8 +45,8 @@ const HumanHead3D = () => {
         opacity: 0.9,
       }),
       glow2: new THREE.MeshPhysicalMaterial({
-        color: new THREE.Color('#FFFFFF'),
-        emissive: new THREE.Color('#FFFFFF'),
+        color: new THREE.Color('#FFD700'),
+        emissive: new THREE.Color('#FFD700'),
         emissiveIntensity: 0.6,
         transparent: true,
         opacity: 0.8,
