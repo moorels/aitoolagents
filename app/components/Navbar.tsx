@@ -80,7 +80,7 @@ export default function Navbar() {
               
               <button
                 onClick={() => router.push('/')}
-                className="text-sm font-medium text-white px-3 py-1 bg-gray-800 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                className="text-sm font-medium text-white px-3 py-1 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
               >
                 AI TOOL AGENTS
               </button>
@@ -111,7 +111,7 @@ export default function Navbar() {
                             router.push(solution.path)
                             setShowDesktopSolutions(false)
                           }}
-                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                         >
                           {solution.name}
                         </button>
@@ -127,7 +127,7 @@ export default function Navbar() {
                             router.push(platform.path)
                             setShowDesktopPlatforms(false)
                           }}
-                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                         >
                           {platform.name}
                         </button>
@@ -171,7 +171,7 @@ export default function Navbar() {
 
         {/* Mobile menu */}
         <motion.div
-          className={`absolute top-12 left-0 right-0 bg-black/90 backdrop-blur-sm border-b border-blue-500/20 ${
+          className={`absolute top-12 left-0 right-0 bg-black/90 backdrop-blur-sm border-b border-blue-500/20 text-[#dfb406] ${
             isOpen ? 'block' : 'hidden'
           } md:hidden`}
           initial={{ opacity: 0, y: -10 }}
@@ -185,7 +185,7 @@ export default function Navbar() {
                   <div>
                     <button
                       onClick={() => setShowMobileSolutions(!showMobileSolutions)}
-                      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                     >
                       {link}
                     </button>
@@ -199,7 +199,7 @@ export default function Navbar() {
                               setIsOpen(false)
                               setShowMobileSolutions(false)
                             }}
-                            className="block w-full text-left px-3 py-1 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                            className="block w-full text-left px-3 py-1 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                           >
                             {solution.name}
                           </button>
@@ -211,7 +211,7 @@ export default function Navbar() {
                   <div>
                     <button
                       onClick={() => setShowMobilePlatforms(!showMobilePlatforms)}
-                      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                     >
                       {link}
                     </button>
