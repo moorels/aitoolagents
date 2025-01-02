@@ -29,13 +29,13 @@ export default function ServiceModal({ isOpen, onClose, title, content }: Servic
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          className="bg-gray-900 rounded-lg p-6 max-w-2xl mx-auto mt-24 relative z-50 max-h-[calc(100vh-8rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-blue-600 scrollbar-track-gray-800"
+          className="bg-gray-900 rounded-lg p-6 max-w-2xl mx-auto mt-24 relative z-50 max-h-[calc(100vh-8rem)] overflow-y-auto scrollbar-thin scrollbar-thumb-[#dfb406] scrollbar-track-gray-800"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close Button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+            className="absolute top-4 right-4 text-[#dfb406] hover:text-[#efb406] transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -44,7 +44,7 @@ export default function ServiceModal({ isOpen, onClose, title, content }: Servic
 
           {/* Content */}
           <div className="p-6">
-            <h2 className="text-2xl font-bold text-blue-500 mb-4">{title}</h2>
+            <h2 className="text-2xl font-bold text-[#dfb406] mb-4">{title}</h2>
             
             <div className="space-y-6">
               {/* Description */}
