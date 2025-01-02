@@ -46,7 +46,7 @@ export default function ServicePage({ title, description, features, benefits, us
             initial="initial"
             animate="animate"
           >
-            <h1 className="text-4xl font-bold mb-6 text-blue-500">
+            <h1 className="text-4xl font-bold mb-6 text-[#dfb406]">
               {title}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -59,7 +59,7 @@ export default function ServicePage({ title, description, features, benefits, us
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center">Key Features</h2>
+          <h2 className="text-3xl font-bold text-[#dfb406] mb-8 text-center">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -80,7 +80,7 @@ export default function ServicePage({ title, description, features, benefits, us
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center">Benefits</h2>
+          <h2 className="text-3xl font-bold text-[#dfb406] mb-8 text-center">Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -101,7 +101,7 @@ export default function ServicePage({ title, description, features, benefits, us
       {/* Use Cases Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-blue-400 mb-8 text-center">Use Cases</h2>
+          <h2 className="text-3xl font-bold text-[#dfb406] mb-8 text-center">Use Cases</h2>
           <div className="grid grid-cols-1 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
@@ -112,7 +112,7 @@ export default function ServicePage({ title, description, features, benefits, us
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleItemClick(useCase.title)}
               >
-                <h3 className="text-xl font-bold text-blue-300 mb-4">{useCase.title}</h3>
+                <h3 className="text-xl font-bold text-[#dfb406] mb-4">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
             ))}
@@ -128,12 +128,12 @@ export default function ServicePage({ title, description, features, benefits, us
         transition={{ delay: 0.8 }}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl text-gray-300 leading-relaxed mb-8">
+          <p className="text-xl text-[#dfb406] leading-relaxed mb-8">
             Ready to transform your business with our {title.toLowerCase()}?
           </p>
           <a 
             href="/contact" 
-            className="inline-block bg-blue-500 text-white px-8 py-4 text-lg font-semibold hover:bg-blue-600 transition-colors duration-300"
+            className="inline-block bg-[#dfb406] text-white px-8 py-4 text-lg font-semibold hover:bg-[#efb406] transition-colors duration-300"
           >
             Contact Us Today
           </a>

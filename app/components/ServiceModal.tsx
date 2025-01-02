@@ -56,7 +56,7 @@ export default function ServiceModal({ isOpen, onClose, title, content }: Servic
 
               {/* Key Benefits */}
               <div>
-                <h3 className="text-xl font-semibold text-blue-400 mb-3">Key Benefits</h3>
+                <h3 className="text-xl font-semibold text-[#dfb406] mb-3">Key Benefits</h3>
                 <ul className="list-disc list-inside space-y-2">
                   {content.benefits.map((benefit, index) => (
                     <li key={index} className="text-gray-300">{benefit}</li>
@@ -66,7 +66,7 @@ export default function ServiceModal({ isOpen, onClose, title, content }: Servic
 
               {/* Implementation Steps */}
               <div>
-                <h3 className="text-xl font-semibold text-blue-400 mb-3">Implementation Process</h3>
+                <h3 className="text-xl font-semibold text-[#dfb406] mb-3">Implementation Process</h3>
                 <ul className="list-decimal list-inside space-y-2">
                   {content.implementation.map((step, index) => (
                     <li key={index} className="text-gray-300">{step}</li>
@@ -76,7 +76,7 @@ export default function ServiceModal({ isOpen, onClose, title, content }: Servic
 
               {/* Success Metrics */}
               <div>
-                <h3 className="text-xl font-semibold text-blue-400 mb-3">Success Metrics</h3>
+                <h3 className="text-xl font-semibold text-[#dfb406] mb-3">Success Metrics</h3>
                 <ul className="list-disc list-inside space-y-2">
                   {content.metrics.map((metric, index) => (
                     <li key={index} className="text-gray-300">{metric}</li>

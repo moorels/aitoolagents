@@ -57,7 +57,7 @@ export default function Modal({ isOpen, onClose, title, content }: ModalProps) {
             </button>
             <div>
               <motion.h3 
-                className="text-2xl font-semibold text-blue-400 mb-4"
+                className="text-2xl font-semibold text-[#dfb406] mb-4"
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.1 }}
