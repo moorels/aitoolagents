@@ -63,7 +63,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 border-b border-blue-500/20 bg-gradient-to-b from-black/50 to-transparent backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 z-50 border-b border-blue-500/20 bg-gradient-to-b from-black/50 to-transparent backdrop-blur-sm text-[#dfb406]"
     >
       <AnimatedBackground />
       <div className="relative max-w-7xl mx-auto px-4 h-full">
@@ -185,7 +185,7 @@ export default function Navbar() {
                   <div>
                     <button
                       onClick={() => setShowMobileSolutions(!showMobileSolutions)}
-                      className="px-3 py-1 text-sm text-[edce54] hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                      className="px-3 py-1 text-sm text-[edce54] hover:text-[#dfb406] transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                     >
                       {link}
                     </button>
@@ -225,7 +225,7 @@ export default function Navbar() {
                               setIsOpen(false)
                               setShowMobilePlatforms(false)
                             }}
-                            className="block w-full text-left px-3 py-1 text-sm text-[edce54] hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                            className="block w-full text-left px-3 py-1 text-sm text-[edce54] hover:bg-blue-500/20 hover:text-[#dfb406]transition-colors duration-200"
                           >
                             {platform.name}
                           </button>
