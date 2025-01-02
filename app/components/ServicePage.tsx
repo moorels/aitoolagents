@@ -64,13 +64,13 @@ export default function ServicePage({ title, description, features, benefits, us
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="p-6 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-colors duration-300 cursor-pointer"
+                className="p-6 bg-gray-900/50 border border-gray-800/50 hover:border-[#c49d17] transition-colors duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleItemClick(feature)}
               >
-                <p className="text-gray-300">{feature}</p>
+                <p className="text-[#c49d17]">{feature}</p>
               </motion.div>
             ))}
           </div>
@@ -85,13 +85,13 @@ export default function ServicePage({ title, description, features, benefits, us
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="p-6 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-colors duration-300 cursor-pointer"
+                className="p-6 bg-gray-900/50 border border-gray-800/50 hover:border-[#c49d17] transition-colors duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleItemClick(benefit)}
               >
-                <p className="text-gray-300">{benefit}</p>
+                <p className="text-[#c49d17]">{benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -106,7 +106,7 @@ export default function ServicePage({ title, description, features, benefits, us
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                className="p-8 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-colors duration-300 cursor-pointer"
+                className="p-8 bg-gray-900/50 border border-gray-800/50 hover:border-[#c49d17] transition-colors duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}

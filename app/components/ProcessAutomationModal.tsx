@@ -41,7 +41,7 @@ export default function ProcessAutomationModal({ isOpen, onClose, title, content
             onClick={onClose}
           />
           <motion.div 
-            className="relative bg-gray-900 rounded-lg p-8 max-w-lg w-full mx-4 shadow-xl border border-blue-500/20"
+            className="relative bg-gray-900 rounded-lg p-8 max-w-lg w-full mx-4 shadow-xl border border-[#c49d17]"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
@@ -57,7 +57,7 @@ export default function ProcessAutomationModal({ isOpen, onClose, title, content
             </button>
             <div>
               <motion.h3 
-                className="text-2xl font-semibold text-blue-400 mb-4"
+                className="text-2xl font-semibold text-[#c49d17] mb-4"
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.1 }}
@@ -72,7 +72,7 @@ export default function ProcessAutomationModal({ isOpen, onClose, title, content
               >
                 <div className="relative">
                   <p className="text-[15px] leading-relaxed">{content}</p>
-                  <span className="animate-pulse absolute -right-4 text-blue-400">|</span>
+                  <span className="animate-pulse absolute -right-4 text-[#c49d17]">|</span>
                 </div>
               </motion.div>
             </div>
