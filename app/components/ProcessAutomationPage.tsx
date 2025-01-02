@@ -64,13 +64,13 @@ export default function ProcessAutomationPage({ title, description, features, be
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="group p-6 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-all duration-300 cursor-pointer"
+                className="group p-6 bg-gray-900/50 border border-gray-800/50 hover:border-[#c49d17] transition-all duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleItemClick(feature)}
               >
-                <p className="text-gray-300 group-hover:text-blue-300 transition-colors">{feature}</p>
+                <p className="text-gray-300 group-hover:text-[#c49d17] transition-colors">{feature}</p>
               </motion.div>
             ))}
           </div>
@@ -85,7 +85,7 @@ export default function ProcessAutomationPage({ title, description, features, be
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="group p-6 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-all duration-300 cursor-pointer"
+                className="group p-6 bg-gray-900/50 border border-gray-800/50 hover:border-[#c49d17] transition-all duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -106,7 +106,7 @@ export default function ProcessAutomationPage({ title, description, features, be
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                className="group p-8 bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-all duration-300 cursor-pointer"
+                className="group p-8 bg-gray-900/50 border border-gray-800/50 hover:border-[#c49d17] transition-all duration-300 cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}

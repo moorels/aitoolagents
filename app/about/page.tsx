@@ -86,7 +86,7 @@ export default function AboutPage() {
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
-                className="flex flex-col md:flex-row items-center gap-8 bg-gray-900/50 p-8 rounded-lg border border-gray-800/50 hover:border-blue-500/50 transition-colors duration-300"
+                className="flex flex-col md:flex-row items-center gap-8 bg-gray-900/50 p-8 rounded-lg border border-gray-800/50 hover:border-[#c49d17] transition-colors duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
@@ -98,7 +98,7 @@ export default function AboutPage() {
                     fill
                     className="rounded-full object-cover"
                   />
-                  <div className="absolute inset-0 rounded-full border-2 border-blue-500/50"></div>
+                  <div className="absolute inset-0 rounded-full border-2 border-[#c49d17]"></div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl font-bold mb-2 text-[#c49d17]">{member.name}</h3>

@@ -198,7 +198,7 @@ export default function AIAgentsExplainedPage() {
             ].map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                className="p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-blue-500/50 transition-colors duration-300"
+                className="p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-[#c49d17] transition-colors duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
