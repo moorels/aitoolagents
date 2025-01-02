@@ -5,7 +5,7 @@ import RobotFooter from './Robotfooter';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8 border-t border-[#dfb406] animated-border">
+    <footer className="bg-gray-900 text-white py-8 border-t border-[#915b07] animated-border">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center md:items-start">
           <div className="hidden md:block w-32 h-32 md:w-40 md:h-40 mb-6 md:mb-0 md:mr-8">
