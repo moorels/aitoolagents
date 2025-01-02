@@ -139,13 +139,13 @@ export default function AIAgentsExplainedPage() {
           <h2 className="text-3xl font-bold mb-8 text-[#c49d17]">What Exactly Are AI Agents?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-blue-300">Think of Them As Digital Employees</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#c49d17]">Think of Them As Digital Employees</h3>
               <p className="text-gray-300">
                 AI agents are like smart computer programs that can understand and perform tasks just like human employees would. They can read documents, answer questions, make decisions, and even learn from experience to get better at their jobs.
               </p>
             </div>
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-blue-300">They Are Always Learning</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#c49d17]">They Are Always Learning</h3>
               <p className="text-gray-300">
                 Just like new employees learn and improve over time, AI agents get better at their tasks the more they work. They learn from every interaction and can adapt to new situations, making them increasingly valuable to your business.
               </p>
@@ -204,7 +204,7 @@ export default function AIAgentsExplainedPage() {
                 transition={{ delay: index * 0.1 }}
               >
                 <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold mb-3 text-blue-300">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
@@ -233,7 +233,7 @@ export default function AIAgentsExplainedPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: sectorIndex * 0.2 }}
               >
-                <h3 className="text-2xl font-semibold mb-4 text-blue-300">{sector.sector}</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-[#c49d17]">{sector.sector}</h3>
                 <p className="text-gray-300 mb-8">{sector.description}</p>
                 <div className="space-y-6">
                   {sector.steps.map((step, stepIndex) => (
@@ -241,7 +241,7 @@ export default function AIAgentsExplainedPage() {
                       key={step.title}
                       className="bg-gray-900/50 p-6 rounded-lg border border-gray-600"
                     >
-                      <h4 className="text-xl font-semibold mb-3 text-blue-200">
+                      <h4 className="text-xl font-semibold mb-3 text-[#c49d17]">
                         Step {stepIndex + 1}: {step.title}
                       </h4>
                       <p className="text-gray-300 mb-4">{step.description}</p>
@@ -290,7 +290,7 @@ export default function AIAgentsExplainedPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <h3 className="text-xl font-semibold mb-3 text-blue-300">{item.question}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">{item.question}</h3>
                 <p className="text-gray-300">{item.answer}</p>
               </motion.div>
             ))}
