@@ -5,7 +5,7 @@ import RobotFooter from './Robotfooter';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8 border-t border-black animated-border">
+    <footer className="bg-gray-900 text-white py-8 border-t border-[#dfb406] animated-border">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center md:items-start">
           <div className="hidden md:block w-32 h-32 md:w-40 md:h-40 mb-6 md:mb-0 md:mr-8">
@@ -60,7 +60,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col items-center md:items-start">
                 <div className="flex items-center">
-                  <FaMapMarkerAlt className="text-[#dfb406] mr-2 text-xl" />
+                  <FaMapMarkerAlt className="text-[#dfb406] mr-2 text-xl " />
                   <address className="not-italic">
                     350 Collins St,<br />
                     Melbourne VIC 3000
@@ -68,8 +68,8 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center mt-8 pt-8 border-t border-gray-700">
-              <p>&copy; {new Date().getFullYear()} AI Tool Agents Australia. All rights reserved.</p>
+            <div className="text-center mt-8 pt-8 border-t border-gray-700 ">
+              <p className="text-[#dfb406]">&copy; {new Date().getFullYear()} AI Tool Agents Australia. All rights reserved.</p>
             </div>
           </div>
         </div>
