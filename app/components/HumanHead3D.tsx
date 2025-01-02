@@ -107,7 +107,7 @@ const HumanHead3D = () => {
 
     // Add more swirling lights
     const createSwirlingLight = (color: number, intensity: number) => {
-      const light = new THREE.PointLight(color, intensity, 10);
+      const light = new THREE.PointLight(color, intensity, 20);
       scene.add(light);
       return light;
     };
