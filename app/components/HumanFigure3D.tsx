@@ -64,7 +64,7 @@ const HumanFigure3D = () => {
     };
 
     const materials = {
-      primary: createMaterial('#4B5563'),
+      primary: createMaterial('#ce9b38'),
       secondary: createMaterial('#9CA3AF'),
       accent: createMaterial('#60A5FA'),
       detail: createMaterial('#1F2937'),
