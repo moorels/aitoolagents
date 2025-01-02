@@ -25,10 +25,10 @@ export default function NavbarCube2() {
 
     // Array of colors
     const colors = [
-      '#9CA3AF',  // gray-400
-      '#4B5563',  // gray-600
-      '#1F2937',  // gray-800
-      '#111827',  // gray-900
+      '#ffc438',  // gray-400
+      '#c7f662',  // gray-600
+      '#fdc736',  // gray-800
+      '#fd9d36',  // gray-900
     ];
     const cubes: CubeInfo[] = [];
 

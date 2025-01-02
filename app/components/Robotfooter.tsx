@@ -93,8 +93,8 @@ const Robotfooter = () => {
     };
 
     const materials = {
-      primary: createMaterial('#4B5563'),
-      secondary: createMaterial('#9CA3AF'),
+      primary: createMaterial('#3e567e'),
+      secondary: createMaterial('#fdb72f'),
       accent: createMaterial('#60A5FA'),
       detail: createMaterial('#1F2937'),
       glow: new THREE.MeshPhysicalMaterial({
