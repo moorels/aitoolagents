@@ -316,7 +316,7 @@ export default function AIAgentsExplainedPage() {
          
           <a 
             href="/contact" 
-            className="inline-block text-[#c49d17] text-white px-8 py-4 text-lg font-semibold hover:bg-blue-600 transition-colors duration-300"
+            className="inline-block bg-[#c49d17] text-white px-8 py-4 text-lg font-semibold hover:bg-[#f49d17] transition-colors duration-300"
           >
             Schedule a Free Consultation
           </a>

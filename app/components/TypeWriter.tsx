@@ -67,7 +67,7 @@ export default function TypeWriter({
         >
           <button
             onClick={() => handleServiceClick(message)}
-            className="text-gray-300 hover:text-blue-500 transition-colors duration-300 text-left w-full"
+            className="text-gray-300 hover:text-[#c49d17] transition-colors duration-300 text-left w-full"
           >
             {message}
           </button>
