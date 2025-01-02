@@ -70,8 +70,8 @@ const PixelTitle = () => {
   };
 
   const colors = [
-    '#111827',  // gray-900
-    '#9CA3AF',  // gray-400
+    '#ffc600',  // gray-900
+    '#ff9c00',  // gray-400
    
     
   ];

@@ -13,12 +13,12 @@ const Footer = () => {
           </div>
           <div className="flex-1">
             <div className="text-center md:text-left mb-6">
-              <h2 className="text-2xl font-bold">AI TOOL AGENTS AUSTRALIA</h2>
+              <h2 className="text-2xl font-bold text-[#dfb406]">AI TOOL AGENTS AUSTRALIA</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="flex flex-col items-center md:items-start">
                 <div className="flex items-center mb-3">
-                  <FaGlobe className="text-blue-400 mr-2 text-xl" />
+                  <FaGlobe className="text-[#dfb406] mr-2 text-xl" />
                   <a href="https://www.aitoolagents.com.au" className="hover:text-blue-400 transition-colors">
                     www.aitoolagents.com.au
                   </a>
@@ -26,19 +26,19 @@ const Footer = () => {
               </div>
               <div className="flex flex-col items-center md:items-start space-y-3">
                 <div className="flex items-center">
-                  <FaEnvelope className="text-blue-400 mr-2 text-xl" />
+                  <FaEnvelope className="text-[#dfb406] mr-2 text-xl" />
                   <a href="mailto:info@aitoolagents.com.au" className="hover:text-blue-400 transition-colors">
                     info@aitoolagents.com.au
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <FaEnvelope className="text-blue-400 mr-2 text-xl" />
+                  <FaEnvelope className="text-[#dfb406] mr-2 text-xl" />
                   <a href="mailto:help@aitoolagents.com.au" className="hover:text-blue-400 transition-colors">
                     help@aitoolagents.com.au
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <FaEnvelope className="text-blue-400 mr-2 text-xl" />
+                  <FaEnvelope className="text-[#dfb406] mr-2 text-xl" />
                   <a href="mailto:sales@aitoolagents.com.au" className="hover:text-blue-400 transition-colors">
                     sales@aitoolagents.com.au
                   </a>
@@ -46,13 +46,13 @@ const Footer = () => {
               </div>
               <div className="flex flex-col items-center md:items-start space-y-3">
                 <div className="flex items-center">
-                  <FaPhone className="text-blue-400 mr-2 text-xl" />
+                  <FaPhone className="text-[#dfb406] mr-2 text-xl" />
                   <a href="tel:0390163533" className="hover:text-blue-400 transition-colors">
                     (03) 9016 3533
                   </a>
                 </div>
                 <div className="flex items-center">
-                  <FaPhone className="text-blue-400 mr-2 text-xl" />
+                  <FaPhone className="text-[#dfb406] mr-2 text-xl" />
                   <a href="tel:0468609702" className="hover:text-blue-400 transition-colors">
                     0468 609 702
                   </a>
@@ -60,7 +60,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col items-center md:items-start">
                 <div className="flex items-center">
-                  <FaMapMarkerAlt className="text-blue-400 mr-2 text-xl" />
+                  <FaMapMarkerAlt className="text-[#dfb406] mr-2 text-xl" />
                   <address className="not-italic">
                     350 Collins St,<br />
                     Melbourne VIC 3000
