@@ -115,7 +115,7 @@ export default function AIAgentsExplainedPage() {
             initial="initial"
             animate="animate"
           >
-            <h1 className="text-4xl font-bold mb-6 text-blue-500">
+            <h1 className="text-4xl font-bold mb-6 text-[#c49d17]">
               Understanding AI Agents: Your Digital Workforce
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6">
@@ -136,7 +136,7 @@ export default function AIAgentsExplainedPage() {
         transition={{ delay: 0.2 }}
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-blue-400">What Exactly Are AI Agents?</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#c49d17]">What Exactly Are AI Agents?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-blue-300">Think of Them As Digital Employees</h3>
@@ -162,7 +162,7 @@ export default function AIAgentsExplainedPage() {
         transition={{ delay: 0.2 }}
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-blue-400">How AI Agents Help Your Business</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#c49d17]">How AI Agents Help Your Business</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -220,7 +220,7 @@ export default function AIAgentsExplainedPage() {
         transition={{ delay: 0.3 }}
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-blue-400">Getting Started with AI Agents</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#c49d17]">Getting Started with AI Agents</h2>
           <p className="text-xl text-gray-300 mb-12">
             Starting with AI agents does not mean completely changing how your business works overnight. Instead, we recommend a step-by-step approach in different areas of your business. Here is how we can help you begin:
           </p>
@@ -263,7 +263,7 @@ export default function AIAgentsExplainedPage() {
         transition={{ delay: 0.4 }}
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-blue-400">Common Questions About AI Agents</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#c49d17]">Common Questions About AI Agents</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -306,7 +306,7 @@ export default function AIAgentsExplainedPage() {
         transition={{ delay: 0.4 }}
       >
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-blue-400">Ready to Explore AI Agents?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-[#c49d17]">Ready to Explore AI Agents?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Let us start with a friendly chat about your business and how AI agents could help. We will explain everything in plain language and help you find the perfect starting point for your journey into AI.
           </p>
@@ -316,7 +316,7 @@ export default function AIAgentsExplainedPage() {
          
           <a 
             href="/contact" 
-            className="inline-block bg-blue-500 text-white px-8 py-4 text-lg font-semibold hover:bg-blue-600 transition-colors duration-300"
+            className="inline-block text-[#c49d17] text-white px-8 py-4 text-lg font-semibold hover:bg-blue-600 transition-colors duration-300"
           >
             Schedule a Free Consultation
           </a>
