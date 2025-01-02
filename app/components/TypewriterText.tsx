@@ -30,7 +30,7 @@ const defaultText = "Welcome to AI Tool Agents Australia Business Solutions, you
   "Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries."
 ]
 
-export default function TypewriterText({ text = defaultText, delay = 70 }: TypewriterTextProps) {
+export default function TypewriterText({ text = defaultText, delay = 35 }: TypewriterTextProps) {
   const [displayText, setDisplayText] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [showServices, setShowServices] = useState(false)

@@ -87,7 +87,7 @@ export default function ContactPage() {
     <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-blue-500 mb-4">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-[#c49d17] mb-4">Contact Us</h1>
           <p className="text-lg text-gray-300">
             We&apos;re here to help and answer any questions you might have.
           </p>
@@ -96,7 +96,7 @@ export default function ContactPage() {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 bg-gray-900 p-8 shadow-lg border border-gray-800">
           {/* Personal Information Section */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-white">Personal Information</h2>
+            <h2 className="text-2xl font-semibold text-[#c49d17]">Personal Information</h2>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div>
                 <label htmlFor="firstName" className="block text-sm font-medium text-gray-300">
@@ -183,7 +183,7 @@ export default function ContactPage() {
 
           {/* Inquiry Details Section */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-white">Inquiry Details</h2>
+            <h2 className="text-2xl font-semibold text-[#c49d17]">Inquiry Details</h2>
             
             <div>
               <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-300">
@@ -271,7 +271,7 @@ export default function ContactPage() {
 
           {/* Preferences Section */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-white">Preferences</h2>
+            <h2 className="text-2xl font-semibold text-[#c49d17]">Preferences</h2>
             
             <div>
               <label htmlFor="preferredContact" className="block text-sm font-medium text-gray-300">
@@ -304,7 +304,7 @@ export default function ContactPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full flex justify-center py-4 px-4 border border-transparent shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 h-14 ${
+              className={`w-full flex justify-center py-4 px-4 border border-transparent shadow-sm text-sm font-medium text-white bg-[#c49d17] hover:bg-[#e49d17] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 h-14 ${
                 isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
               }`}
             >
