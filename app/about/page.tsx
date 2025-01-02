@@ -102,7 +102,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl font-bold mb-2 text-[#c49d17]">{member.name}</h3>
-                  <h4 className="text-lg font-semibold mb-4 text-blue-300">{member.role}</h4>
+                  <h4 className="text-lg font-semibold mb-4 text-[#c49d17]">{member.role}</h4>
                   <p className="text-gray-300 leading-relaxed">{member.description}</p>
                 </div>
               </motion.div>
