@@ -19,36 +19,15 @@ const HumanHead3D = () => {
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     containerRef.current.appendChild(renderer.domElement);
 
-    // Create gradient texture
-    const canvas = document.createElement('canvas');
-    canvas.width = 512;
-    canvas.height = 512;
-    const ctx = canvas.getContext('2d');
-    
-    if (ctx) {
-      // Create gradient
-      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, '#000000');
-      gradient.addColorStop(0.5, '#FFD700');
-      gradient.addColorStop(1, '#000000');
-      
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-    }
-
-    const gradientTexture = new THREE.CanvasTexture(canvas);
-    gradientTexture.wrapS = THREE.RepeatWrapping;
-    gradientTexture.wrapT = THREE.RepeatWrapping;
-
-    // Materials with updated gradient
+    // Materials
     const materials = {
       primary: new THREE.MeshPhysicalMaterial({
-        map: gradientTexture,
-        metalness: 0.9,
-        roughness: 0.1,
+        color: new THREE.Color('#4B5563'),
+        metalness: 0.8,
+        roughness: 0.2,
         envMapIntensity: 1,
-        clearcoat: 0.8,
-        clearcoatRoughness: 0.2,
+        clearcoat: 0.5,
+        clearcoatRoughness: 0.3,
       }),
       secondary: new THREE.MeshPhysicalMaterial({
         color: new THREE.Color('#9CA3AF'),
@@ -73,15 +52,6 @@ const HumanHead3D = () => {
         opacity: 0.8,
       })
     };
-
-    // Create environment map for reflections
-    const envMapLoader = new THREE.CubeTextureLoader();
-    const envMap = envMapLoader.load([
-      'px.jpg', 'nx.jpg',
-      'py.jpg', 'ny.jpg',
-      'pz.jpg', 'nz.jpg'
-    ]);
-    scene.environment = envMap;
 
     // Helper function to create segments
     const createSegment = (
@@ -135,7 +105,7 @@ const HumanHead3D = () => {
     fillLight.position.set(-5, 0, 5);
     scene.add(fillLight);
 
-    // Add point lights for the swirling effect
+    // Add more swirling lights
     const createSwirlingLight = (color: number, intensity: number) => {
       const light = new THREE.PointLight(color, intensity, 10);
       scene.add(light);
@@ -145,7 +115,10 @@ const HumanHead3D = () => {
     const swirlingLights = [
       createSwirlingLight(0xFFD700, 1),
       createSwirlingLight(0xFFFFFF, 0.8),
-      createSwirlingLight(0xFFD700, 1)
+      createSwirlingLight(0xFFD700, 1),
+      createSwirlingLight(0xFFFFFF, 0.6),
+      createSwirlingLight(0xFFD700, 0.9),
+      createSwirlingLight(0xFFFFFF, 0.7)
     ];
 
     // Camera position
@@ -158,28 +131,23 @@ const HumanHead3D = () => {
     controls.minDistance = 2;
     controls.maxDistance = 10;
 
-    // Animation loop with enhanced effects
+    // Animation loop with enhanced swirling effects
     let time = 0;
     const animate = () => {
       requestAnimationFrame(animate);
       
       time += 0.01;
       
-      // Update swirling lights positions
+      // Update swirling lights positions with varied patterns
       swirlingLights.forEach((light, index) => {
         const radius = 3;
         const phase = (2 * Math.PI * index) / swirlingLights.length;
+        const verticalOffset = Math.sin(time * 0.5 + phase) * 0.5;
+        
         light.position.x = radius * Math.cos(time + phase);
-        light.position.y = radius * Math.sin(time + phase);
+        light.position.y = radius * Math.sin(time + phase) + verticalOffset;
         light.position.z = 2 * Math.sin(time * 0.5 + phase);
       });
-
-      // Update gradient texture rotation
-      if (main.material instanceof THREE.MeshPhysicalMaterial && main.material.map) {
-        main.material.map.offset.x = Math.sin(time * 0.2) * 0.2;
-        main.material.map.offset.y = Math.cos(time * 0.2) * 0.2;
-        main.material.needsUpdate = true;
-      }
       
       controls.update();
       renderer.render(scene, camera);
