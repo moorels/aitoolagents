@@ -68,12 +68,12 @@ export default function Navbar() {
       <AnimatedBackground />
       <div className="relative max-w-7xl mx-auto px-4 h-full">
         
-        <div className="flex h-full items-center justify-between">
+        <div className="flex h-full items-center justify-between text-[edce54]">
           <div className="flex items-center space-x-2">
             <div className="w-24 h-24">
               <HumanHead3D />
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center text-[edce54]">
               <div className="flex-shrink-0 mr-1 hidden md:block">
                 <InfinityLogo />
               </div>
