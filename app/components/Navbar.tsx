@@ -24,7 +24,7 @@ const NavLink = ({
         router.push(href)
         onClick?.()
       }}
-      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+      className="px-3 py-1 text-sm text-[edce54] hover:text-[#dfb406] transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
     >
       {children}
     </button>
@@ -80,7 +80,7 @@ export default function Navbar() {
               
               <button
                 onClick={() => router.push('/')}
-                className="text-sm font-medium text-white px-3 py-1 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                className="text-sm font-medium text-[edce54] px-3 py-1 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
               >
                 AI TOOL AGENTS
               </button>
@@ -111,7 +111,7 @@ export default function Navbar() {
                             router.push(solution.path)
                             setShowDesktopSolutions(false)
                           }}
-                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                          className="block w-full text-left px-4 py-2 text-sm text-[edce54] hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                         >
                           {solution.name}
                         </button>
@@ -127,7 +127,7 @@ export default function Navbar() {
                             router.push(platform.path)
                             setShowDesktopPlatforms(false)
                           }}
-                          className="block w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                          className="block w-full text-left px-4 py-2 text-sm text-[edce54] hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                         >
                           {platform.name}
                         </button>
@@ -142,7 +142,7 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-300 hover:text-white"
+            className="md:hidden text-gray-300 hover:text-[edce54]"
           >
             <svg
               className="w-6 h-6"
@@ -185,7 +185,7 @@ export default function Navbar() {
                   <div>
                     <button
                       onClick={() => setShowMobileSolutions(!showMobileSolutions)}
-                      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                      className="px-3 py-1 text-sm text-[edce54] hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                     >
                       {link}
                     </button>
@@ -199,7 +199,7 @@ export default function Navbar() {
                               setIsOpen(false)
                               setShowMobileSolutions(false)
                             }}
-                            className="block w-full text-left px-3 py-1 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                            className="block w-full text-left px-3 py-1 text-sm text-[edce54] hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                           >
                             {solution.name}
                           </button>
@@ -211,7 +211,7 @@ export default function Navbar() {
                   <div>
                     <button
                       onClick={() => setShowMobilePlatforms(!showMobilePlatforms)}
-                      className="px-3 py-1 text-sm text-gray-300 hover:text-white transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                      className="px-3 py-1 text-sm text-[edce54] hover:text-[edce54] transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
                     >
                       {link}
                     </button>
@@ -225,7 +225,7 @@ export default function Navbar() {
                               setIsOpen(false)
                               setShowMobilePlatforms(false)
                             }}
-                            className="block w-full text-left px-3 py-1 text-sm text-gray-300 hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
+                            className="block w-full text-left px-3 py-1 text-sm text-[edce54] hover:bg-blue-500/20 hover:text-white transition-colors duration-200"
                           >
                             {platform.name}
                           </button>
