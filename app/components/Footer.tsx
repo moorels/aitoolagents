@@ -19,7 +19,7 @@ const Footer = () => {
               <div className="flex flex-col items-center md:items-start">
                 <div className="flex items-center mb-3">
                   <FaGlobe className="text-[#dfb406] mr-2 text-xl" />
-                  <a href="https://www.aitoolagents.com.au" className="hover:text-blue-400 transition-colors">
+                  <a href="https://www.aitoolagents.com.au" className="hover:text-[#dfb406] transition-colors">
                     www.aitoolagents.com.au
                   </a>
                 </div>
@@ -27,19 +27,19 @@ const Footer = () => {
               <div className="flex flex-col items-center md:items-start space-y-3">
                 <div className="flex items-center">
                   <FaEnvelope className="text-[#dfb406] mr-2 text-xl" />
-                  <a href="mailto:info@aitoolagents.com.au" className="hover:text-blue-400 transition-colors">
+                  <a href="mailto:info@aitoolagents.com.au" className="hover:text-[#dfb406] transition-colors">
                     info@aitoolagents.com.au
                   </a>
                 </div>
                 <div className="flex items-center">
                   <FaEnvelope className="text-[#dfb406] mr-2 text-xl" />
-                  <a href="mailto:help@aitoolagents.com.au" className="hover:text-blue-400 transition-colors">
+                  <a href="mailto:help@aitoolagents.com.au" className="hover:text-[#dfb406] transition-colors">
                     help@aitoolagents.com.au
                   </a>
                 </div>
                 <div className="flex items-center">
                   <FaEnvelope className="text-[#dfb406] mr-2 text-xl" />
-                  <a href="mailto:sales@aitoolagents.com.au" className="hover:text-blue-400 transition-colors">
+                  <a href="mailto:sales@aitoolagents.com.au" className="hover:text-[#dfb406] transition-colors">
                     sales@aitoolagents.com.au
                   </a>
                 </div>
@@ -47,13 +47,13 @@ const Footer = () => {
               <div className="flex flex-col items-center md:items-start space-y-3">
                 <div className="flex items-center">
                   <FaPhone className="text-[#dfb406] mr-2 text-xl" />
-                  <a href="tel:0390163533" className="hover:text-blue-400 transition-colors">
+                  <a href="tel:0390163533" className="hover:text-[#dfb406] transition-colors">
                     (03) 9016 3533
                   </a>
                 </div>
                 <div className="flex items-center">
                   <FaPhone className="text-[#dfb406] mr-2 text-xl" />
-                  <a href="tel:0468609702" className="hover:text-blue-400 transition-colors">
+                  <a href="tel:0468609702" className="hover:text-[#dfb406] transition-colors">
                     0468 609 702
                   </a>
                 </div>
