@@ -69,7 +69,7 @@ export default function AboutPage() {
             animate="animate"
           > 
             
-            <h1 className="text-4xl font-bold mb-6 text-blue-500">
+            <h1 className="text-4xl font-bold mb-6 text-[#c49d17]">
               About Our Team
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">AI Tool Agents was founded in 2021 with a vision to make business automation accessible and efficient for companies of all sizes. Since then, we have helped over 70 businesses streamline their operations and enhance customer experiences.
@@ -101,7 +101,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 rounded-full border-2 border-blue-500/50"></div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-2xl font-bold mb-2 text-blue-400">{member.name}</h3>
+                  <h3 className="text-2xl font-bold mb-2 text-[#c49d17]">{member.name}</h3>
                   <h4 className="text-lg font-semibold mb-4 text-blue-300">{member.role}</h4>
                   <p className="text-gray-300 leading-relaxed">{member.description}</p>
                 </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
           <p className="text-xl text-gray-300 leading-relaxed mb-8">
             Together, we bring together a wealth of experience, creativity, and innovation to offer bespoke AI solutions that are tailored to the unique needs of our clients. Whether you&apos;re looking to enhance customer service with chatbots, optimize your operations through process automation, or gain deeper insights from your data, we&apos;re here to make it happen.
           </p>
-          <p className="text-2xl font-bold text-blue-400">
+          <p className="text-2xl font-bold text-[#c49d17]">
             Join us as we continue to shape the future of AI in business across Australia!
           </p>
         </div>
