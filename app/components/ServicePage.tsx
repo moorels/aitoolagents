@@ -70,7 +70,7 @@ export default function ServicePage({ title, description, features, benefits, us
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleItemClick(feature)}
               >
-                <p className="text-[#c49d17]">{feature}</p>
+                <p className="text-gray-300">{feature}</p>
               </motion.div>
             ))}
           </div>
@@ -91,7 +91,7 @@ export default function ServicePage({ title, description, features, benefits, us
                 transition={{ delay: index * 0.1 }}
                 onClick={() => handleItemClick(benefit)}
               >
-                <p className="text-[#c49d17]">{benefit}</p>
+                <p className="text-gray-300">{benefit}</p>
               </motion.div>
             ))}
           </div>
