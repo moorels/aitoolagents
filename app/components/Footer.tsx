@@ -66,10 +66,18 @@ const Footer = () => {
                     Melbourne VIC 3000
                   </address>
                 </div>
+                <div className="flex items-center mt-8">
+                AI BUSINESS TOOLS AUSTRALIA
+                 
+                </div>
+                <div className="flex items-center mt-4">
+                ABN <div className="pl-2 text-[#dfb406]">79 338 920 277</div>
+                </div>
               </div>
+              
             </div>
             <div className="text-center mt-8 pt-8 border-t border-gray-700 ">
-              <p className="text-[#dfb406]">&copy; {new Date().getFullYear()} AI Tool Agents Australia. All rights reserved.</p>
+              <p className="text-[#dfb406]">&copy; {new Date().getFullYear()} AI TOOL AGENTS AUSTRALIA. All rights reserved.</p>
             </div>
           </div>
         </div>

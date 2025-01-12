@@ -13,6 +13,9 @@ export default function Home() {
       <div className="w-full">
       
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4">
+        <div className="text-center mt-12 text-xl md:text-2xl font-thin px-4 text-[#c49d17]">
+          Welcome to AI Business Tools Australia
+          </div>
         <div className="text-center mt-12 text-xl md:text-2xl font-thin px-4">
           Transform Your Business with Smart Automation.
           <div className="mt-4 align-center text-lg md:text-xl px-2">Discover how AI agents can streamline your operations and enhance customer experiences.</div>

@@ -111,7 +111,8 @@ const PixelTitle = () => {
   };
 
   const words = [
-    { text: "AI TOOL AGENTS", offset: 0 }
+    { text: "AI TOOL AGENTS", offset: 0 },
+    
   ];
 
   return (
