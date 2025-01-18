@@ -2,6 +2,7 @@
 
 import { useAuth } from "../../contexts/AuthContext";
 import ProtectedRoute from "../../components/ProtectedRoute";
+import Submissions from "../../components/Submissions";
 
 export default function DashboardPage() {
   const { logout } = useAuth();
@@ -9,7 +10,7 @@ export default function DashboardPage() {
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-black text-keypad-gold p-8">
-        hi there
+        <Submissions />
       </div>
     </ProtectedRoute>
   );
