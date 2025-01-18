@@ -1,6 +1,9 @@
 'use client'
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { supabase } from '../lib/supabase';
+  
+
 
 interface ContactFormData {
   firstName: string;
@@ -22,7 +25,7 @@ export default function ContactPage() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
-
+ 
   const inquiryOptions = [
     "General Inquiry",
     "Product Information",
@@ -53,34 +56,69 @@ export default function ContactPage() {
   ];
 
   const onSubmit = async (data: ContactFormData) => {
+
     setIsSubmitting(true);
+
     try {
-      // Here you would typically send this to your backend
-      // For now, we'll simulate sending an email using mailto
-      const subject = encodeURIComponent(`New Contact Form Submission: ${data.inquiryType}`);
-      const body = encodeURIComponent(`
-        Name: ${data.firstName} ${data.lastName}
-        Email: ${data.email}
-        Company: ${data.company}
-        Job Title: ${data.jobTitle}
-        Phone: ${data.phone}
-        Inquiry Type: ${data.inquiryType}
-        Project Scope: ${data.projectScope}
-        Timeline: ${data.timeline}
-        Budget: ${data.budget}
-        Message: ${data.message}
-        Preferred Contact Method: ${data.preferredContact}
-        Newsletter Signup: ${data.newsletter ? 'Yes' : 'No'}
-      `);
+
+      const { error } = await supabase
+
+        .from('contact_submissions')
+
+        .insert([
+
+          {
+
+            first_name: data.firstName,
+
+            last_name: data.lastName,
+
+            email: data.email,
+
+            company: data.company,
+
+            job_title: data.jobTitle,
+
+            phone: data.phone,
+
+            inquiry_type: data.inquiryType,
+
+            project_scope: data.projectScope,
+
+            timeline: data.timeline,
+
+            budget: data.budget,
+
+            message: data.message,
+
+            preferred_contact: data.preferredContact,
+
+            newsletter: data.newsletter
+
+          }
+
+        ]);
+
+      if (error) throw error;
+
+     
+
       
-      window.location.href = `mailto:aibusinessagents@gmail.com?subject=${subject}&body=${body}`;
-      setSubmitStatus('success');
+
       reset();
+
     } catch (error) {
-      setSubmitStatus('error');
+
+      console.error('Error submitting form:', error);
+
+     
+
     } finally {
+
       setIsSubmitting(false);
+
     }
+
   };
 
   return (
