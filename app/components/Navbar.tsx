@@ -38,8 +38,8 @@ export default function Navbar() {
   const [showDesktopPlatforms, setShowDesktopPlatforms] = useState(false)
   const [showMobileSolutions, setShowMobileSolutions] = useState(false)
   const [showMobilePlatforms, setShowMobilePlatforms] = useState(false)
-  const Links = ['Home', 'Platforms', 'Solutions', 'About', 'Contact', 'Login']
-  const paths = ['/', '#', '#', '/about', '/contact', 'https://aiui.com.au']
+  const Links = ['Home', 'Platforms', 'Solutions', 'About', 'Contact', 'Login', 'Admin']
+  const paths = ['/', '#', '#', '/about', '/contact', 'https://aiui.com.au', '/admin']
   
   const solutionsLinks = [
     { name: 'Customer Service', path: '/services/customer-service' },

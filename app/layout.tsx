@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import NavbarCubeContainer from './components/NavbarCubeContainer'
 import Footer from './components/Footer'
 import { generateHomeMetadata } from './metadata-config';
+import { AuthProvider } from './contexts/AuthContext';
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -24,14 +25,16 @@ export default function RootLayout({
       <body
         className={`${geistMono.variable} font-['Blogger_Sans'] font-light antialiased bg-gray-900 min-h-full overflow-x-hidden`}
       >
-        <div className="fixed top-0 left-0 right-0 z-50">
-          <NavbarCubeContainer />
-          <Navbar />
-        </div>
-        <div className="pt-16">
-          {children}
-        </div>
-        <Footer />
+        <AuthProvider>
+          <div className="fixed top-0 left-0 right-0 z-50">
+            <NavbarCubeContainer />
+            <Navbar />
+          </div>
+          <div className="pt-16">
+            {children}
+          </div>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
