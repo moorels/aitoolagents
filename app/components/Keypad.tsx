@@ -87,7 +87,7 @@ const Keypad = () => {
               value={btn}
               onClick={handleKeyPress}
               isSpecial={btn === "C" || btn === "Enter"}
-              className={btn === "Enter" && "text-green-500"}
+              className={btn === "Enter" ? "text-green-500" : undefined}
             />
           ))
         )}
