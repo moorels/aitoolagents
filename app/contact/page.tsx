@@ -73,7 +73,7 @@ export default function ContactPage() {
         Newsletter Signup: ${data.newsletter ? 'Yes' : 'No'}
       `);
       
-      window.location.href = `mailto:info@aitoolagents.com.au?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:aibusinessagents@gmail.com?subject=${subject}&body=${body}`;
       setSubmitStatus('success');
       reset();
     } catch (error) {
