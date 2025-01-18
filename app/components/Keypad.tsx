@@ -33,7 +33,7 @@ const Keypad = () => {
       if (hashedPin === CORRECT_PIN_HASH) {
         toast.success("Login successful!");
         login();
-        router.push("/dashboard");
+        router.push("/admin/dashboard");
       } else {
         toast.error("Incorrect PIN");
         setPin("");
