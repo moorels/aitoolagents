@@ -101,17 +101,13 @@ export default function ContactPage() {
 
       if (error) throw error;
 
-     
-
-      
-
+      setSubmitStatus('success');
       reset();
 
     } catch (error) {
 
       console.error('Error submitting form:', error);
-
-     
+      setSubmitStatus('error');
 
     } finally {
 

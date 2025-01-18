@@ -5,6 +5,7 @@ import Chat from './components/Chat'
 import Link from 'next/link'
 import BlueWaveBackground from './components/RedWaveBackground'
 import BorderWave from './components/BorderWave';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
@@ -29,12 +30,14 @@ export default function Home() {
               className="relative inline-flex items-center justify-center w-full h-full text-white hover:text-white/90 transition-colors duration-300"
             >
               
-              <span className="flex items-center text-lg font-light">
+              <span className="flex items-center text-[15px] md:text-[15px] font-light">
                 <span className="mr-2 text-2xl md:text-1xl text-[#c49d17] bg-blue-500/30 bg-opacity-70 rounded px-2 md:px-4 py-1 md:py-2">Click here to learn about AI Agents</span>
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </span>
             </Link>
           </div>
+          <div className="mt-4 align-center text-[15px] md:text-[25px] px-2">Welcome to AI Tool Agents Australia Business Solutions, your trusted partner in the future of AI.</div>
+          <div className="mt-4 align-center text-[15px] md:text-[25px] px-2">Where innovation meets intelligence, and possibilities are limitless.</div>
         </div>
           <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-8">
             <div className="w-[300px] h-[300px] md:w-[80px] md:h-[600px] relative mb-8 md:mb-0">
@@ -48,7 +51,31 @@ export default function Home() {
             
               <TypewriterText />
             </div>
+            
           </div>
+          <motion.section 
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-[#c49d17]">Ready to Explore AI Agents?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let us start with a friendly chat about your business and how AI agents could help. We will explain everything in plain language and help you find the perfect starting point for your journey into AI.
+          </p>
+          
+        </div>
+        <div className="max-w-4xl mx-auto text-center">
+         
+          <a 
+            href="/contact" 
+            className="inline-block bg-[#c49d17] text-white px-8 py-4 text-lg font-semibold hover:bg-[#f49d17] transition-colors duration-300"
+          >
+            Schedule a Free Consultation
+          </a>
+        </div>
+      </motion.section>
           <div className="mt-8">
             <Chat />
           </div>
