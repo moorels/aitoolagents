@@ -69,7 +69,7 @@ export default function Submissions() {
   }
 
   return (
-    <div className="rounded-md border overflow-x-auto">
+    <div className="rounded-md border overflow-x-auto text-[#c49d17]">
       <Table>
         <TableHeader>
           <TableRow>

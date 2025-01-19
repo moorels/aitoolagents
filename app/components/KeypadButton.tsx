@@ -32,16 +32,16 @@ const KeypadButton = ({ value, onClick, className, isSpecial }: KeypadButtonProp
   return (
     <button
       className={cn(
-        "w-16 h-16 md:w-20 md:h-20 rounded-lg bg-keypad-gold",
+        "w-16 h-16 md:w-20 md:h-20 rounded-lg bg-[#c49d17]",
         "text-2xl md:text-3xl font-light",
         "transition-all duration-200 ease-in-out",
-        "hover:bg-opacity-80 hover:scale-105",
-        "focus:outline-none focus:ring-2 focus:ring-keypad-gold focus:ring-opacity-50",
+        " hover:scale-105 hover:bg-white",
+        
         "shadow-lg hover:shadow-keypad-glow",
         isPressed 
           ? "text-[#FFD700] scale-95 animate-key-press" 
-          : "text-keypad-gold",
-        isSpecial && !isPressed && "text-red-500",
+          : "text-black",
+        isSpecial && !isPressed && "text-white",
         className
       )}
       onClick={handleClick}
