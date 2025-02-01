@@ -1,7 +1,7 @@
 'use client';
 
 import { FaGlobe, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import RobotFooter from './Robotfooter';
+import FloatingImage from './FloatingImage';
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center md:items-start">
           <div className="hidden md:block w-32 h-32 md:w-40 md:h-40 mb-6 md:mb-0 md:mr-8">
-            <RobotFooter />
+            <FloatingImage src="/robo1.png" alt="Robot" width={96} height={96} />
           </div>
           <div className="flex-1">
             <div className="text-center md:text-left mb-6">

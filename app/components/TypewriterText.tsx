@@ -12,8 +12,7 @@ const defaultText = ""
 
 
   const services = [
-  "Our company can offer a variety of business service solutions to its clients. Including :",
-"",
+  
   "Virtual Customer Service Agents",
   "AI-Powered Sales Assistants",
   "Automated Data Entry & Processing",
@@ -25,9 +24,7 @@ const defaultText = ""
   "AI-Driven Content Creation",
   "Predictive Analytics & Forecasting",
   "AI-Powered Lead Scoring & Qualification",
-  "Real-Time Translation Services",
-"",
-  "Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries."
+  "Real-Time Translation Services"
 ]
 
 export default function TypewriterText({ text = defaultText, delay = 35 }: TypewriterTextProps) {
@@ -61,7 +58,7 @@ export default function TypewriterText({ text = defaultText, delay = 35 }: Typew
       {showServices && (
         <div className="text-[15px] text-gray-300 mt-8">
          
-          <TypeWriter messages={services} typingSpeed={7} delayBetweenMessages={100} />
+          <TypeWriter messages={services} typingSpeed={1} delayBetweenMessages={20} />
         
         </div>
       )}

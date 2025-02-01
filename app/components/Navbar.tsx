@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import AnimatedBackground from './AnimatedBackground'
 import { useState } from 'react'
 import InfinityLogo from './InfinityLogo'
-import HumanHead3D from '../components/HumanHead3D';
+import FloatingImage from './FloatingImage';
 
 const NavLink = ({ 
   children, 
@@ -71,7 +71,9 @@ export default function Navbar() {
         <div className="flex h-full items-center justify-between text-[edce54]">
           <div className="flex items-center space-x-2">
             <div className="w-24 h-24">
-              <HumanHead3D />
+              <div className="navbar-floating-image">
+                <FloatingImage src="/robo1.png" alt="Robot" width={32} height={32} />
+              </div>
             </div>
             <div className="flex items-center text-[edce54]">
               <div className="flex-shrink-0 mr-1 hidden md:block">

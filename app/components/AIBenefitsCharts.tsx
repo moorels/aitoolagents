@@ -13,7 +13,7 @@ import {
 // Complex dataset for AI implementation benefits
 const timeSeriesData = Array.from({ length: 24 }, (_, i) => ({
   month: `${2023 + Math.floor(i / 12)}-${String(i % 12 + 1).padStart(2, '0')}`,
-  revenue: 100000 + Math.random() * 5000 + (i * 5000),
+  revenue: 50000 + Math.random() * 2000 + (i * 2000),
   costs: 20000 + Math.random() * 3000 - (i * 900),
   efficiency: 70 + (i * 1.2) + (Math.random() * 5),
   customerSatisfaction: 75 + (i * 1.1) + (Math.random() * 3),
@@ -80,7 +80,7 @@ const staffWorkloadData = [
   { department: 'IT Support', beforeHours: 155, afterHours: 50, taskTypes: 14 },
 ];
 
-const COLORS = ['#111827', '#f8c90e'];
+const COLORS = ['#456ace', '#f8c90e'];
 
 const AIBenefitsCharts = () => {
   return (
@@ -91,10 +91,10 @@ const AIBenefitsCharts = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-12"
       >
-        <h2 className="text-3xl font-bold text-[#f8c90e] mb-4">
+        <h2 className="text-4xl font-bold text-[#f8c90e] mb-4">
           AI Implementation Benefits Analysis
         </h2>
-        <p className="text-[#1111111] max-w-3xl mx-auto">
+        <p className="text-[#1111111] max-w-3xl mx-auto text-xl">
           Comprehensive visualization of the transformative impact of AI automation across various business metrics
         </p>
       </motion.div>
@@ -278,19 +278,31 @@ const AIBenefitsCharts = () => {
           <div className="h-[400px] -ml-6">
             <ResponsiveContainer width="95%" height="100%">
               <ScatterChart
-                margin={{ left: 40, right: 20, top: 10, bottom: 10 }}
+                margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis type="number" dataKey="automationLevel" name="Automation Level" unit="%" style={{ fontSize: '12px', fill: '#FFFFFF' }} />
-                <YAxis type="number" dataKey="efficiency" name="Efficiency" unit="%" style={{ fontSize: '12px', fill: '#FFFFFF' }} />
-                <ZAxis type="number" dataKey="revenue" name="Revenue" unit="$" />
+                <XAxis
+                  dataKey="automationLevel"
+                  type="number"
+                  name="Automation Level"
+                  unit="%"
+                  style={{ fontSize: '12px', fill: '#fff' }}
+                />
+                <YAxis
+                  dataKey="efficiency"
+                  type="number"
+                  name="Efficiency"
+                  unit="%"
+                  style={{ fontSize: '12px', fill: '#fff' }}
+                />
                 <Tooltip cursor={{ strokeDasharray: '3 3' }} />
                 <Legend />
-                <Scatter name="Performance Metrics" data={timeSeriesData} fill="#f8c90e">
-                  {timeSeriesData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                </Scatter>
+                <Scatter
+                  name="Efficiency vs Automation"
+                  data={timeSeriesData}
+                  fill="#ff7300"
+                  stroke="#f8c90e"
+                />
               </ScatterChart>
             </ResponsiveContainer>
           </div>

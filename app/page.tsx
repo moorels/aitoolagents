@@ -1,6 +1,6 @@
 'use client'
 import TypewriterText from './components/TypewriterText';
-import HumanFigure3D from './components/HumanFigure3D';
+import FloatingImage from './components/FloatingImage';
 import Chat from './components/Chat'
 import Link from 'next/link'
 import BlueWaveBackground from './components/RedWaveBackground'
@@ -37,29 +37,31 @@ export default function Home() {
             </Link>
           </div>
           <div className="mt-4 align-center text-[15px] md:text-[25px] px-2">Welcome to AI Tool Agents Australia Business Solutions, your trusted partner in the future of AI.</div>
-          <div className="mt-4 align-center text-[15px] md:text-[25px] px-2">Where innovation meets intelligence, and possibilities are limitless.</div>
+         
+        <div className="mt-4 align-center text-[15px] md:text-[25px] px-2">Where innovation meets intelligence, and possibilities are limitless.</div>
+        
         </div>
-          <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-8">
-            <div className="w-[300px] h-[300px] md:w-[80px] md:h-[600px] relative mb-8 md:mb-0">
+        <div className="mt-4 align-center text-[15px] md:text-[15px] px-2"> Our company can offer a variety of business service solutions to its clients. Including :</div>
+          <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center px-16 gap-[200px]">
             
-              <HumanFigure3D />
-              
-               
-              
+            <div className="hidden md:block">
+              <FloatingImage src="/robo1.png" alt="Robot" width={100} height={100} />
             </div>
-            <div className="flex-1 w-full">
+            <div className="flex items-center">
             
-              <TypewriterText />
+              <div className="flex-1 w-full max-w-2xl">
+                <TypewriterText />
+              </div>
             </div>
-            
           </div>
           <motion.section 
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50"
+        className="py-4 px-4 sm:px-6 lg:px-8 bg-gray-900/50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
         <div className="max-w-3xl mx-auto text-center">
+        <div className="mt-4 align-center text-[15px] md:text-[15px] px-2">Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries.</div>
           <h2 className="text-3xl font-bold mb-6 text-[#c49d17]">Ready to Explore AI Agents?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Let us start with a friendly chat about your business and how AI agents could help. We will explain everything in plain language and help you find the perfect starting point for your journey into AI.
