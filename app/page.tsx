@@ -1,6 +1,7 @@
 'use client'
 import TypewriterText from './components/TypewriterText';
 import FloatingImage from './components/FloatingImage';
+
 import Chat from './components/Chat'
 import Link from 'next/link'
 import BlueWaveBackground from './components/RedWaveBackground'
@@ -10,7 +11,7 @@ import { motion } from 'framer-motion';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative overflow-hidden">
-      
+     
       <div className="w-full">
       
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4">

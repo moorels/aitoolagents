@@ -6,11 +6,11 @@
     height: 100vh;
     pointer-events: none;
     overflow: hidden;
-    background-color: black;
+    
   }
   
   .floating-robot {
-    width: 37.5px; /* 1/4 of original 150px */
+    width: 17.5px; /* 1/4 of original 150px */
     height: auto;
     position: absolute;
     transition: all 1.5s ease-in-out;
@@ -20,7 +20,7 @@
   .floating-image {
     animation: float 3s ease-in-out infinite;
     display: inline-block;
-    margin-top: 45px;
+    margin-top: 33px;
   }
   
   .main-page-floating-image {
