@@ -4,7 +4,7 @@ import FloatingImage from './components/FloatingImage';
 
 import Chat from './components/Chat'
 import Link from 'next/link'
-import BlueWaveBackground from './components/RedWaveBackground'
+
 import BorderWave from './components/BorderWave';
 import { motion } from 'framer-motion';
 

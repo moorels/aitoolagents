@@ -82,8 +82,9 @@ export default function Navbar() {
               
               <button
                 onClick={() => router.push('/')}
-                className="text-sm font-medium text-[edce54] px-3 py-1 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                className="text-sm font-medium text-[edce54] px-3 py-1 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200 flex items-center gap-2"
               >
+                <img src="/favicon.ico" alt="AI Tool Agents Logo" className="w-4 h-4" />
                 AI TOOL AGENTS
               </button>
             </div>
