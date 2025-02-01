@@ -110,7 +110,7 @@ const crossSellingData = [
 ];
 
 const COLORS = [
-  "#111827", "#f8c90e", "#ff7300", "#ff8042", "#8884D8",
+  "#cbccae", "#f8c90e", "#ff7300", "#ff8042", "#8884D8",
   "#82CA9D", "#D946EF", "#0EA5E9", "#1EAEDB", "#33C3F0"
 ];
 
@@ -514,7 +514,7 @@ const BusinessMetricsCharts = () => {
                     <YAxis yAxisId="right" orientation="right" style={{ fontSize: '12px', fill: '#fff' }} />
                     <Tooltip />
                     <Legend />
-                    <Bar yAxisId="left" dataKey="revenue" fill="#fff" name="Revenue ($)" />
+                    <Bar yAxisId="left" dataKey="revenue" fill="#f8c90e" name="Revenue ($)" />
                     <Line yAxisId="right" type="monotone" dataKey="conversion" stroke="#ff7300" name="Conversion Rate %" />
                     <Line yAxisId="right" type="monotone" dataKey="engagement" stroke="#413ea0" name="Engagement Score" />
                   </ComposedChart>

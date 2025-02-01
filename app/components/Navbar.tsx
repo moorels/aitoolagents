@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import AnimatedBackground from './AnimatedBackground'
 import { useState } from 'react'
-import InfinityLogo from './InfinityLogo'
+
 import FloatingImage from './FloatingImage';
 
 const NavLink = ({ 
@@ -76,9 +76,7 @@ export default function Navbar() {
               </div>
             </div>
             <div className="flex items-center text-[edce54]">
-              <div className="flex-shrink-0 mr-1 hidden md:block">
-                <InfinityLogo />
-              </div>
+            
               
               <button
                 onClick={() => router.push('/')}
