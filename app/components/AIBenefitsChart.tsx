@@ -224,63 +224,65 @@ const benefitsData = {
       }
     ]
   }
-};
+} as const;
+
+type BenefitsDataKey = keyof typeof benefitsData;
 
 interface AIBenefitsChartProps {
-  service: string;
+  service: BenefitsDataKey;
 }
 
-const AIBenefitsChart: React.FC<AIBenefitsChartProps> = ({ service }) => {
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        display: true,
-        position: 'top' as const,
-        labels: {
-          color: '#ffffff',
-        }
-      },
-      title: {
-        display: true,
-        text: 'Before vs After AI Implementation',
-        color: '#dfb406',
-        font: {
-          size: 16,
-        },
-      },
-      tooltip: {
-        callbacks: {
-          label: function(context: any) {
-            return `${context.dataset.label}: ${context.raw}%`;
-          }
-        }
+const options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      display: true,
+      position: 'top' as const,
+      labels: {
+        color: '#ffffff',
       }
     },
-    scales: {
-      y: {
-        beginAtZero: true,
-        max: 100,
-        grid: {
-          color: 'rgba(255, 255, 255, 0.1)',
-        },
-        ticks: {
-          color: '#ffffff',
-        }
+    title: {
+      display: true,
+      text: 'Before vs After AI Implementation',
+      color: '#dfb406',
+      font: {
+        size: 16,
       },
-      x: {
-        grid: {
-          display: false,
-        },
-        ticks: {
-          color: '#ffffff',
-          maxRotation: 45,
-          minRotation: 45,
+    },
+    tooltip: {
+      callbacks: {
+        label: function(context: any) {
+          return `${context.dataset.label}: ${context.raw}%`;
         }
       }
+    }
+  },
+  scales: {
+    y: {
+      beginAtZero: true,
+      max: 100,
+      grid: {
+        color: 'rgba(255, 255, 255, 0.1)',
+      },
+      ticks: {
+        color: '#ffffff',
+      }
     },
-  };
+    x: {
+      grid: {
+        display: false,
+      },
+      ticks: {
+        color: '#ffffff',
+        maxRotation: 45,
+        minRotation: 45,
+      }
+    }
+  },
+};
 
+const AIBenefitsChart: React.FC<AIBenefitsChartProps> = ({ service }) => {
   return (
     <div className="w-full h-[400px] p-4">
       <Bar options={options} data={benefitsData[service]} />

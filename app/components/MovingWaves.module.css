@@ -16,27 +16,17 @@
   height: 100%;
   background-image: url('/wavey.svg');
   background-repeat: repeat;
-  opacity: 0.15;
+  opacity: 1;
   mix-blend-mode: overlay;
 }
 
 .wave1 {
   animation: moveWaves1 25s linear infinite;
   filter: hue-rotate(45deg) brightness(1) contrast(1.2);
-  opacity: 0.2;
+  opacity: 0.3;
 }
 
-.wave2 {
-  animation: moveWaves2 20s linear infinite;
-  opacity: 0.15;
-  filter: hue-rotate(30deg) brightness(1.5) contrast(1.3) saturate(1.5);
-}
 
-.wave3 {
-  animation: moveWaves3 30s linear infinite;
-  opacity: 0.12;
-  filter: sepia(1) hue-rotate(315deg) brightness(2) contrast(1.4);
-}
 
 @keyframes moveWaves1 {
   0% {
@@ -47,20 +37,4 @@
   }
 }
 
-@keyframes moveWaves2 {
-  0% {
-    background-position: 1000px 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
 
-@keyframes moveWaves3 {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
