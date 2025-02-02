@@ -67,12 +67,12 @@ export default function Home() {
         transition={{ delay: 0.4 }}
       >
         
-        <h2 className="text-2xl font-bold mb-6 text-[#c49d17] text-center mt-4">Below are some examples of Basic Workflow Agents we've created for our existing customers.</h2>
+        <h2 className="text-2xl font-bold mb-6 text-[#c49d17] text-center mt-4">Below are some examples of Basic Workflow Agents we&apos;ve created for our existing customers.</h2>
         <TabView />
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-[#c49d17]">Ready to Explore AI Agents?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let us start with a friendly chat about your business and how AI agents could help. We will explain everything in plain language and help you find the perfect starting point for your journey into AI.
+            Let&apos;s start with a friendly chat about your business and how AI agents could help. We&apos;ll explain everything in plain language and help you find the perfect starting point for your journey into AI.
           </p>
           
         </div>
