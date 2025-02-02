@@ -1,22 +1,23 @@
 'use client'
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AIBenefitsChart from './AIBenefitsChart';
 
-const chartTitleMapping: { [key: string]: string } = {
+const chartTitleMapping: { [key: string]: "Virtual Customer Service Agents" | "AI-Powered Sales Assistants" | "AI-Driven Content Creation" | "Predictive Analytics & Forecasting" | "AI-Powered Lead Scoring & Qualification" | "Real-Time Translation Services" } = {
   'Customer Service': 'Virtual Customer Service Agents',
   'AI Agents': 'AI-Powered Sales Assistants',
-  'Office Automation': 'Automated Data Analysis',
-  'Retail Automation': 'Smart Inventory Management',
-  'Healthcare': 'Predictive Analytics',
-  'Insurance': 'AI-Driven Risk Assessment',
-  'Property Management': 'Intelligent Process Automation',
+  'Office Automation': 'AI-Driven Content Creation',
+  'Retail Automation': 'Predictive Analytics & Forecasting',
+  'Healthcare': 'Predictive Analytics & Forecasting',
+  'Insurance': 'AI-Powered Lead Scoring & Qualification',
+  'Property Management': 'AI-Driven Content Creation',
   'Customer Care': 'Virtual Customer Service Agents',
-  'Custom AI Solutions': 'Automated Data Analysis',
+  'Custom AI Solutions': 'AI-Driven Content Creation',
   'AI Agentic Solutions': 'AI-Powered Sales Assistants',
-  'AI Process Automation': 'Intelligent Process Automation',
-  'AI Integrations': 'Automated Data Analysis',
-  'Security': 'AI-Driven Risk Assessment',
-  'Deployment': 'Predictive Analytics'
+  'AI Process Automation': 'Predictive Analytics & Forecasting',
+  'AI Integrations': 'AI-Powered Lead Scoring & Qualification',
+  'Security': 'AI-Powered Lead Scoring & Qualification',
+  'Deployment': 'Real-Time Translation Services'
 };
 
 interface ServiceModalProps {
