@@ -7,42 +7,42 @@ export default function CustomerCarePage() {
     <div>
       <ServicePageTemplate
         title="Customer Care"
-        description="Elevate your customer care with AI-powered solutions that provide personalized, efficient, and proactive support. Our intelligent systems enhance customer satisfaction through quick response times, personalized interactions, and data-driven insights while reducing operational costs."
+        description="Elevate your customer care with AI-powered solutions that deliver personalized, proactive support while building lasting relationships. Our intelligent systems combine empathy with efficiency to provide exceptional customer experiences at scale."
         benefits={[
-          "Enhanced Customer Experience",
-          "Faster Response Times",
-          "Reduced Support Costs",
-          "24/7 Service Availability",
+          "Personalized Interactions",
+          "Proactive Support",
+          "Enhanced Customer Loyalty",
+          "Reduced Wait Times",
           "Improved First Contact Resolution",
-          "Personalized Support",
-          "Better Customer Insights",
-          "Increased Customer Loyalty"
+          "Consistent Service Quality",
+          "Scalable Support",
+          "Customer Journey Insights"
         ]}
         features={[
-          "AI-Powered Chat Support",
-          "Sentiment Analysis",
-          "Automated Ticket Management",
-          "Customer Journey Tracking",
+          "AI-Powered Personalization",
           "Predictive Support",
-          "Multi-channel Integration",
-          "Knowledge Base Automation",
-          "Performance Analytics"
+          "Omnichannel Integration",
+          "Customer Journey Mapping",
+          "Sentiment Analysis",
+          "Issue Prevention",
+          "Automated Follow-ups",
+          "Performance Monitoring"
         ]}
         useCases={[
           {
-            title: "Proactive Customer Support",
-            description: "Implement AI-driven systems that anticipate customer needs and proactively address potential issues before they escalate, using predictive analytics and behavioral patterns.",
-            impact: "Reduced support tickets by 45% and increased customer satisfaction by 60%"
+            title: "Proactive Issue Resolution",
+            description: "Implement AI systems that predict and address potential customer issues before they become problems, using historical data and behavior patterns.",
+            impact: "Reduced support tickets by 50% and improved customer satisfaction by 65%"
           },
           {
-            title: "Multilingual Customer Service",
-            description: "Deploy AI-powered language processing to provide seamless support across multiple languages, ensuring consistent service quality regardless of customer location or language preference.",
-            impact: "Expanded market reach by 300% and improved international customer satisfaction by 55%"
+            title: "Personalized Customer Journeys",
+            description: "Create tailored customer experiences by analyzing interaction history, preferences, and behavior to provide contextually relevant support and recommendations.",
+            impact: "Increased customer retention by 40% and improved engagement rates by 75%"
           },
           {
-            title: "Automated Issue Resolution",
-            description: "Utilize AI to automatically diagnose and resolve common customer issues, providing instant solutions while maintaining high accuracy and customer satisfaction.",
-            impact: "Achieved 70% automated resolution rate and reduced average handling time by 65%"
+            title: "Automated Customer Success",
+            description: "Deploy AI-driven customer success programs that automatically monitor usage patterns, provide timely assistance, and identify opportunities for customer growth.",
+            impact: "Boosted customer lifetime value by 55% and reduced churn by 35%"
           }
         ]}
       />

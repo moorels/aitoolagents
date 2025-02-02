@@ -287,7 +287,8 @@ const AIBenefitsChart: React.FC<AIBenefitsChartProps> = ({ service }) => {
   const chartData: ChartData<'bar'> = {
     labels: [...benefitsData[service].labels],
     datasets: benefitsData[service].datasets.map(dataset => ({
-      ...dataset
+      ...dataset,
+      data: [...dataset.data]
     }))
   };
 
