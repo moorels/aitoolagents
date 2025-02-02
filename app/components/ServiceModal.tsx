@@ -3,21 +3,19 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import AIBenefitsChart from './AIBenefitsChart';
 
-const chartTitleMapping: { [key: string]: "Virtual Customer Service Agents" | "AI-Powered Sales Assistants" | "AI-Driven Content Creation" | "Predictive Analytics & Forecasting" | "AI-Powered Lead Scoring & Qualification" | "Real-Time Translation Services" } = {
-  'Customer Service': 'Virtual Customer Service Agents',
-  'AI Agents': 'AI-Powered Sales Assistants',
-  'Office Automation': 'AI-Driven Content Creation',
-  'Retail Automation': 'Predictive Analytics & Forecasting',
-  'Healthcare': 'Predictive Analytics & Forecasting',
-  'Insurance': 'AI-Powered Lead Scoring & Qualification',
-  'Property Management': 'AI-Driven Content Creation',
-  'Customer Care': 'Virtual Customer Service Agents',
-  'Custom AI Solutions': 'AI-Driven Content Creation',
-  'AI Agentic Solutions': 'AI-Powered Sales Assistants',
-  'AI Process Automation': 'Predictive Analytics & Forecasting',
-  'AI Integrations': 'AI-Powered Lead Scoring & Qualification',
-  'Security': 'AI-Powered Lead Scoring & Qualification',
-  'Deployment': 'Real-Time Translation Services'
+const chartTitleMapping: { [key: string]: string } = {
+  'Virtual Customer Service Agents': 'Virtual Customer Service Agents',
+  'AI-Powered Sales Assistants': 'AI-Powered Sales Assistants',
+  'Automated Data Entry & Processing': 'Automated Data Entry & Processing',
+  'Customer Segmentation & Profiling': 'Customer Segmentation & Profiling',
+  'Automated Email Processing': 'Automated Email Processing',
+  'Chatbot Development & Customization': 'Chatbot Development & Customization',
+  'AI-Powered Order Fulfillment': 'AI-Powered Order Fulfillment',
+  'Intelligent Scheduling & Appointment Setting': 'Intelligent Scheduling & Appointment Setting',
+  'AI-Driven Content Creation': 'AI-Driven Content Creation',
+  'Predictive Analytics & Forecasting': 'Predictive Analytics & Forecasting',
+  'AI-Powered Lead Scoring & Qualification': 'AI-Powered Lead Scoring & Qualification',
+  'Real-Time Translation Services': 'Real-Time Translation Services'
 };
 
 interface ServiceModalProps {
