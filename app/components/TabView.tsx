@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import styles from './TabView.module.css';
 
@@ -33,6 +33,26 @@ const tabData = [
 
 export default function TabView() {
   const [activeTab, setActiveTab] = useState(0);
+  const imageRef = useRef<HTMLDivElement>(null);
+  const [transform, setTransform] = useState('scale(1) translate(0, 0)');
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!imageRef.current) return;
+
+    const { left, top, width, height } = imageRef.current.getBoundingClientRect();
+    const x = (e.clientX - left) / width;
+    const y = (e.clientY - top) / height;
+
+    // Calculate the transform offset based on mouse position
+    const offsetX = (x - 0.5) * 200;
+    const offsetY = (y - 0.5) * 200;
+
+    setTransform(`scale(2.5) translate(${-offsetX}px, ${-offsetY}px)`);
+  };
+
+  const handleMouseLeave = () => {
+    setTransform('scale(1) translate(0, 0)');
+  };
 
   return (
     <div className={styles.container}>
@@ -52,14 +72,26 @@ export default function TabView() {
           <h2>{tabData[activeTab].title}</h2>
           <p>{tabData[activeTab].description}</p>
         </div>
-        <div className={styles.imageContent}>
-          <Image
-            src={tabData[activeTab].image}
-            alt={tabData[activeTab].title}
-            width={600}
-            height={400}
-            style={{ objectFit: 'contain' }}
-          />
+        <div 
+          className={styles.imageContent}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          ref={imageRef}
+        >
+          <div className={styles.imageWrapper}>
+            <Image
+              src={tabData[activeTab].image}
+              alt={tabData[activeTab].title}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 800px"
+              style={{ 
+                objectFit: 'contain',
+                transform,
+                transition: 'transform 0.1s ease-out'
+              }}
+              priority
+            />
+          </div>
         </div>
       </div>
     </div>
