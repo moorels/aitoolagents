@@ -1,46 +1,48 @@
 'use client'
-import ServicePage from '../../components/ServicePage';
+import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
-
-
-
 
 export default function HealthcarePage() {
   return (
     <div>
-      <ServicePage
-        title="Healthcare Solutions"
-        description="Enhance patient care and streamline medical operations with our AI-powered healthcare solutions. We help healthcare providers optimize their processes, improve patient outcomes, and maintain regulatory compliance while reducing administrative burden."
-        features={[
-          "Patient Data Management",
-          "Appointment Scheduling Automation",
-          "Medical Record Processing",
-          "Clinical Decision Support",
-          "Healthcare Workflow Automation",
-          "Patient Engagement Tools",
-          "Compliance Monitoring",
-          "Medical Billing Automation"
-        ]}
+      <ServicePageTemplate
+        title="Healthcare"
+        description="Transform healthcare delivery with AI-powered solutions that enhance patient care, streamline clinical workflows, and improve operational efficiency. Our intelligent systems support healthcare providers in making data-driven decisions while ensuring compliance and patient privacy."
         benefits={[
-          "Improved Patient Care",
-          "Reduced Administrative Burden",
-          "Enhanced Clinical Decision Making",
-          "Better Resource Allocation",
-          "Increased Operational Efficiency",
-          "Improved Patient Satisfaction"
+          "Enhanced Patient Care",
+          "Improved Diagnosis Accuracy",
+          "Reduced Medical Errors",
+          "Streamlined Operations",
+          "Better Resource Utilization",
+          "Increased Efficiency",
+          "Regulatory Compliance",
+          "Cost Optimization"
+        ]}
+        features={[
+          "Clinical Decision Support",
+          "Patient Data Analytics",
+          "Medical Imaging Analysis",
+          "Treatment Planning",
+          "Resource Management",
+          "Workflow Optimization",
+          "Compliance Monitoring",
+          "Performance Tracking"
         ]}
         useCases={[
           {
-            title: "Automated Patient Scheduling",
-            description: "Intelligent scheduling system that optimizes appointment booking, reduces no-shows, and manages patient flow efficiently."
+            title: "AI-Powered Medical Imaging",
+            description: "Deploy advanced AI algorithms for analyzing medical images (X-rays, MRIs, CT scans) to assist in early detection and diagnosis of conditions, improving accuracy and speed of diagnoses.",
+            impact: "Increased diagnostic accuracy by 45% and reduced analysis time by 60%"
           },
           {
-            title: "Medical Records Management",
-            description: "Automated processing and organization of medical records with intelligent data extraction and categorization."
+            title: "Patient Flow Optimization",
+            description: "Implement AI systems to optimize patient scheduling, bed management, and resource allocation, reducing wait times and improving hospital efficiency.",
+            impact: "Decreased average wait times by 55% and improved bed utilization by 40%"
           },
           {
-            title: "Clinical Workflow Optimization",
-            description: "Streamline clinical workflows with AI-powered task management and resource allocation systems."
+            title: "Predictive Health Monitoring",
+            description: "Utilize AI to analyze patient data in real-time, predicting potential health issues and enabling early intervention to prevent complications.",
+            impact: "Reduced preventable complications by 65% and improved patient outcomes by 35%"
           }
         ]}
       />

@@ -76,9 +76,14 @@ export default function AICharts() {
     labels: ['Customer Service', 'Data Entry', 'Task Management', 'Document Processing'],
     datasets: [
       {
-        label: 'Productivity Increase (%)',
-        data: [65, 80, 45, 70],
+        label: 'After AI Implementation',
+        data: [165, 180, 145, 170],
         backgroundColor: 'rgba(196, 157, 23, 0.8)',
+      },
+      {
+        label: 'Before AI Implementation',
+        data: [100, 100, 100, 100],
+        backgroundColor: 'rgba(255, 115, 0, 0.8)',
       },
     ],
   };
@@ -87,6 +92,7 @@ export default function AICharts() {
     labels: ['Labor Costs', 'Error-Related Costs', 'Training Costs', 'Operational Costs'],
     datasets: [
       {
+        label: 'Cost Reduction After AI (%)',
         data: [35, 25, 20, 20],
         backgroundColor: [
           'rgba(196, 157, 23, 0.8)',
@@ -102,7 +108,7 @@ export default function AICharts() {
     labels: ['Month 1', 'Month 2', 'Month 3', 'Month 4', 'Month 6', 'Month 12'],
     datasets: [
       {
-        label: 'ROI Timeline',
+        label: 'ROI After AI Implementation (%)',
         data: [0, 20, 50, 100, 180, 300],
         borderColor: 'rgba(196, 157, 23, 1)',
         backgroundColor: 'rgba(196, 157, 23, 0.2)',
@@ -131,15 +137,14 @@ export default function AICharts() {
     labels: ['Email Responses', 'Data Entry', 'Scheduling', 'Report Generation', 'Customer Queries'],
     datasets: [
       {
-        label: 'Automation Potential',
+        label: 'After AI Implementation',
         data: [80, 90, 75, 85, 70],
-        backgroundColor: [
-          'rgba(196, 157, 23, 0.8)',
-          'rgba(255, 115, 0, 0.8)',
-          'rgba(241, 177, 0, 0.8)',
-          'rgba(248, 190, 0, 0.8)',
-          'rgba(220, 180, 0, 0.8)',
-        ],
+        backgroundColor: 'rgba(196, 157, 23, 0.8)',
+      },
+      {
+        label: 'Before AI Implementation',
+        data: [25, 30, 20, 15, 35],
+        backgroundColor: 'rgba(255, 115, 0, 0.8)',
       },
     ],
   };
@@ -154,12 +159,17 @@ export default function AICharts() {
     ],
     datasets: [
       {
-        label: 'Impact Score',
-        data: [90, 85, 80, 95, 88],
-        backgroundColor: 'rgba(196, 157, 23, 0.2)',
+        label: 'After AI Implementation',
+        data: [90, 85, 88, 95, 92],
+        backgroundColor: 'rgba(196, 157, 23, 0.8)',
         borderColor: 'rgba(196, 157, 23, 1)',
-        pointBackgroundColor: 'rgba(196, 157, 23, 1)',
       },
+      {
+        label: 'Before AI Implementation',
+        data: [45, 40, 35, 50, 38],
+        backgroundColor: 'rgba(255, 115, 0, 0.8)',
+        borderColor: 'rgba(255, 115, 0, 1)',
+      }
     ],
   };
 
@@ -183,9 +193,14 @@ export default function AICharts() {
     labels: ['Response Time', 'Issue Resolution', 'Customer Satisfaction', 'Support Coverage'],
     datasets: [
       {
-        label: 'Improvement (%)',
-        data: [75, 65, 80, 95],
+        label: 'After AI Implementation',
+        data: [95, 92, 90, 98],
         backgroundColor: 'rgba(196, 157, 23, 0.8)',
+      },
+      {
+        label: 'Before AI Implementation',
+        data: [45, 55, 50, 40],
+        backgroundColor: 'rgba(255, 115, 0, 0.8)',
       },
     ],
   };
@@ -194,14 +209,14 @@ export default function AICharts() {
     labels: ['Data Entry', 'Customer Service', 'Compliance', 'Reporting'],
     datasets: [
       {
-        label: 'Error Reduction (%)',
-        data: [90, 75, 85, 80],
-        backgroundColor: [
-          'rgba(196, 157, 23, 0.8)',
-          'rgba(255, 115, 0, 0.8)',
-          'rgba(241, 177, 0, 0.8)',
-          'rgba(248, 190, 0, 0.8)',
-        ],
+        label: 'After AI Implementation',
+        data: [95, 92, 94, 90],
+        backgroundColor: 'rgba(196, 157, 23, 0.8)',
+      },
+      {
+        label: 'Before AI Implementation',
+        data: [65, 70, 75, 60],
+        backgroundColor: 'rgba(255, 115, 0, 0.8)',
       },
     ],
   };
@@ -283,7 +298,7 @@ export default function AICharts() {
         >
           <h3 className="text-xl font-semibold mb-4 text-[#c49d17]">Task Automation Potential (%)</h3>
           <div className="h-[300px]">
-            <Pie options={pieOptions} data={taskAutomation} />
+            <Bar options={chartOptions} data={taskAutomation} />
           </div>
         </motion.div>
 
@@ -335,7 +350,7 @@ export default function AICharts() {
         >
           <h3 className="text-xl font-semibold mb-4 text-[#c49d17]">Error Reduction by Department</h3>
           <div className="h-[300px]">
-            <Pie options={pieOptions} data={errorReduction} />
+            <Bar options={chartOptions} data={errorReduction} />
           </div>
         </motion.div>
 

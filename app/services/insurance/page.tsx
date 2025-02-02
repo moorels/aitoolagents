@@ -1,45 +1,48 @@
 'use client'
-import ServicePage from '../../components/ServicePage';
+import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
-
-
 
 export default function InsurancePage() {
   return (
     <div>
-      <ServicePage
-        title="Insurance Solutions"
-        description="Transform your insurance operations with AI-powered automation solutions that streamline claims processing, enhance risk assessment, and improve customer service. Our intelligent systems help insurance providers deliver faster, more accurate services while reducing operational costs."
-        features={[
-          "Automated Claims Processing",
-          "Risk Assessment Automation",
-          "Policy Management",
-          "Fraud Detection",
-          "Customer Data Analysis",
-          "Document Processing",
-          "Underwriting Automation",
-          "Compliance Monitoring"
-        ]}
+      <ServicePageTemplate
+        title="Insurance"
+        description="Transform insurance operations with AI-powered solutions that streamline underwriting, enhance risk assessment, and improve claims processing. Our intelligent systems help insurance providers make data-driven decisions while delivering superior customer service and maintaining regulatory compliance."
         benefits={[
           "Faster Claims Processing",
           "Improved Risk Assessment",
-          "Reduced Operational Costs",
-          "Enhanced Fraud Detection",
-          "Better Customer Service",
-          "Increased Accuracy"
+          "Reduced Fraud",
+          "Enhanced Customer Service",
+          "Automated Underwriting",
+          "Better Decision Making",
+          "Regulatory Compliance",
+          "Cost Optimization"
+        ]}
+        features={[
+          "Claims Automation",
+          "Risk Analysis",
+          "Fraud Detection",
+          "Policy Management",
+          "Customer Analytics",
+          "Document Processing",
+          "Compliance Monitoring",
+          "Performance Tracking"
         ]}
         useCases={[
           {
             title: "Automated Claims Processing",
-            description: "Streamline claims processing with AI-powered document analysis, validation, and decision-making support."
+            description: "Deploy AI-powered systems to automate the entire claims lifecycle, from initial filing to assessment and settlement, while detecting potential fraud and ensuring compliance.",
+            impact: "Reduced claims processing time by 75% and improved fraud detection by 60%"
           },
           {
-            title: "Intelligent Risk Assessment",
-            description: "Enhance underwriting processes with automated risk assessment and policy recommendation systems."
+            title: "Intelligent Underwriting",
+            description: "Implement AI algorithms that analyze multiple data sources to assess risk accurately and automate underwriting decisions, providing faster and more consistent policy pricing.",
+            impact: "Decreased underwriting time by 65% and improved risk assessment accuracy by 40%"
           },
           {
-            title: "Fraud Detection",
-            description: "Identify potential fraud patterns using advanced AI algorithms and data analysis."
+            title: "Predictive Customer Analytics",
+            description: "Utilize AI to analyze customer behavior and risk patterns, enabling personalized policy recommendations and proactive risk management strategies.",
+            impact: "Increased customer retention by 35% and reduced risk exposure by 45%"
           }
         ]}
       />

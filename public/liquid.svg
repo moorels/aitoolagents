@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1440" height="1000" viewBox="0 0 1440 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path opacity="0.5">
+  <path opacity="1">
     <animate
       attributeName="fill"
       dur="20s"

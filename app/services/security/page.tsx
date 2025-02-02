@@ -1,45 +1,48 @@
 'use client'
-import ServicePage from '../../components/ServicePage';
+import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
-
-
 
 export default function SecurityPage() {
   return (
     <div>
-      <ServicePage
-        title="AI Security Solutions"
-        description="Protect your AI systems and data with our comprehensive security solutions. We implement robust security measures to ensure the integrity, confidentiality, and reliability of your AI operations while maintaining compliance with industry standards."
-        features={[
-          "AI Model Protection",
-          "Data Encryption",
-          "Access Control",
-          "Threat Detection",
-          "Security Monitoring",
-          "Compliance Management",
-          "Vulnerability Assessment",
-          "Incident Response"
-        ]}
+      <ServicePageTemplate
+        title="Security"
+        description="Protect your AI systems and data with our comprehensive security solutions that combine advanced threat detection, proactive monitoring, and intelligent response mechanisms. Our security framework ensures robust protection while maintaining system performance and accessibility."
         benefits={[
-          "Enhanced Data Protection",
-          "Regulatory Compliance",
-          "Risk Mitigation",
-          "Operational Security",
-          "Trust and Reliability",
+          "Enhanced Threat Protection",
+          "Proactive Security Measures",
+          "Reduced Security Risks",
+          "Compliance Assurance",
+          "Real-time Monitoring",
+          "Rapid Incident Response",
+          "Data Protection",
           "Business Continuity"
+        ]}
+        features={[
+          "AI-Powered Threat Detection",
+          "Access Control Management",
+          "Encryption Implementation",
+          "Security Monitoring",
+          "Incident Response System",
+          "Compliance Framework",
+          "Vulnerability Assessment",
+          "Security Analytics"
         ]}
         useCases={[
           {
-            title: "AI Model Security",
-            description: "Implement comprehensive security measures to protect AI models from unauthorized access, tampering, and theft while ensuring their integrity and reliability."
+            title: "Intelligent Threat Detection",
+            description: "Deploy AI-powered security systems that continuously monitor network traffic and system behavior to identify and respond to potential threats in real-time.",
+            impact: "Reduced threat detection time by 85% and improved incident response by 70%"
           },
           {
-            title: "Data Security",
-            description: "Secure sensitive data used in AI operations through encryption, access controls, and continuous monitoring for potential security threats."
+            title: "Automated Compliance Management",
+            description: "Implement AI solutions that automate compliance monitoring, documentation, and reporting across multiple regulatory frameworks while ensuring continuous compliance.",
+            impact: "Achieved 99.9% compliance rate and reduced audit preparation time by 60%"
           },
           {
-            title: "Compliance Management",
-            description: "Ensure AI systems comply with industry regulations and standards while maintaining robust security measures for data protection."
+            title: "Advanced Access Control",
+            description: "Utilize AI for intelligent access management, including behavioral biometrics and contextual authentication, to enhance security while maintaining user convenience.",
+            impact: "Reduced unauthorized access attempts by 95% and improved user authentication speed by 40%"
           }
         ]}
       />

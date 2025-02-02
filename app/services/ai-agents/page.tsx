@@ -1,43 +1,48 @@
 'use client'
-import ServicePage from '../../components/ServicePage';
+import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
 
 export default function AIAgentsPage() {
   return (
     <div>
-      <ServicePage
-        title="AI Agents Solutions"
-        description="Empower your operations with intelligent AI agents that automate complex tasks and decision-making processes. Our advanced agents combine machine learning, natural language processing, and autonomous decision-making capabilities to handle sophisticated workflows and interactions."
-        features={[
-          "Autonomous Decision Making",
-          "Natural Language Understanding",
-          "Task Automation",
-          "Learning and Adaptation",
-          "Multi-Agent Coordination",
-          "Process Optimization",
-          "Real-time Response",
-          "Contextual Awareness"
-        ]}
+      <ServicePageTemplate
+        title="AI Agents"
+        description="Empower your business with intelligent AI agents that automate complex tasks, make informed decisions, and adapt to changing conditions. Our AI agents combine advanced machine learning with robust decision-making capabilities to deliver autonomous, efficient, and scalable solutions."
         benefits={[
-          "Enhanced Operational Efficiency",
-          "Reduced Manual Intervention",
-          "Improved Decision Making",
+          "Autonomous Task Execution",
+          "Intelligent Decision Making",
+          "Continuous Learning",
+          "Improved Efficiency",
+          "Reduced Human Error",
           "24/7 Operation Capability",
           "Scalable Performance",
-          "Consistent Service Delivery"
+          "Adaptable Solutions"
+        ]}
+        features={[
+          "Advanced Machine Learning",
+          "Natural Language Processing",
+          "Autonomous Decision Making",
+          "Real-time Adaptation",
+          "Multi-agent Coordination",
+          "Task Automation",
+          "Performance Analytics",
+          "Integration Capabilities"
         ]}
         useCases={[
           {
-            title: "Intelligent Process Automation",
-            description: "Deploy AI agents to automate complex business processes with intelligent decision-making capabilities."
+            title: "Customer Service Automation",
+            description: "Implement AI agents to handle customer inquiries 24/7, providing instant responses to common questions and seamlessly escalating complex issues to human agents when necessary.",
+            impact: "Reduced response time by 80% and increased customer satisfaction scores by 35%"
           },
           {
-            title: "Customer Interaction Management",
-            description: "Implement AI agents that handle customer inquiries and support requests with natural language understanding."
+            title: "Intelligent Process Orchestration",
+            description: "Deploy AI agents to coordinate and optimize complex business processes across multiple departments, automatically handling task allocation, monitoring progress, and adapting to bottlenecks.",
+            impact: "Improved process efficiency by 60% and reduced operational costs by 40%"
           },
           {
-            title: "Workflow Optimization",
-            description: "Utilize AI agents to analyze and optimize business workflows for maximum efficiency and effectiveness."
+            title: "Predictive Maintenance",
+            description: "Utilize AI agents to monitor equipment performance, predict potential failures, and automatically schedule maintenance before issues occur, ensuring optimal operation of critical systems.",
+            impact: "Decreased equipment downtime by 75% and maintenance costs by 50%"
           }
         ]}
       />

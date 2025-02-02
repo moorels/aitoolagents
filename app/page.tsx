@@ -6,14 +6,14 @@ import Chat from './components/Chat'
 import Link from 'next/link'
 
 import BorderWave from './components/BorderWave';
-import LiquidBackground from './components/LiquidBackground';
+import MovingWaves from './components/MovingWaves';
 import TabView from './components/TabView';
 import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative overflow-hidden">
-      <LiquidBackground />
+      <MovingWaves />
       
       <div className="w-full">
       

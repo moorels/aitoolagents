@@ -1,45 +1,48 @@
 'use client'
-import ServicePage from '../../components/ServicePage';
+import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
-
-
 
 export default function OfficeAutomationPage() {
   return (
     <div>
-      <ServicePage
+      <ServicePageTemplate
         title="Office Automation"
-        description="Streamline your office operations with intelligent automation solutions that reduce manual tasks, improve workflow efficiency, and enhance productivity. Our AI-powered systems transform traditional office processes into seamless digital workflows."
-        features={[
-          "Intelligent Document Processing",
-          "Automated Data Entry and Validation",
-          "Smart Calendar Management",
-          "Email Classification and Routing",
-          "Meeting Scheduling and Coordination",
-          "Document Version Control",
-          "Automated Report Generation",
-          "Digital Asset Management"
-        ]}
+        description="Transform your office operations with AI-powered automation solutions that streamline workflows, reduce manual tasks, and enhance productivity. Our intelligent systems optimize everyday office processes while ensuring accuracy and compliance."
         benefits={[
           "Increased Productivity",
-          "Reduced Manual Errors",
-          "Time and Cost Savings",
-          "Improved Workflow Efficiency",
-          "Enhanced Data Accuracy",
-          "Better Resource Allocation"
+          "Reduced Manual Work",
+          "Improved Accuracy",
+          "Better Resource Allocation",
+          "Enhanced Collaboration",
+          "Streamlined Workflows",
+          "Cost Reduction",
+          "Data-Driven Insights"
+        ]}
+        features={[
+          "Document Processing",
+          "Workflow Automation",
+          "Meeting Scheduling",
+          "Email Management",
+          "Task Prioritization",
+          "Resource Planning",
+          "Performance Tracking",
+          "Integration Capabilities"
         ]}
         useCases={[
           {
-            title: "Document Processing",
-            description: "Automatically process, categorize, and store documents while extracting key information for easy retrieval and analysis."
+            title: "Intelligent Document Management",
+            description: "Implement AI-powered document processing that automatically categorizes, extracts data, and routes documents to appropriate departments while maintaining searchable digital archives.",
+            impact: "Reduced document processing time by 90% and improved document retrieval speed by 75%"
           },
           {
-            title: "Meeting Management",
-            description: "Streamline meeting scheduling, note-taking, and follow-up tasks with AI-powered coordination tools."
+            title: "Smart Meeting Assistant",
+            description: "Deploy AI systems that handle meeting scheduling, generate automated summaries, track action items, and facilitate follow-ups to ensure productive meetings and accountability.",
+            impact: "Decreased meeting scheduling time by 80% and improved action item completion rate by 65%"
           },
           {
-            title: "Workflow Automation",
-            description: "Create intelligent workflows that automatically route tasks, notify relevant team members, and track progress."
+            title: "Email Intelligence",
+            description: "Utilize AI to automatically categorize, prioritize, and respond to emails, while identifying important action items and maintaining organized communication threads.",
+            impact: "Reduced email response time by 70% and improved email organization efficiency by 85%"
           }
         ]}
       />

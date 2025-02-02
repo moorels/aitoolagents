@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import TypeWriter from './TypeWriter'
+import AIBenefitsChart from './AIBenefitsChart';
 
 interface TypewriterTextProps {
   text?: string

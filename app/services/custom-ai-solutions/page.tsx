@@ -1,43 +1,48 @@
 'use client'
-import ServicePage from '../../components/ServicePage';
+import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
 
 export default function CustomAISolutionsPage() {
   return (
     <div>
-      <ServicePage
+      <ServicePageTemplate
         title="Custom AI Solutions"
-        description="Transform your business with tailor-made AI solutions designed to address your unique challenges and opportunities. Our expert team develops custom AI applications that align perfectly with your business objectives and operational requirements."
-        features={[
-          "Customized AI Development",
-          "Business Process Analysis",
-          "Solution Architecture Design",
-          "Integration Planning",
-          "Performance Optimization",
-          "Scalability Planning",
-          "Custom Model Training",
-          "Ongoing Support and Maintenance"
-        ]}
+        description="Transform your business with tailored AI solutions designed to address your unique challenges and opportunities. Our custom AI development services combine cutting-edge technology with deep industry expertise to deliver solutions that drive innovation and competitive advantage."
         benefits={[
           "Tailored to Your Needs",
+          "Improved Operational Efficiency",
           "Competitive Advantage",
-          "Improved Efficiency",
           "Scalable Solutions",
           "Future-Proof Technology",
-          "ROI Optimization"
+          "Enhanced Decision Making",
+          "Rapid Implementation",
+          "Continuous Optimization"
+        ]}
+        features={[
+          "Custom AI Model Development",
+          "Industry-Specific Solutions",
+          "Integration Services",
+          "Scalable Architecture",
+          "Performance Monitoring",
+          "Continuous Learning",
+          "Security Implementation",
+          "API Development"
         ]}
         useCases={[
           {
-            title: "Process Optimization",
-            description: "Custom AI solutions that analyze and optimize your specific business processes for maximum efficiency."
+            title: "Predictive Analytics for Manufacturing",
+            description: "Develop custom AI models that analyze production data to predict equipment failures, optimize maintenance schedules, and improve quality control processes in manufacturing environments.",
+            impact: "Reduced unplanned downtime by 75% and improved product quality by 45%"
           },
           {
-            title: "Intelligent Automation",
-            description: "Tailored automation solutions that address your unique operational challenges and requirements."
+            title: "AI-Powered Risk Assessment",
+            description: "Create tailored risk assessment models for financial institutions that analyze multiple data sources to evaluate credit risks, detect fraud patterns, and automate underwriting processes.",
+            impact: "Improved risk assessment accuracy by 60% and reduced fraud losses by 80%"
           },
           {
-            title: "Data Analytics",
-            description: "Custom AI models that extract meaningful insights from your specific data sources and formats."
+            title: "Healthcare Diagnosis Assistant",
+            description: "Build specialized AI systems that assist healthcare professionals in diagnosis by analyzing patient data, medical imaging, and historical records to provide evidence-based recommendations.",
+            impact: "Increased diagnostic accuracy by 40% and reduced diagnosis time by 50%"
           }
         ]}
       />

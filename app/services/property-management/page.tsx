@@ -1,45 +1,48 @@
 'use client'
-import ServicePage from '../../components/ServicePage';
+import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
-
-
 
 export default function PropertyManagementPage() {
   return (
     <div>
-      <ServicePage
-        title="Property Management Solutions"
-        description="Transform property management operations with AI-powered solutions that streamline maintenance, optimize tenant experiences, and maximize property value. Our intelligent systems help property managers automate routine tasks and make data-driven decisions."
-        features={[
-          "Automated Maintenance Scheduling",
-          "Smart Building Management",
-          "Tenant Portal Integration",
-          "Rent Collection Automation",
-          "Property Inspection Tools",
-          "Lease Management System",
-          "Utility Usage Optimization",
-          "Security System Integration"
-        ]}
+      <ServicePageTemplate
+        title="Property Management"
+        description="Transform property management with AI-powered solutions that streamline operations, enhance tenant satisfaction, and optimize property performance. Our intelligent systems automate routine tasks, provide predictive maintenance insights, and deliver real-time property analytics for better decision-making."
         benefits={[
-          "Reduced Operating Costs",
           "Improved Tenant Satisfaction",
+          "Reduced Maintenance Costs",
           "Enhanced Property Value",
-          "Streamlined Maintenance",
           "Better Resource Allocation",
-          "Increased Energy Efficiency"
+          "Increased Occupancy Rates",
+          "Streamlined Operations",
+          "Predictive Maintenance",
+          "Real-time Performance Insights"
+        ]}
+        features={[
+          "Automated Maintenance Requests",
+          "Tenant Portal Integration",
+          "Smart Building Management",
+          "Rent Collection Automation",
+          "Property Analytics Dashboard",
+          "Inspection Management",
+          "Vendor Management System",
+          "Document Processing Automation"
         ]}
         useCases={[
           {
             title: "Smart Maintenance Management",
-            description: "Implement predictive maintenance systems that identify potential issues before they become problems, automatically schedule repairs, and track maintenance history."
+            description: "Deploy AI-powered systems to predict maintenance needs, automatically schedule repairs, and optimize resource allocation while tracking maintenance history and costs.",
+            impact: "Reduced maintenance costs by 40% and improved response time by 65%"
           },
           {
-            title: "Automated Tenant Services",
-            description: "Provide a digital platform for tenant communications, maintenance requests, rent payments, and document management."
+            title: "Intelligent Tenant Experience",
+            description: "Implement AI solutions that streamline tenant communications, automate rent collection, and provide personalized service through an integrated tenant portal.",
+            impact: "Increased tenant satisfaction by 50% and reduced administrative tasks by 70%"
           },
           {
-            title: "Building Performance Optimization",
-            description: "Monitor and optimize building systems for energy efficiency, comfort, and sustainability using IoT sensors and AI analytics."
+            title: "Predictive Property Analytics",
+            description: "Utilize AI to analyze property performance metrics, occupancy patterns, and market trends to optimize pricing and identify improvement opportunities.",
+            impact: "Improved occupancy rates by 25% and increased rental income by 30%"
           }
         ]}
       />

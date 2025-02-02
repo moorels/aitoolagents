@@ -1,46 +1,48 @@
 'use client'
-import ServicePage from '../../components/ServicePage';
+import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
-
-
-
 
 export default function DeploymentPage() {
   return (
     <div>
-      <ServicePage
-        title="AI Deployment Solutions"
-        description="Streamline your AI deployment process with our comprehensive deployment solutions. We ensure smooth transition from development to production while maintaining performance, scalability, and reliability of your AI systems."
+      <ServicePageTemplate
+        title="Deployment"
+        description="Streamline your AI solution deployment with our comprehensive deployment services that ensure smooth implementation, optimal performance, and seamless integration. Our expert team handles everything from infrastructure setup to monitoring and maintenance, ensuring your AI systems operate at peak efficiency."
+        benefits={[
+          "Rapid Implementation",
+          "Minimal Disruption",
+          "Optimized Performance",
+          "Scalable Infrastructure",
+          "Reliable Operations",
+          "Continuous Monitoring",
+          "Cost Efficiency",
+          "Expert Support"
+        ]}
         features={[
           "Automated Deployment",
-          "Environment Management",
+          "Infrastructure Setup",
+          "Performance Optimization",
+          "Monitoring Systems",
+          "Scaling Management",
           "Version Control",
-          "Performance Monitoring",
-          "Scalability Options",
           "Rollback Capabilities",
-          "Deployment Testing",
-          "Infrastructure Management"
-        ]}
-        benefits={[
-          "Faster Time-to-Market",
-          "Reduced Deployment Risks",
-          "Improved Reliability",
-          "Cost Optimization",
-          "Seamless Updates",
-          "Enhanced Monitoring"
+          "Documentation Support"
         ]}
         useCases={[
           {
-            title: "Production Deployment",
-            description: "Deploy AI models to production environments with automated testing, monitoring, and rollback capabilities to ensure reliable operation."
+            title: "Cloud-Native AI Deployment",
+            description: "Deploy AI solutions using cloud-native architectures and containerization, ensuring scalability, reliability, and optimal resource utilization across multiple environments.",
+            impact: "Achieved 99.99% system uptime and reduced deployment time by 75%"
           },
           {
-            title: "Scalable Infrastructure",
-            description: "Implement scalable infrastructure solutions that can handle growing demands while maintaining optimal performance and cost efficiency."
+            title: "Continuous Integration/Deployment",
+            description: "Implement automated CI/CD pipelines for AI models and applications, enabling rapid updates and ensuring consistent quality across all deployments.",
+            impact: "Reduced deployment cycles by 80% and improved deployment success rate to 99.5%"
           },
           {
-            title: "Continuous Integration",
-            description: "Set up continuous integration and deployment pipelines for seamless updates and maintenance of AI systems."
+            title: "Edge Computing Integration",
+            description: "Deploy AI solutions to edge devices and local networks, optimizing performance and reducing latency while maintaining centralized management and monitoring.",
+            impact: "Reduced latency by 90% and improved processing efficiency by 65%"
           }
         ]}
       />

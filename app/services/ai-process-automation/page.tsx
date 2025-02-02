@@ -1,43 +1,48 @@
 'use client'
-import ProcessAutomationPage from '../../components/ProcessAutomationPage';
+import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
 
 export default function AIProcessAutomationPage() {
   return (
     <div>
-      <ProcessAutomationPage
+      <ServicePageTemplate
         title="AI Process Automation"
-        description="Transform your business operations with intelligent process automation powered by AI. Our solutions streamline workflows, reduce manual intervention, and optimize business processes through advanced machine learning and automation technologies."
-        features={[
-          "Intelligent Workflow Automation",
-          "Machine Learning Integration",
-          "Process Mining & Analysis",
-          "Real-time Optimization",
-          "Predictive Analytics",
-          "Adaptive Process Control",
-          "Error Detection & Handling",
-          "Performance Monitoring"
-        ]}
+        description="Transform your business operations with intelligent process automation that combines AI-powered decision making with seamless workflow execution. Our solutions streamline complex processes, reduce manual intervention, and deliver consistent, high-quality results while adapting to changing business needs."
         benefits={[
-          "Increased Operational Efficiency",
-          "Reduced Processing Time",
-          "Minimized Human Error",
-          "Cost Optimization",
-          "Improved Accuracy",
-          "Enhanced Scalability"
+          "Increased Process Efficiency",
+          "Reduced Operating Costs",
+          "Enhanced Accuracy",
+          "Faster Processing Times",
+          "Improved Compliance",
+          "Better Resource Utilization",
+          "Scalable Operations",
+          "Real-time Process Insights"
+        ]}
+        features={[
+          "Intelligent Workflow Design",
+          "Process Mining & Analysis",
+          "Automated Decision Making",
+          "Exception Handling",
+          "Performance Monitoring",
+          "Integration Framework",
+          "Business Rules Engine",
+          "Process Analytics"
         ]}
         useCases={[
           {
-            title: "Business Process Automation",
-            description: "Automate complex business processes with AI-driven workflows that adapt and optimize based on real-time data and performance metrics."
-          },
-          {
             title: "Intelligent Document Processing",
-            description: "Implement smart document processing systems that can understand, extract, and process information from various document types automatically."
+            description: "Automate the extraction, classification, and processing of various document types using AI-powered OCR and natural language processing, streamlining document-heavy workflows.",
+            impact: "Reduced document processing time by 85% and improved accuracy to 99.9%"
           },
           {
-            title: "Workflow Optimization",
-            description: "Leverage AI to analyze and optimize existing workflows, identifying bottlenecks and suggesting improvements for enhanced efficiency."
+            title: "Supply Chain Optimization",
+            description: "Implement AI-driven process automation to optimize inventory management, demand forecasting, and supplier relationships, ensuring efficient supply chain operations.",
+            impact: "Decreased inventory costs by 30% and improved delivery accuracy by 40%"
+          },
+          {
+            title: "Financial Operations Automation",
+            description: "Deploy AI automation for financial processes including accounts payable/receivable, reconciliation, and compliance reporting, reducing manual effort and errors.",
+            impact: "Reduced processing costs by 70% and shortened month-end close by 60%"
           }
         ]}
       />
