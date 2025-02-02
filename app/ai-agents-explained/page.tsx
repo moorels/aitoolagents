@@ -23,6 +23,7 @@ const imageWrapperStyle = {
   display: 'flex ',
   justifyContent: 'center',
   alignItems: 'center',
+  
 };
 
 interface ImplementationStep {
@@ -170,7 +171,7 @@ export default function AIAgentsExplainedPage() {
                 src="/more/1.JPG"
                 alt="AI Customer Support Illustration"
                 width={400}
-                height={200}
+                height={260}
                 style={imageStyle}
                 className="my-4"
               />
@@ -275,7 +276,7 @@ export default function AIAgentsExplainedPage() {
                 src="/more/2.JPG"
                 alt="AI Knowledge Base Building"
                 width={400}
-                height={200}
+                height={300}
                 style={imageStyle}
                 className="my-4"
               />
@@ -309,7 +310,7 @@ export default function AIAgentsExplainedPage() {
             src="/more/5.JPG"
             alt="Operations and Logistics AI"
             width={400}
-            height={200}
+            height={250}
             style={imageStyle}
             className="my-4"
           />
@@ -333,7 +334,7 @@ export default function AIAgentsExplainedPage() {
                 src="/more/6.JPG"
                 alt="Process Automation"
                 width={400}
-                height={200}
+                height={250}
                 style={imageStyle}
                 className="my-4"
               />
@@ -386,7 +387,7 @@ export default function AIAgentsExplainedPage() {
                 src="/more/4.JPG"
                 alt="Smart Inventory Management"
                 width={400}
-                height={200}
+                height={300}
                 style={imageStyle}
                 className="my-4"
               />
