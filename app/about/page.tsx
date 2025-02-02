@@ -21,7 +21,7 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Robert Morels',
     role: 'Founding Member & Software Developer',
-    description: 'As one of the founding members, Robert brings over 10 years of experience in software development and a deep-seated love for AI. He holds a Bachelor&apos;s degree in Computer Science from the University of Technology Sydney and has worked with several startups to bring their ideas to life.',
+    description: 'As one of the founding members, Robert brings over 10 years of experience in software development and a deep-seated love for AI. He holds a Bachelor\'s degree in Computer Science from the University of Technology Sydney and has worked with several startups to bring their ideas to life.',
     imageUrl: '/team/Robert.jpg'
   },
   {
@@ -218,7 +218,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div className="bg-gray-800/50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Australian Impact</h3>
-                  <p className="text-gray-300">We aim to empower 1,000+ businesses across Australia with AI solutions by 2026, making a significant impact on global business efficiency and innovation.</p>
+                  <p className="text-gray-300">We're dedicated to transforming the Australian business landscape through innovative AI solutions.</p>
                 </div>
                 <div className="bg-gray-800/50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Sustainable Solutions</h3>
@@ -314,7 +314,7 @@ export default function AboutPage() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xl text-gray-300 leading-relaxed mb-8">
-            Together, we bring together a wealth of experience, creativity, and innovation to offer bespoke AI solutions that are tailored to the unique needs of our clients. Whether you&apos;re looking to enhance customer service with chatbots, optimize your operations through process automation, or gain deeper insights from your data, we&apos;re here to make it happen.
+            Together, we bring together a wealth of experience, creativity, and innovation to offer bespoke AI solutions that are tailored to the unique needs of our clients. Whether you're looking to enhance customer service with chatbots, optimize your operations through process automation, or gain deeper insights from your data, we're here to make it happen.
           </p>
           <p className="text-2xl font-bold text-[#c49d17]">
             Join us as we continue to shape the future of AI in business across Australia!
