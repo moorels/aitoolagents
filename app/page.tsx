@@ -1,17 +1,18 @@
 'use client'
 import TypewriterText from './components/TypewriterText';
 import FloatingImage from './components/FloatingImage';
-
+import ClientCarousel from './components/ClientCarousel';
 import Chat from './components/Chat'
 import Link from 'next/link'
 
 import BorderWave from './components/BorderWave';
+import LiquidBackground from './components/LiquidBackground';
 import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative overflow-hidden">
-     
+      <LiquidBackground />
       <div className="w-full">
       
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4">
@@ -55,6 +56,8 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="mt-4 align-center text-[15px] md:text-[15px] px-2">Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries.</div>
+          
           <motion.section 
         className="py-4 px-4 sm:px-6 lg:px-8 bg-gray-900/50"
         initial={{ opacity: 0 }}
@@ -62,7 +65,6 @@ export default function Home() {
         transition={{ delay: 0.4 }}
       >
         <div className="max-w-3xl mx-auto text-center">
-        <div className="mt-4 align-center text-[15px] md:text-[15px] px-2">Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries.</div>
           <h2 className="text-3xl font-bold mb-6 text-[#c49d17]">Ready to Explore AI Agents?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Let us start with a friendly chat about your business and how AI agents could help. We will explain everything in plain language and help you find the perfect starting point for your journey into AI.
@@ -79,7 +81,8 @@ export default function Home() {
           </a>
         </div>
       </motion.section>
-          <div className="mt-8">
+      <ClientCarousel />
+          <div className="mt-4">
             <Chat />
           </div>
         </div>

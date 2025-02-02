@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import { generateHomeMetadata } from './metadata-config';
 import { AuthProvider } from './contexts/AuthContext';
 import Providers from './providers';
+import StyledComponentsRegistry from './registry';
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -31,16 +32,18 @@ export default function RootLayout({
       <body
         className={`${geistMono.variable} font-['Blogger_Sans'] font-light antialiased bg-gray-900 min-h-full overflow-x-hidden`}
       >
-        <AuthProvider>
-          <Providers>
-            <div className="fixed top-0 left-0 right-0 z-50">
-              <NavbarCubeContainer />
-              <Navbar />
-            </div>
-            <main className="pt-24 min-h-screen">{children}</main>
-            <Footer />
-          </Providers>
-        </AuthProvider>
+        <StyledComponentsRegistry>
+          <AuthProvider>
+            <Providers>
+              <div className="fixed top-0 left-0 right-0 z-50">
+                <NavbarCubeContainer />
+                <Navbar />
+              </div>
+              <main className="pt-24 min-h-screen">{children}</main>
+              <Footer />
+            </Providers>
+          </AuthProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
