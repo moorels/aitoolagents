@@ -2,14 +2,19 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Chat from '../components/Chat';
-
-
+import StatisticsCharts from '../components/StatisticsCharts';
 
 interface TeamMember {
   name: string;
   role: string;
   description: string;
   imageUrl: string;
+}
+
+interface Statistic {
+  value: string;
+  label: string;
+  description: string;
 }
 
 const teamMembers: TeamMember[] = [
@@ -45,6 +50,29 @@ const teamMembers: TeamMember[] = [
   }
 ];
 
+const statistics: Statistic[] = [
+  {
+    value: "197+",
+    label: "Clients Served",
+    description: "Businesses transformed through our AI solutions"
+  },
+  {
+    value: "95%",
+    label: "Client Satisfaction",
+    description: "Average satisfaction rate from our clients"
+  },
+  {
+    value: "1500+",
+    label: "AI Services Deployed",
+    description: "Custom AI solutions implemented"
+  },
+  {
+    value: "99% Uptime",
+    label: "Services Uptime",
+    description: "Our services run without interruption 24/7, ensuring uninterrupted access to our solutions."
+  }
+];
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
@@ -53,7 +81,7 @@ const fadeInUp = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen  text-white">
+    <div className="min-h-screen text-white">
       {/* Hero Section */}
       <motion.section 
         className="relative py-20 px-4 sm:px-6 lg:px-8"
@@ -68,14 +96,179 @@ export default function AboutPage() {
             initial="initial"
             animate="animate"
           > 
+            <div className="flex justify-center mb-12">
+              <div className="relative">
+                <Image
+                  src="/About/1.jpg"
+                  alt="About Image 1"
+                  width={800}
+                  height={600}
+                  className="rounded-lg shadow-2xl"
+                />
+              </div>
+            </div>
             
             <h1 className="text-4xl font-bold mb-6 text-[#c49d17]">
               About Our Team
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">AI Tool Agents was founded in 2021 with a vision to make business automation accessible and efficient for companies of all sizes. Since then, we have helped over 70 businesses streamline their operations and enhance customer experiences.
-              We&apos;re a passionate community dedicated to transforming the way businesses operate through cutting-edge AI solutions. Our journey began with a shared vision, and we&apos;re committed to harness the power of artificial intelligence to help organizations thrive in an ever-evolving digital landscape.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
+              AI Tool Agents was founded in 2021 with a vision to make business automation accessible and efficient for companies of all sizes. Since then, we have helped over 70 businesses streamline their operations and enhance customer experiences.
             </p>
+            <div className="max-w-4xl mx-auto bg-gray-900/50 p-8 rounded-lg border border-gray-800">
+              <h3 className="text-2xl font-semibold mb-4 text-[#c49d17]">Our Mission</h3>
+              <p className="text-lg text-gray-300 mb-6">
+                To democratize AI technology by making powerful, intuitive tools accessible to businesses of all sizes, enabling them to thrive in the digital age.
+              </p>
+              <h3 className="text-2xl font-semibold mb-4 text-[#c49d17]">Our Vision</h3>
+              <p className="text-lg text-gray-300">
+                To create a future where AI enhances human potential, making businesses more efficient, innovative, and sustainable while maintaining the human touch that makes each organization unique.
+              </p>
+            </div>
           </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Values and Passions Section */}
+      <motion.section 
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold mb-8 text-[#c49d17]">Our Values & Passions</h2>
+              <div className="space-y-6">
+                <div className="bg-gray-800/50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Innovation First</h3>
+                  <p className="text-gray-300">We're passionate about pushing the boundaries of what's possible with AI, constantly exploring new technologies and approaches to solve complex business challenges.</p>
+                </div>
+                <div className="bg-gray-800/50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Human-Centered Design</h3>
+                  <p className="text-gray-300">We believe that the best AI solutions are those that enhance human capabilities rather than replace them, focusing on intuitive interfaces and meaningful interactions.</p>
+                </div>
+                <div className="bg-gray-800/50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Continuous Learning</h3>
+                  <p className="text-gray-300">Our team is driven by curiosity and a commitment to staying at the forefront of AI advancement, ensuring our clients always benefit from the latest innovations.</p>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-1/2 flex justify-center">
+              <Image
+                src="/About/2.jpg"
+                alt="About Image 2"
+                width={600}
+                height={450}
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Statistics Section */}
+      <motion.section 
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#c49d17]">Our Impact in Numbers</h2>
+          <StatisticsCharts />
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {statistics.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-[#c49d17] transition-all"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="text-3xl font-bold text-[#c49d17] mb-2">{stat.value}</div>
+                <div className="text-lg font-semibold mb-2 text-[#c49d17]">{stat.label}</div>
+                <div className="text-sm text-gray-400">{stat.description}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Goals and Future Section */}
+      <motion.section 
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col-reverse md:flex-row items-center gap-12">
+            <div className="md:w-1/2 flex justify-center">
+              <Image
+                src="/About/3.jpg"
+                alt="About Image 3"
+                width={600}
+                height={450}
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold mb-8 text-[#c49d17]">Our Goals & Future</h2>
+              <div className="space-y-6">
+                <div className="bg-gray-800/50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Australian Impact</h3>
+                  <p className="text-gray-300">We aim to empower 1,000+ businesses across Australia with AI solutions by 2026, making a significant impact on global business efficiency and innovation.</p>
+                </div>
+                <div className="bg-gray-800/50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Sustainable Solutions</h3>
+                  <p className="text-gray-300">We're committed to developing AI solutions that not only drive business success but also promote environmental sustainability and responsible resource usage.</p>
+                </div>
+                <div className="bg-gray-800/50 p-6 rounded-lg">
+                  <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Community Building</h3>
+                  <p className="text-gray-300">We're building a vibrant community of AI-powered businesses, fostering knowledge sharing and collaborative innovation across industries.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Work Process Section */}
+      <motion.section 
+        className="py-16 px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#c49d17]">Our Work Process</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              className="text-center p-6 bg-gray-900/50 rounded-lg border border-gray-800"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="text-4xl mb-4">🔍</div>
+              <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Discovery</h3>
+              <p className="text-gray-400">Understanding your unique business needs and challenges</p>
+            </motion.div>
+            <motion.div 
+              className="text-center p-6 bg-gray-900/50 rounded-lg border border-gray-800"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="text-4xl mb-4">🔧</div>
+              <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Development</h3>
+              <p className="text-gray-400">Creating tailored AI solutions that fit your requirements</p>
+            </motion.div>
+            <motion.div 
+              className="text-center p-6 bg-gray-900/50 rounded-lg border border-gray-800"
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Deployment</h3>
+              <p className="text-gray-400">Seamless integration and continuous support</p>
+            </motion.div>
+          </div>
         </div>
       </motion.section>
 
@@ -95,8 +288,9 @@ export default function AboutPage() {
                   <Image
                     src={member.imageUrl}
                     alt={member.name}
-                    fill
-                    className="rounded-full object-cover"
+                    width={200}
+                    height={200}
+                    className="rounded-full"
                   />
                   <div className="absolute inset-0 rounded-full border-2 border-[#c49d17]"></div>
                 </div>

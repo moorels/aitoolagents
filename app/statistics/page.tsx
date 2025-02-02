@@ -611,7 +611,7 @@ const BusinessMetricsCharts = () => {
             </div>
 
             <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
-              <h3 className="text-xl font-semibold mb-4 text-w[#f8c90e]">Customer Journey Enhancement</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Customer Journey Enhancement</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
                   <LineChart data={customerJourneyData} margin={{ left: 60, right: 20, top: 10, bottom: 10 }}>
