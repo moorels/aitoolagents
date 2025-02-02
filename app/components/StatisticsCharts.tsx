@@ -41,7 +41,7 @@ const chartOptions = {
       color: '#c49d17',
       font: {
         size: 16,
-        weight: 'bold',
+        weight: "bold" as const,
       },
     },
   },
