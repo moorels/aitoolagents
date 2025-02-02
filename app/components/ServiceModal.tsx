@@ -1,9 +1,9 @@
 'use client'
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import AIBenefitsChart from './AIBenefitsChart';
+import AIBenefitsChart, { ServiceType } from './AIBenefitsChart';
 
-const chartTitleMapping: { [key: string]: string } = {
+const chartTitleMapping: Record<string, ServiceType> = {
   'Virtual Customer Service Agents': 'Virtual Customer Service Agents',
   'AI-Powered Sales Assistants': 'AI-Powered Sales Assistants',
   'Automated Data Entry & Processing': 'Automated Data Entry & Processing',

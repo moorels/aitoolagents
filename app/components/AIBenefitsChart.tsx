@@ -227,10 +227,10 @@ const benefitsData = {
   }
 } as const;
 
-type BenefitsDataKey = keyof typeof benefitsData;
+export type ServiceType = keyof typeof benefitsData;
 
 interface AIBenefitsChartProps {
-  service: BenefitsDataKey;
+  service: ServiceType;
 }
 
 const options = {
