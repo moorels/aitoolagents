@@ -27,7 +27,7 @@ const Footer = () => {
                 </div>
                 <div className="mt-4">
                   <Image
-                    src="/lobby.jpg"
+                    src="/lobb.jpg"
                     alt="Office Lobby"
                     width={300}
                     height={200}
