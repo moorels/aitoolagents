@@ -2,6 +2,23 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import AIBenefitsChart from './AIBenefitsChart';
 
+const chartTitleMapping: { [key: string]: string } = {
+  'Customer Service': 'Virtual Customer Service Agents',
+  'AI Agents': 'AI-Powered Sales Assistants',
+  'Office Automation': 'Automated Data Analysis',
+  'Retail Automation': 'Smart Inventory Management',
+  'Healthcare': 'Predictive Analytics',
+  'Insurance': 'AI-Driven Risk Assessment',
+  'Property Management': 'Intelligent Process Automation',
+  'Customer Care': 'Virtual Customer Service Agents',
+  'Custom AI Solutions': 'Automated Data Analysis',
+  'AI Agentic Solutions': 'AI-Powered Sales Assistants',
+  'AI Process Automation': 'Intelligent Process Automation',
+  'AI Integrations': 'Automated Data Analysis',
+  'Security': 'AI-Driven Risk Assessment',
+  'Deployment': 'Predictive Analytics'
+};
+
 interface ServiceModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -16,6 +33,8 @@ interface ServiceModalProps {
 
 export default function ServiceModal({ isOpen, onClose, title, content }: ServiceModalProps) {
   if (!isOpen) return null;
+
+  const chartTitle = chartTitleMapping[title] || 'Virtual Customer Service Agents';
 
   return (
     <AnimatePresence>
@@ -59,7 +78,7 @@ export default function ServiceModal({ isOpen, onClose, title, content }: Servic
               <div className="my-8">
                 <h3 className="text-xl font-semibold text-[#dfb406] mb-3">Performance Metrics</h3>
                 <div className="bg-gray-800 rounded-lg p-4">
-                  <AIBenefitsChart service={title} />
+                  <AIBenefitsChart service={chartTitle} />
                 </div>
               </div>
 
