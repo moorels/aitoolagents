@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion';
 import AICharts from '../components/AICharts';
+import Image from 'next/image';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -8,12 +9,28 @@ const fadeInUp = {
   transition: { duration: 0.6 }
 };
 
+const imageStyle = {
+  borderRadius: '16px',
+  margin: '20px auto',
+  width: '100%',
+  height: 'auto',
+  maxWidth: '600px',
+  display: 'block',
+};
+
+const imageWrapperStyle = {
+  width: '100%',
+  display: 'flex ',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
+
 interface ImplementationStep {
   sector: string;
-  description: string;
+  description: string | JSX.Element;
   steps: {
     title: string;
-    description: string;
+    description: string | JSX.Element;
     example: string;
   }[];
 }
@@ -25,12 +42,22 @@ const implementationSteps: ImplementationStep[] = [
     steps: [
       {
         title: "Starting Small: Basic Customer Support",
-        description: "Begin with simple chatbots that can answer frequently asked questions like What are your business hours? or How do I reset my password? These AI agents work like a very smart FAQ system that can understand questions even when they are asked in different ways.",
+        description: (
+          <div>
+            <p>Begin with simple chatbots that can answer frequently asked questions like What are your business hours? or How do I reset my password? These AI agents work like a very smart FAQ system that can understand questions even when they are asked in different ways.</p>
+            
+          </div>
+        ),
         example: "For example, if someone asks When do you close ? or Are you open now ?, the AI understands they are asking about business hours."
       },
       {
         title: "Building the Knowledge Base",
-        description: "Next, we teach the AI agent about your specific business. This is like creating a digital library of all your company, information, products, and services. The AI learns to use this information to give accurate, helpful answers about your specific offerings.",
+        description: (
+          <div>
+            
+            <p>Next, we teach the AI agent about your specific business. This is like creating a digital library of all your company, information, products, and services. The AI learns to use this information to give accurate, helpful answers about your specific offerings.</p>
+          </div>
+        ),
         example: "If you have a retail store, the AI can learn about your return policy, shipping options, and current inventory to provide precise answers about these topics."
       },
       {
@@ -47,7 +74,13 @@ const implementationSteps: ImplementationStep[] = [
   },
   {
     sector: "Operations & Logistics",
-    description: "In operations and logistics, AI agents act like super-powered assistants that can monitor, predict, and optimize various aspects of your business processes. They help make everything run more smoothly and efficiently.",
+    description: (
+      <div>
+        <p>In operations and logistics, AI agents act like super-powered assistants that can monitor, predict, and optimize various aspects of your business processes. They help make everything run more smoothly and efficiently.</p>
+        
+        
+      </div>
+    ),
     steps: [
       {
         title: "Watching and Learning",
@@ -61,12 +94,22 @@ const implementationSteps: ImplementationStep[] = [
       },
       {
         title: "Smart Inventory Management",
-        description: "The AI then helps manage your inventory by automatically tracking stock levels, predicting when you might need to reorder, and even suggesting optimal quantities. It is like having a manager who always knows exactly what is in stock and what is needed.",
+        description: (
+          <div>
+            <p>The AI then helps manage your inventory by automatically tracking stock levels, predicting when you might need to reorder, and even suggesting optimal quantities. It is like having a manager who always knows exactly what is in stock and what is needed.</p>
+            
+          </div>
+        ),
         example: "If a product typically sells more during summer, the AI will automatically suggest ordering more stock as summer approaches."
       },
       {
         title: "Process Automation",
-        description: "Finally, the AI can start automating routine tasks and making real-time adjustments to improve efficiency. This is like having a skilled coordinator who can instantly respond to changes and keep everything running smoothly.",
+        description: (
+          <div>
+            
+            <p>Finally, the AI can start automating routine tasks and making real-time adjustments to improve efficiency. This is like having a skilled coordinator who can instantly respond to changes and keep everything running smoothly.</p>
+          </div>
+        ),
         example: "If a delivery truck is running late, the AI can automatically adjust the day of schedule and notify affected customers."
       }
     ]
@@ -128,7 +171,16 @@ export default function AIAgentsExplainedPage() {
           </motion.div>
         </div>
       </motion.section>
-
+      <div style={imageWrapperStyle}>
+              <Image
+                src="/more/1.JPG"
+                alt="AI Customer Support Illustration"
+                width={400}
+                height={200}
+                style={imageStyle}
+                className="my-4"
+              />
+            </div>
       {/* What Are AI Agents Section */}
       <motion.section 
         className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/50"
@@ -224,7 +276,16 @@ export default function AIAgentsExplainedPage() {
           <h2 className="text-3xl font-bold mb-8 text-[#c49d17]">Getting Started with AI Agents</h2>
           <p className="text-xl text-gray-300 mb-12">
             Starting with AI agents does not mean completely changing how your business works overnight. Instead, we recommend a step-by-step approach in different areas of your business. Here is how we can help you begin:
-          </p>
+          </p><div style={imageWrapperStyle}>
+              <Image
+                src="/more/2.JPG"
+                alt="AI Knowledge Base Building"
+                width={400}
+                height={200}
+                style={imageStyle}
+                className="my-4"
+              />
+            </div>
           <div className="space-y-16">
             {implementationSteps.map((sector, sectorIndex) => (
               <motion.div
@@ -249,7 +310,16 @@ export default function AIAgentsExplainedPage() {
                       <p className="text-gray-400 italic">{step.example}</p>
                     </div>
                   ))}
-                </div>
+                </div><div style={imageWrapperStyle}>
+          <Image
+            src="/more/5.JPG"
+            alt="Operations and Logistics AI"
+            width={400}
+            height={200}
+            style={imageStyle}
+            className="my-4"
+          />
+        </div>
               </motion.div>
             ))}
           </div>
@@ -264,7 +334,16 @@ export default function AIAgentsExplainedPage() {
         transition={{ delay: 0.4 }}
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-[#c49d17]">Common Questions About AI Agents</h2>
+          <h2 className="text-3xl font-bold mb-8 text-[#c49d17]">Common Questions About AI Agents</h2><div style={imageWrapperStyle}>
+              <Image
+                src="/more/6.JPG"
+                alt="Process Automation"
+                width={400}
+                height={200}
+                style={imageStyle}
+                className="my-4"
+              />
+            </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -308,7 +387,16 @@ export default function AIAgentsExplainedPage() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h1 className="text-4xl font-bold text-center mb-8 text-[#c49d17]">Understanding AI Agents</h1>
-          
+          <div style={imageWrapperStyle}>
+              <Image
+                src="/more/4.JPG"
+                alt="Smart Inventory Management"
+                width={400}
+                height={200}
+                style={imageStyle}
+                className="my-4"
+              />
+            </div>
           <div className="prose prose-lg prose-invert max-w-none">
             <h2 className="text-2xl font-semibold mb-4 text-[#c49d17]">The Impact of AI Agents on Business</h2>
             <p className="mb-8">
