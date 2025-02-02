@@ -9,6 +9,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import { ChartData } from 'chart.js';
 
 ChartJS.register(
   CategoryScale,
@@ -283,9 +284,16 @@ const options = {
 };
 
 const AIBenefitsChart: React.FC<AIBenefitsChartProps> = ({ service }) => {
+  const chartData: ChartData<'bar'> = {
+    labels: [...benefitsData[service].labels],
+    datasets: benefitsData[service].datasets.map(dataset => ({
+      ...dataset
+    }))
+  };
+
   return (
     <div className="w-full h-[400px] p-4">
-      <Bar options={options} data={benefitsData[service]} />
+      <Bar options={options} data={chartData} />
     </div>
   );
 };
