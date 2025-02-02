@@ -1,0 +1,76 @@
+/* Temporarily using system fonts until Blogger Sans files are added */
+:root {
+  --font-blogger: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Blogger Sans';
+  src: url('/fonts/Blogger_Sans.otf') format('opentype'),
+       var(--font-blogger);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blogger Sans';
+  src: url('/fonts/Blogger_Sans-Bold.otf') format('opentype'),
+       var(--font-blogger);
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blogger Sans';
+  src: url('/fonts/Blogger_Sans-Medium.otf') format('opentype'),
+       var(--font-blogger);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blogger Sans';
+  src: url('/fonts/Blogger_Sans-Light.otf') format('opentype'),
+       var(--font-blogger);
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blogger Sans';
+  src: url('/fonts/Blogger_Sans-Italic.otf') format('opentype'),
+       var(--font-blogger);
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blogger Sans';
+  src: url('/fonts/Blogger_Sans-Bold_Italic.otf') format('opentype'),
+       var(--font-blogger);
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blogger Sans';
+  src: url('/fonts/Blogger_Sans-Medium_Italic.otf') format('opentype'),
+       var(--font-blogger);
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blogger Sans';
+  src: url('/fonts/Blogger_Sans-Light_Italic.otf') format('opentype'),
+       var(--font-blogger);
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}

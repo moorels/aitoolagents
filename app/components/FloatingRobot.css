@@ -1,0 +1,50 @@
+.floating-robot-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    
+  }
+  
+  .floating-robot {
+    width: 17.5px; /* 1/4 of original 150px */
+    height: auto;
+    position: absolute;
+    transition: all 1.5s ease-in-out;
+    transform: translate(-50%, -50%); /* Center the robot on its position */
+  }
+  
+  .floating-image {
+    animation: float 3s ease-in-out infinite;
+    display: inline-block;
+    margin-top: 33px;
+  }
+  
+  .main-page-floating-image {
+    margin-top: -45px;
+  }
+  
+  .navbar-floating-image {
+    margin-top: -5px !important;
+  }
+  
+  @media (min-width: 768px) {
+    .main-page-floating-image {
+        margin-top: -45px;
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
