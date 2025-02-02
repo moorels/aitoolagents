@@ -7,12 +7,14 @@ import Link from 'next/link'
 
 import BorderWave from './components/BorderWave';
 import LiquidBackground from './components/LiquidBackground';
+import TabView from './components/TabView';
 import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between relative overflow-hidden">
       <LiquidBackground />
+      
       <div className="w-full">
       
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4">
@@ -63,7 +65,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
-      >
+      ><TabView />
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 text-[#c49d17]">Ready to Explore AI Agents?</h2>
           <p className="text-xl text-gray-300 mb-8">
