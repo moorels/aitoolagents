@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
+import AICharts from '../components/AICharts';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -294,6 +295,68 @@ export default function AIAgentsExplainedPage() {
                 <p className="text-gray-300">{item.answer}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Charts Section */}
+      <motion.section 
+        className="py-16 px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h1 className="text-4xl font-bold text-center mb-8 text-[#c49d17]">Understanding AI Agents</h1>
+          
+          <div className="prose prose-lg prose-invert max-w-none">
+            <h2 className="text-2xl font-semibold mb-4 text-[#c49d17]">The Impact of AI Agents on Business</h2>
+            <p className="mb-8">
+              AI agents are transforming how businesses operate, offering unprecedented levels of automation, 
+              efficiency, and intelligence. The charts below demonstrate the quantifiable benefits that businesses 
+              across different sectors are experiencing with AI agent implementation.
+            </p>
+          </div>
+
+          <AICharts />
+
+          <div className="prose prose-lg prose-invert max-w-none mt-12">
+            <h2 className="text-2xl font-semibold mb-4 text-[#c49d17]">Key Insights from the Data</h2>
+            
+            <h3 className="text-xl font-semibold mb-2 text-[#deb74b]">Productivity and Efficiency</h3>
+            <p className="mb-4">
+              As shown in the productivity charts, businesses are seeing significant improvements across various 
+              departments, with some areas experiencing up to 80% increase in efficiency. The automation of 
+              routine tasks allows employees to focus on more strategic, high-value activities.
+            </p>
+
+            <h3 className="text-xl font-semibold mb-2 text-[#deb74b]">Cost Benefits</h3>
+            <p className="mb-4">
+              The cost reduction distribution chart highlights how AI agents contribute to significant savings 
+              across different areas. Labor costs see the most substantial reduction, followed by decreased 
+              error-related expenses and reduced training costs.
+            </p>
+
+            <h3 className="text-xl font-semibold mb-2 text-[#deb74b]">Employee Satisfaction</h3>
+            <p className="mb-4">
+              Contrary to common concerns, the employee satisfaction metrics show that AI agent implementation 
+              leads to improved job satisfaction and better work-life balance. This is achieved by reducing 
+              repetitive tasks and allowing employees to engage in more meaningful work.
+            </p>
+
+            <h3 className="text-xl font-semibold mb-2 text-[#deb74b]">Customer Service Excellence</h3>
+            <p className="mb-4">
+              The customer service improvements chart demonstrates significant enhancements in response times, 
+              issue resolution rates, and overall customer satisfaction. AI agents provide 24/7 support 
+              capability while maintaining consistent service quality.
+            </p>
+
+            <h3 className="text-xl font-semibold mb-2 text-[#deb74b]">Scalability and Growth</h3>
+            <p className="mb-8">
+              The scalability demonstration shows how AI agents can handle exponentially increasing workloads 
+              without proportional increases in cost or resources. This makes them particularly valuable for 
+              growing businesses.
+            </p>
           </div>
         </div>
       </motion.section>

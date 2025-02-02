@@ -264,7 +264,7 @@ const BusinessMetricsCharts = () => {
             Interactive Business Analytics
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Revenue Growth Comparison</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -281,7 +281,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Cost Reduction Analysis</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -306,7 +306,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Satisfaction Metrics</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -337,7 +337,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Inventory Optimization Impact</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -355,7 +355,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Employee Efficiency Improvements</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -372,7 +372,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Customer Engagement Metrics</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -390,7 +390,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Marketing ROI Analysis</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -410,7 +410,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Operational Efficiency Gains</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -429,7 +429,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">AI Sales Prediction Accuracy</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -448,7 +448,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Customer Lifetime Value Impact</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -465,7 +465,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">AI-Powered Cross-Selling Success</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -483,7 +483,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Supply Chain Optimization Metrics</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -503,7 +503,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Omni-Channel Performance Analysis</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -522,7 +522,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Seasonality Impact Analysis</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -540,7 +540,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">AI Customer Service Impact</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -557,7 +557,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">24-Hour Chatbot Performance</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -576,7 +576,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Multilingual Support Capabilities</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -593,7 +593,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">AI vs Human Resolution Distribution</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -610,7 +610,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-w[#f8c90e]">Customer Journey Enhancement</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -628,7 +628,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Query Resolution & Escalation Patterns</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -646,7 +646,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Customer Sentiment Trends</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -664,7 +664,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Operational Cost Analysis</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -683,7 +683,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Automation Adoption Metrics</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -701,7 +701,7 @@ const BusinessMetricsCharts = () => {
               </div>
             </div>
 
-            <div className="bg-[#111827] p-6 rounded-lg shadow-lg">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700">
               <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Peak Handling Capacity</h3>
               <div className="h-[400px] -ml-6">
                 <ResponsiveContainer width="95%" height="100%">
@@ -729,7 +729,7 @@ const BusinessMetricsCharts = () => {
 
 export default function StatisticsPage() {
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 bg-gray-900 min-h-screen p-8">
       <AIBenefitsCharts />
       <BusinessMetricsCharts />
     </div>

@@ -105,7 +105,7 @@ const AIBenefitsCharts = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#111827] pl-[44px] pr-6 pt-6 pb-6 rounded-xl shadow-lg"
+          className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Performance Metrics Over Time</h3>
           <div className="h-[400px] -ml-6">
@@ -135,7 +135,7 @@ const AIBenefitsCharts = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#111827] pl-[44px] pr-6 pt-6 pb-6 rounded-xl shadow-lg"
+          className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Department-wise Impact</h3>
           <div className="h-[400px] -ml-6">
@@ -161,7 +161,7 @@ const AIBenefitsCharts = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#111827] pl-[44px] pr-6 pt-6 pb-6 rounded-xl shadow-lg"
+          className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Process Automation Metrics</h3>
           <div className="h-[400px] -ml-6">
@@ -189,7 +189,7 @@ const AIBenefitsCharts = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#111827] pl-[44px] pr-6 pt-6 pb-6 rounded-xl shadow-lg"
+          className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Resource Optimization</h3>
           <div className="h-[400px] -ml-6">
@@ -216,7 +216,7 @@ const AIBenefitsCharts = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#111827] pl-[44px] pr-6 pt-6 pb-6 rounded-xl shadow-lg"
+          className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Customer Experience Metrics</h3>
           <div className="h-[400px] -ml-6">
@@ -244,7 +244,7 @@ const AIBenefitsCharts = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#111827] pl-[44px] pr-6 pt-6 pb-6 rounded-xl shadow-lg"
+          className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">AI Capability Assessment</h3>
           <div className="h-[400px] -ml-6">
@@ -272,7 +272,7 @@ const AIBenefitsCharts = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#111827] pl-[44px] pr-6 pt-6 pb-6 rounded-xl shadow-lg"
+          className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Efficiency vs Automation Level</h3>
           <div className="h-[400px] -ml-6">
@@ -313,7 +313,7 @@ const AIBenefitsCharts = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#111827] pl-[44px] pr-6 pt-6 pb-6 rounded-xl shadow-lg"
+          className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-gray-700"
         >
           <h3 className="text-xl font-semibold mb-4 text-[#f8c90e]">Staff Workload Reduction Analysis</h3>
           <div className="h-[400px] -ml-6">
