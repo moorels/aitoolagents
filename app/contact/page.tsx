@@ -2,8 +2,7 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { supabase } from '../lib/supabase';
-  
-
+import Image from 'next/image';
 
 interface ContactFormData {
   firstName: string;
@@ -25,7 +24,7 @@ export default function ContactPage() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
- 
+
   const inquiryOptions = [
     "General Inquiry",
     "Product Information",
@@ -118,10 +117,25 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Contact Image */}
+        
+
+        {/* Contact Information */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-[#c49d17] mb-4">Contact Us</h1>
+          <h2 className="text-4xl font-bold text-[#c49d17] mb-6">Contact Us</h2>
+          <p className="text-2xl text-white mb-4">
+            Phone: <a href="tel:0468609702" className="text-[#c49d17] hover:underline">0468 609 702</a>
+          </p>
+          <p className="text-2xl text-white">
+            Email: <a href="mailto:sales@aitoolagents.com.au" className="text-[#c49d17] hover:underline">sales@aitoolagents.com.au</a>
+          </p>
+        </div>
+
+        {/* Form Title */}
+        <div className="text-center mb-12">
+         
           <p className="text-lg text-gray-300">
             We&apos;re here to help and answer any questions you might have.
           </p>

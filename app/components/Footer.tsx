@@ -2,6 +2,7 @@
 
 import { FaGlobe, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import FloatingImage from './FloatingImage';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -23,6 +24,15 @@ const Footer = () => {
                   <a href="https://www.aitoolagents.com.au" className="hover:text-[#dfb406] transition-colors">
                     www.aitoolagents.com.au
                   </a>
+                </div>
+                <div className="mt-4">
+                  <Image
+                    src="/lobby.jpg"
+                    alt="Office Lobby"
+                    width={300}
+                    height={200}
+                    className="rounded-lg shadow-lg"
+                  />
                 </div>
               </div>
               <div className="flex flex-col items-center md:items-start space-y-3">
