@@ -7,9 +7,10 @@ interface ZoomableImageProps {
   width: number;
   height: number;
   style?: React.CSSProperties;
+  className?: string;
 }
 
-export default function ZoomableImage({ src, alt, width, height, style }: ZoomableImageProps) {
+export default function ZoomableImage({ src, alt, width, height, style, className }: ZoomableImageProps) {
   const imageRef = useRef<HTMLDivElement>(null);
   const [transform, setTransform] = useState('scale(1) translate(0, 0)');
 
@@ -34,6 +35,7 @@ export default function ZoomableImage({ src, alt, width, height, style }: Zoomab
   return (
     <div
       ref={imageRef}
+      className={className}
       style={{
         position: 'relative',
         overflow: 'hidden',
