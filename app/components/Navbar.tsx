@@ -38,8 +38,8 @@ export default function Navbar() {
   const [showDesktopPlatforms, setShowDesktopPlatforms] = useState(false)
   const [showMobileSolutions, setShowMobileSolutions] = useState(false)
   const [showMobilePlatforms, setShowMobilePlatforms] = useState(false)
-  const Links = ['Home', 'Platforms', 'Solutions','Statistics','About', 'Contact', 'Login', 'Admin']
-  const paths = ['/', '#', '#','/statistics ', '/about', '/contact', 'https://aiui.com.au', '/admin']
+  const Links = ['Home', 'Platforms', 'Solutions', 'Statistics', 'About', 'Contact', 'Login', 'Admin']
+  const paths = ['/', '#', '#', '/statistics', '/about', '/contact', 'https://aiui.com.au', '/admin']
   
   const solutionsLinks = [
     { name: 'Customer Service', path: '/services/customer-service' },
@@ -180,70 +180,73 @@ export default function Navbar() {
           transition={{ duration: 0.2 }}
         >
           <div className="px-4 py-3 space-y-1">
-            {Links.map((link, index) => (
-              <div key={link} className="block">
-                {link === 'Solutions' ? (
-                  <div>
-                    <button
-                      onClick={() => setShowMobileSolutions(!showMobileSolutions)}
-                      className="px-3 py-1 text-sm text-[edce54] hover:text-[#dfb406] transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
-                    >
+            {Links.filter(link => link !== 'Statistics').map((link) => {
+              const pathIndex = Links.indexOf(link);
+              return (
+                <div key={link} className="block">
+                  {link === 'Solutions' ? (
+                    <div>
+                      <button
+                        onClick={() => setShowMobileSolutions(!showMobileSolutions)}
+                        className="px-3 py-1 text-sm text-[edce54] hover:text-[#dfb406] transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                      >
+                        {link}
+                      </button>
+                      {showMobileSolutions && (
+                        <div className="pl-4 mt-1 space-y-1">
+                          {solutionsLinks.map((solution) => (
+                            <button
+                              key={solution.path}
+                              onClick={() => {
+                                router.push(solution.path);
+                                setIsOpen(false);
+                                setShowMobileSolutions(false);
+                              }}
+                              className="block w-full text-left px-3 py-1 text-sm text-[edce54] hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                            >
+                              {solution.name}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : link === 'Platforms' ? (
+                    <div>
+                      <button
+                        onClick={() => setShowMobilePlatforms(!showMobilePlatforms)}
+                        className="px-3 py-1 text-sm text-[edce54] hover:text-[edce54] transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                      >
+                        {link}
+                      </button>
+                      {showMobilePlatforms && (
+                        <div className="pl-4 mt-1 space-y-1">
+                          {platformsLinks.map((platform) => (
+                            <button
+                              key={platform.path}
+                              onClick={() => {
+                                router.push(platform.path);
+                                setIsOpen(false);
+                                setShowMobilePlatforms(false);
+                              }}
+                              className="block w-full text-left px-3 py-1 text-sm text-[edce54] hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
+                            >
+                              {platform.name}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <NavLink href={paths[pathIndex]} onClick={() => setIsOpen(false)}>
                       {link}
-                    </button>
-                    {showMobileSolutions && (
-                      <div className="pl-4 mt-1 space-y-1">
-                        {solutionsLinks.map((solution) => (
-                          <button
-                            key={solution.path}
-                            onClick={() => {
-                              router.push(solution.path)
-                              setIsOpen(false)
-                              setShowMobileSolutions(false)
-                            }}
-                            className="block w-full text-left px-3 py-1 text-sm text-[edce54] hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
-                          >
-                            {solution.name}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : link === 'Platforms' ? (
-                  <div>
-                    <button
-                      onClick={() => setShowMobilePlatforms(!showMobilePlatforms)}
-                      className="px-3 py-1 text-sm text-[edce54] hover:text-[edce54] transition-colors duration-200 bg-gray-800 hover:bg-blue-500/20 hover:text-[#dfb406] transition-colors duration-200"
-                    >
-                      {link}
-                    </button>
-                    {showMobilePlatforms && (
-                      <div className="pl-4 mt-1 space-y-1">
-                        {platformsLinks.map((platform) => (
-                          <button
-                            key={platform.path}
-                            onClick={() => {
-                              router.push(platform.path)
-                              setIsOpen(false)
-                              setShowMobilePlatforms(false)
-                            }}
-                            className="block w-full text-left px-3 py-1 text-sm text-[edce54] hover:bg-blue-500/20 hover:text-[#dfb406]transition-colors duration-200"
-                          >
-                            {platform.name}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <NavLink href={paths[index]} onClick={() => setIsOpen(false)}>
-                    {link}
-                  </NavLink>
-                )}
-              </div>
-            ))}
+                    </NavLink>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </motion.div>
       </div>
     </nav>
-  )
+  );
 }

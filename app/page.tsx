@@ -45,7 +45,7 @@ export default function Home() {
         <div className="mt-4 align-center text-[15px] md:text-[25px] px-2">Where innovation meets intelligence, and possibilities are limitless.</div>
         
         </div>
-        <div className="mt-4 align-center text-[15px] md:text-[15px] px-2"> Our company can offer a variety of business service solutions to its clients. Including :</div>
+        <div className="mt-4 align-center text-[15px] md:text-[15px] px-2"> Our company can offer a variety of business service solutions to its clients.</div>
           <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center px-16 gap-[200px]">
             
             <div className="hidden md:block">
@@ -54,7 +54,9 @@ export default function Home() {
             <div className="flex items-center">
             
               <div className="flex-1 w-full max-w-2xl">
-                <TypewriterText />
+                <div className="hidden md:block">
+                  <TypewriterText />
+                </div>
               </div>
             </div>
           </div>
