@@ -8,6 +8,7 @@ interface TypeWriterProps {
   messages: string[];
   typingSpeed?: number;
   delayBetweenMessages?: number;
+  onMessageClick?: (message: string) => void;
 }
 
 type ServiceModalContent = {
@@ -23,6 +24,7 @@ export default function TypeWriter({
   messages,
   typingSpeed = 50,
   delayBetweenMessages = 1000,
+  onMessageClick
 }: TypeWriterProps) {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
@@ -66,7 +68,7 @@ export default function TypeWriter({
           transition={{ duration: 0.3 }}
         >
           <button
-            onClick={() => handleServiceClick(message)}
+            onClick={() => onMessageClick?.(message) || handleServiceClick(message)}
             className="text-gray-300 hover:text-[#c49d17] transition-colors duration-300 text-left w-full"
           >
             {message}

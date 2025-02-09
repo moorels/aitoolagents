@@ -43,6 +43,7 @@ export default function Navbar() {
   
   const solutionsLinks = [
     { name: 'Customer Service', path: '/services/customer-service' },
+    { name: 'Employee Training', path: '/services/employee-training' },
     { name: 'Office Automation', path: '/services/office-automation' },
     { name: 'Retail Automation', path: '/services/retail-automation' },
     { name: 'HealthCare', path: '/services/healthcare' },
@@ -50,6 +51,7 @@ export default function Navbar() {
     { name: 'Property Management', path: '/services/property-management' },
     { name: 'Customer Care', path: '/services/customer-care' },
     { name: 'Custom AI Solutions', path: '/services/custom-ai-solutions' },
+    
   ]
 
   const platformsLinks = [

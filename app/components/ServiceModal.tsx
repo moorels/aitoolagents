@@ -5,6 +5,7 @@ import AIBenefitsChart, { ServiceType } from './AIBenefitsChart';
 
 const chartTitleMapping: Record<string, ServiceType> = {
   'Virtual Customer Service Agents': 'Virtual Customer Service Agents',
+  'Employee Training Agents': 'Employee Training Agents',
   'AI-Powered Sales Assistants': 'AI-Powered Sales Assistants',
   'Automated Data Entry & Processing': 'Automated Data Entry & Processing',
   'Customer Segmentation & Profiling': 'Customer Segmentation & Profiling',

@@ -38,6 +38,23 @@ const benefitsData = {
       }
     ]
   },
+  "Employee Training Agents": {
+    labels: ['Training Completion', 'Knowledge Retention', 'Policy Compliance', 'Onboarding Speed', 'Employee Satisfaction', 'Cost Efficiency'],
+    datasets: [
+      {
+        label: 'After AI Implementation',
+        data: [95, 92, 98, 94, 90, 88],
+        backgroundColor: 'rgba(255, 180, 6, 0.8)',
+        borderColor: 'rgba(255, 180, 6, 1)',
+      },
+      {
+        label: 'Before AI Implementation',
+        data: [45, 40, 55, 35, 50, 42],
+        backgroundColor: 'rgba(75, 192, 192, 0.8)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+      }
+    ]
+  },
   "AI-Powered Sales Assistants": {
     labels: ['Lead Conversion', 'Sales Efficiency', 'Customer Insights', 'Cross-selling', 'Time Savings', 'Deal Closure'],
     datasets: [

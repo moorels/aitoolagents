@@ -72,6 +72,40 @@ const implementationSteps: ImplementationStep[] = [
     ]
   },
   {
+    sector: "Employee Training",
+    description: "Employee training is a critical area where AI agents can transform the onboarding and continuous learning experience. These intelligent agents serve as personalized trainers that adapt to each employee's learning style while ensuring consistent knowledge transfer across the organization.",
+    steps: [
+      {
+        title: "Context-Aware Knowledge Base",
+        description: (
+          <div className="space-y-4">
+            The first step is creating a comprehensive knowledge base that includes company policies, procedures, best practices, and role-specific information. The AI agent learns to understand this information in context, making it capable of providing relevant answers to any training-related questions.
+          </div>
+        ),
+        example: "When a new employee asks about the vacation policy, the AI not only explains the policy but also provides relevant examples and connects it to related policies like sick leave and personal time off."
+      },
+      {
+        title: "Personalized Learning Paths",
+        description: (
+          <div className="space-y-4">
+            Next, we develop adaptive learning paths that adjust to each employee's role, experience level, and learning style. The AI agent tracks progress, identifies areas needing more attention, and customizes the training experience accordingly.
+          </div>
+        ),
+        example: "For a new sales representative, the AI might focus more on product knowledge and sales techniques, while for an IT professional, it emphasizes technical procedures and security protocols."
+      },
+      {
+        title: "Interactive Training Sessions",
+        description: "The AI agent then conducts interactive training sessions using various methods like quizzes, role-playing scenarios, and real-world case studies. This ensures active engagement and better retention of information.",
+        example: "During customer service training, the AI simulates different customer interactions, allowing employees to practice handling various situations while receiving immediate feedback."
+      },
+      {
+        title: "Continuous Learning Support",
+        description: "Finally, the AI agent provides ongoing support beyond initial training, offering refresher courses, updates on new policies, and just-in-time learning resources when needed. It becomes a constant learning companion for employees.",
+        example: "When a policy changes, the AI proactively notifies relevant employees, explains the changes, and ensures everyone understands and complies with the new requirements."
+      }
+    ]
+  },
+  {
     sector: "Operations & Logistics",
     description: (
       <div className="space-y-4">

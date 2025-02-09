@@ -268,6 +268,21 @@ const metricsData = {
       },
     ],
   },
+  'employee-training': {
+    labels: ['Training Completion', 'Knowledge Retention', 'Policy Compliance', 'Onboarding Speed', 'Employee Satisfaction', 'Training Consistency'],
+    datasets: [
+      {
+        label: 'After AI Implementation',
+        data: [95, 92, 98, 94, 90, 96],
+        backgroundColor: 'rgba(196, 157, 23, 0.8)',
+      },
+      {
+        label: 'Before AI Implementation',
+        data: [45, 40, 55, 35, 50, 42],
+        backgroundColor: 'rgba(255, 115, 0, 0.8)',
+      },
+    ],
+  },
 };
 
 interface ServiceMetricsChartProps {
