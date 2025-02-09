@@ -45,23 +45,23 @@ const implementationSteps: ImplementationStep[] = [
         title: "Starting Small: Basic Customer Support",
         description: (
           <div className="space-y-4">
-            Begin with simple chatbots that can answer frequently asked questions like What are your business hours? or How do I reset my password? These AI agents work like a very smart FAQ system that can understand questions even when they are asked in different ways.
+            Begin with simple chatbots that can answer frequently asked questions like &quot;What are your business hours?&quot; or &quot;How do I reset my password?&quot; These AI agents work like a very smart FAQ system that can understand questions even when they are asked in different ways.
           </div>
         ),
-        example: "For example, if someone asks When do you close ? or Are you open now ?, the AI understands they are asking about business hours."
+        example: "For example, if someone asks &quot;When do you close?&quot; or &quot;Are you open now?&quot;, the AI understands they are asking about business hours."
       },
       {
         title: "Building the Knowledge Base",
         description: (
           <div className="space-y-4">
-            Next, we teach the AI agent about your specific business. This is like creating a digital library of all your company, information, products, and services. The AI learns to use this information to give accurate, helpful answers about your specific offerings.
+            Next, we teach the AI agent about your specific business. This is like creating a digital library of all your company&apos;s information, products, and services. The AI learns to use this information to give accurate, helpful answers about your specific offerings.
           </div>
         ),
         example: "If you have a retail store, the AI can learn about your return policy, shipping options, and current inventory to provide precise answers about these topics."
       },
       {
         title: "Adding Problem-Solving Abilities",
-        description: "Now we give the AI agent more capabilities, like helping customers track orders, process returns, or solve technical issues. It is like training a virtual employee who can handle multiple tasks at once.",
+        description: "Now we give the AI agent more capabilities, like helping customers track orders, process returns, or solve technical issues. It&apos;s like training a virtual employee who can handle multiple tasks at once.",
         example: "The AI can now help a customer track their package, initiate a return, and suggest similar products they might like - all in one conversation."
       },
       {
@@ -73,7 +73,7 @@ const implementationSteps: ImplementationStep[] = [
   },
   {
     sector: "Employee Training",
-    description: "Employee training is a critical area where AI agents can transform the onboarding and continuous learning experience. These intelligent agents serve as personalized trainers that adapt to each employee's learning style while ensuring consistent knowledge transfer across the organization.",
+    description: "Employee training is a critical area where AI agents can transform the onboarding and continuous learning experience. These intelligent agents serve as personalized trainers that adapt to each employee&apos;s learning style while ensuring consistent knowledge transfer across the organization.",
     steps: [
       {
         title: "Context-Aware Knowledge Base",
@@ -88,7 +88,7 @@ const implementationSteps: ImplementationStep[] = [
         title: "Personalized Learning Paths",
         description: (
           <div className="space-y-4">
-            Next, we develop adaptive learning paths that adjust to each employee's role, experience level, and learning style. The AI agent tracks progress, identifies areas needing more attention, and customizes the training experience accordingly.
+            Next, we develop adaptive learning paths that adjust to each employee&apos;s role, experience level, and learning style. The AI agent tracks progress, identifies areas needing more attention, and customizes the training experience accordingly.
           </div>
         ),
         example: "For a new sales representative, the AI might focus more on product knowledge and sales techniques, while for an IT professional, it emphasizes technical procedures and security protocols."
@@ -115,22 +115,22 @@ const implementationSteps: ImplementationStep[] = [
     steps: [
       {
         title: "Watching and Learning",
-        description: "First, AI agents observe how your business operates. They collect and analyze data about things like how long tasks take, where delays happen, and what patterns exist in your daily operations. It is like having a very attentive assistant who never misses a detail.",
+        description: "First, AI agents observe how your business operates. They collect and analyze data about things like how long tasks take, where delays happen, and what patterns exist in your daily operations. It&apos;s like having a very attentive assistant who never misses a detail.",
         example: "The AI might notice that shipping delays often occur on Mondays due to weekend order buildups, allowing you to adjust staffing accordingly."
       },
       {
         title: "Predictive Planning",
-        description: "Next, the AI starts predicting what might happen in the future based on past patterns. This helps prevent problems before they occur and helps you plan better. It is similar to having a weather forecast, but for your business operations.",
+        description: "Next, the AI starts predicting what might happen in the future based on past patterns. This helps prevent problems before they occur and helps you plan better. It&apos;s similar to having a weather forecast, but for your business operations.",
         example: "The AI can predict when a machine might need maintenance based on its performance patterns, helping you schedule repairs before it breaks down."
       },
       {
         title: "Smart Inventory Management",
         description: (
           <div className="space-y-4">
-            The AI then helps manage your inventory by automatically tracking stock levels, predicting when you might need to reorder, and even suggesting optimal quantities. It is like having a manager who always knows exactly what is in stock and what is needed.
+            The AI then helps manage your inventory by automatically tracking stock levels, predicting when you might need to reorder, and even suggesting optimal quantities. It&apos;s like having a manager who always knows exactly what&apos;s in stock and what&apos;s needed.
           </div>
         ),
-        example: "If a product typically sells more during summer, the AI will automatically suggest ordering more stock as summer approaches."
+        example: "If sales of a product suddenly increase, the AI can automatically adjust order quantities and timing to prevent stockouts."
       },
       {
         title: "Process Automation",
