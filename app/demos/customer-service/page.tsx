@@ -115,20 +115,38 @@ export default function CustomerServiceDemo() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-gray-900 rounded-lg shadow-xl w-full max-w-6xl h-[80vh] relative"
+              className="bg-gray-900 rounded-lg shadow-xl w-full max-w-7xl h-[90vh] relative overflow-hidden"
             >
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-4 right-4 text-[#edce54] hover:text-[#edce54]/80 transition-colors"
+                className="absolute top-4 right-4 text-[#edce54] hover:text-[#edce54]/80 transition-colors z-10"
               >
                 <IoClose size={24} />
               </button>
-              <h2 className="mr-4 ml-8 text-2xl font-semibold mb-4 mt-8">Customer Service Dental Practice</h2>
-              <iframe
-                src="https://aiui.com.au/#/public-chat/CustomerService"
-                className="w-full h-full rounded-lg"
-                title="Customer Service Demo"
-              />
+              <div className="flex flex-col lg:flex-row h-full p-4 gap-4 overflow-y-auto">
+                <div className="w-full lg:w-[750px]">
+                  <h2 className="text-2xl font-semibold mb-2">Customer Service Dental Practice</h2>
+                  <iframe
+                    src="https://aiui.com.au/#/public-chat/CustomerService"
+                    className="w-full h-[600px] rounded-lg border border-gray-700"
+                    title="Customer Service Demo"
+                  />
+                </div>
+                <div className="w-full lg:w-[400px] bg-gray-800 p-4 rounded-lg border border-gray-700">
+                  <h3 className="text-xl font-semibold mb-4">How to Use</h3>
+                  <div className="space-y-4 text-gray-300">
+                    <p>Welcome to our AI Customer Service Demo for a dental practice!</p>
+                    <ul className="list-disc list-inside space-y-2">
+                      <li>Start by greeting the AI assistant</li>
+                      <li>Ask questions about dental services</li>
+                      <li>Inquire about appointments</li>
+                      <li>Get information about pricing</li>
+                      <li>Ask about emergency services</li>
+                    </ul>
+                    <p className="mt-4 text-sm">The AI will respond naturally and provide relevant information based on your queries.</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         )}
