@@ -30,10 +30,10 @@ export default function DemoPage() {
           >
             <div className="flex items-center mb-4">
               <RiCustomerService2Line className="text-[#edce54] text-2xl mr-3" />
-              <h3 className="text-xl font-semibold">Customer Service Demo</h3>
+              <h3 className="text-xl font-semibold">Customer Bookings Demo</h3>
             </div>
             <p className="text-gray-300 mb-4">
-              Experience how our AI agents handle customer inquiries and support tickets in real-time.
+              Experience how our AI agents handle customer inquiries and appointments in real-time.
             </p>
             <button 
               onClick={() => router.push('/demos/customer-service')}

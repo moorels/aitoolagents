@@ -25,9 +25,9 @@ export default function Home() {
         <div className="text-center mt-12 text-xl md:text-2xl font-thin px-4">
           Transform Your Business with Smart Automation.
           <div className="mt-4 align-center text-lg md:text-xl px-2">Discover how AI agents can streamline your operations and enhance customer experiences.</div>
-          <div className="relative mt-4 h-[100px] w-full max-w-[800px] mx-auto group">
+          <div className="relative mt-2 h-[100px] w-full max-w-[800px] mx-auto group">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-              <BorderWave width={400} height={80} />
+              
             </div>
             <Link 
               href="/ai-agents-explained" 
@@ -39,8 +39,18 @@ export default function Home() {
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </span>
             </Link>
+            <Link 
+              href="/demos" 
+              className="relative inline-flex items-center justify-center w-full h-[10px] text-white hover:text-white/90 transition-colors duration-300"
+            >
+              
+              <span className="flex items-center text-[15px] md:text-[15px] font-light">
+                <span className="mr-2 text-2xl md:text-1xl text-[#c49d17] bg-blue-500/30 bg-opacity-70 rounded px-2 md:px-4 py-1 md:py-2">Click here to view our live demos</span>
+                <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+              </span>
+            </Link>
           </div>
-          <div className="mt-4 align-center text-[15px] md:text-[25px] px-2">Welcome to AI Tool Agents Australia Business Solutions, your trusted partner in the future of AI.</div>
+          <div className=" align-center text-[15px] md:text-[25px] px-2 mt-20">Welcome to AI Tool Agents Australia Business Solutions, your trusted partner in the future of AI.</div>
          
         <div className="mt-4 align-center text-[15px] md:text-[25px] px-2">Where innovation meets intelligence, and possibilities are limitless.</div>
         

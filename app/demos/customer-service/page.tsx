@@ -23,7 +23,7 @@ export default function CustomerServiceDemo() {
         <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:items-center sm:justify-between mb-8">
           <div className="flex items-center">
             <RiCustomerService2Line className="text-[#edce54] text-3xl sm:text-4xl mr-3" />
-            <h1 className="text-2xl sm:text-4xl font-bold">Customer Service Demo</h1>
+            <h1 className="text-2xl sm:text-4xl font-bold">Customer Service and Bookings Demo</h1>
           </div>
           <div className="flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:items-center sm:space-x-4">
             <button
@@ -52,10 +52,11 @@ export default function CustomerServiceDemo() {
           >
             <h2 className="text-2xl font-semibold mb-4">Interactive Demo</h2>
             <p className="text-gray-300 mb-4">
-              Experience our AI-powered customer service system that provides:
+              Experience our AI-powered customer service and booking system that provides:
             </p>
             <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4 mb-6">
               <li>24/7 customer support</li>
+              <li>Customer booking and scheduling</li>
               <li>Intelligent query resolution</li>
               <li>Multi-language support</li>
               <li>Seamless ticket management</li>
@@ -80,7 +81,7 @@ export default function CustomerServiceDemo() {
               <div>
                 <h3 className="text-xl font-semibold mb-3">Quick Resolution</h3>
                 <p className="text-gray-300">
-                  Efficient problem-solving with minimal wait times.
+                  Efficient appointments with minimal wait times.
                 </p>
               </div>
               <div>
@@ -128,7 +129,7 @@ export default function CustomerServiceDemo() {
                   <h2 className="text-2xl font-semibold mb-2">Customer Service Dental Practice</h2>
                   <iframe
                     src="https://aiui.com.au/#/public-chat/CustomerService"
-                    className="w-full h-[600px] rounded-lg border border-gray-700"
+                    className="w-full h-[800px] rounded-lg border border-gray-700"
                     title="Customer Service Demo"
                   />
                 </div>
@@ -136,12 +137,18 @@ export default function CustomerServiceDemo() {
                   <h3 className="text-xl font-semibold mb-4">How to Use</h3>
                   <div className="space-y-4 text-gray-300">
                     <p>Welcome to our AI Customer Service Demo for a dental practice!</p>
+                    <p>We have Created some patient records on our database for you to use in the demo.</p>
                     <ul className="list-disc list-inside space-y-2">
-                      <li>Start by greeting the AI assistant</li>
-                      <li>Ask questions about dental services</li>
-                      <li>Inquire about appointments</li>
-                      <li>Get information about pricing</li>
-                      <li>Ask about emergency services</li>
+                      <li className='text-[#edce54]'>Susan Rogers</li>
+                      <li className='text-[#edce54]'>Jane Smith</li>
+                      <li className='text-[#edce54]'>Michael Brown</li>                      
+                    </ul>
+                    <p>Use these names above to start a conversation.</p>
+                    <ul className="list-disc list-inside space-y-2">
+                      <li className='text-[#edce54]'>Ask questions about dental services</li>
+                      <li className='text-[#edce54]'>Inquire about appointments</li>
+                      <li className='text-[#edce54]'>Get information about pricing</li>
+                      <li className='text-[#edce54]'>Ask about emergency services</li>
                     </ul>
                     <p className="mt-4 text-sm">The AI will respond naturally and provide relevant information based on your queries.</p>
                   </div>
