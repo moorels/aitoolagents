@@ -177,6 +177,8 @@ export default function PricingPage() {
               <p className="font-semibold mb-2">First-Time Setup Fee: $299</p>
               <p className="text-white/90">Includes initial implementation and configuration of your selected features with your current systems and data.</p>
               <p className="text-white/90 mt-2">All future modifications and feature additions <span className="text-[#c49d17] font-semibold">have no setup costs</span>.</p>
+              <p className="text-white/90">Pricing estimates below are provided for small businesses of 1 to 10 employees.</p>
+              <p className="text-white/90">For larger businesses, contact us for a customized quote.</p>
             </motion.div>
           </div>
 
