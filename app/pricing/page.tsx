@@ -160,7 +160,7 @@ export default function PricingPage() {
               Tailored Solutions for Your Business
             </motion.h1>
             <motion.p 
-              className="text-xl text-gray-400 max-w-3xl mx-auto"
+              className="text-xl text-gray-400 max-w-3xl mx-auto mb-4"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -168,6 +168,16 @@ export default function PricingPage() {
               We understand that every business is unique. Our pricing is customized to ensure 
               you only pay for the features and capabilities that add value to your organization.
             </motion.p>
+            <motion.div
+              className="text-lg text-[#c49d17] max-w-2xl mx-auto p-4 border border-[#c49d17]/20 rounded-lg bg-gray-900/50 backdrop-blur-sm"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <p className="font-semibold mb-2">First-Time Setup Fee: $299</p>
+              <p className="text-white/90">Includes initial implementation and configuration of your selected features with your current systems and data.</p>
+              <p className="text-white/90 mt-2">All future modifications and feature additions <span className="text-[#c49d17] font-semibold">have no setup costs</span>.</p>
+            </motion.div>
           </div>
 
           <motion.div
@@ -181,8 +191,11 @@ export default function PricingPage() {
 
           <div className="mt-16 text-center">
             <h2 className="text-2xl font-semibold mb-4 text-[#c49d17]">Need a More Specialized Solution?</h2>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-400 mb-2">
               Contact our team for a personalized consultation and custom pricing tailored to your specific requirements.
+            </p>
+            <p className="text-gray-400 mb-6">
+              Remember, after the initial setup fee, all modifications and feature additions are included at no extra cost!
             </p>
             <Link href="/contact" className="inline-block bg-[#c49d17] text-black px-8 py-3 rounded-lg hover:bg-[#dfb406] transition-colors font-medium">
               Contact Sales Team
