@@ -44,25 +44,25 @@ const features: Feature[] = [
   { 
     category: 'Customer Service', 
     name: '24/7 Support', 
-    basePrice: 99,
+    basePrice: 48,
     description: 'Round-the-clock customer assistance'
   },
   { 
     category: 'Customer Service', 
     name: 'Escalation Agents', 
-    basePrice: 129,
+    basePrice: 62,
     description: 'Expert support for complex issues'
   },
   { 
     category: 'Customer Service', 
     name: 'Multilingual Support', 
-    basePrice: 79,
+    basePrice: 37,
     description: 'Support in multiple languages'
   },
   { 
     category: 'Customer Service', 
     name: 'Priority Queue', 
-    basePrice: 69,
+    basePrice: 34,
     description: 'VIP customer handling'
   },
   
@@ -70,25 +70,25 @@ const features: Feature[] = [
   { 
     category: 'Marketing', 
     name: 'Targeted Advertising', 
-    basePrice: 69,
+    basePrice: 34,
     description: 'AI-driven ad targeting'
   },
   { 
     category: 'Marketing', 
     name: 'Personalized Recommendations', 
-    basePrice: 89,
+    basePrice: 43,
     description: 'Custom product suggestions'
   },
   { 
     category: 'Marketing', 
     name: 'Campaign Analytics', 
-    basePrice: 99,
+    basePrice: 48,
     description: 'Detailed marketing insights'
   },
   { 
     category: 'Marketing', 
     name: 'Social Media Integration', 
-    basePrice: 69,
+    basePrice: 34,
     description: 'Automated social posting'
   },
   
@@ -96,25 +96,25 @@ const features: Feature[] = [
   { 
     category: 'Inventory', 
     name: 'Sales Trend Analysis', 
-    basePrice: 119,
+    basePrice: 58,
     description: 'Predictive inventory insights'
   },
   { 
     category: 'Inventory', 
     name: 'Dynamic Pricing', 
-    basePrice: 129,
+    basePrice: 62,
     description: 'Automated price optimization'
   },
   { 
     category: 'Inventory', 
     name: 'Stock Alerts', 
-    basePrice: 69,
+    basePrice: 34,
     description: 'Real-time inventory notifications'
   },
   { 
     category: 'Inventory', 
     name: 'Supplier Management', 
-    basePrice: 99,
+    basePrice: 48,
     description: 'Automated vendor coordination'
   },
   
@@ -122,25 +122,25 @@ const features: Feature[] = [
   { 
     category: 'Staffing', 
     name: 'Simulated Agents', 
-    basePrice: 69,
+    basePrice: 34,
     description: 'AI customer service agents'
   },
   { 
     category: 'Staffing', 
     name: 'Scalable Hours', 
-    basePrice: 89,
+    basePrice: 43,
     description: 'Flexible staffing solutions'
   },
   { 
     category: 'Staffing', 
     name: 'Training Module', 
-    basePrice: 99,
+    basePrice: 48,
     description: 'AI-powered staff training'
   },
   { 
     category: 'Staffing', 
     name: 'Performance Analytics', 
-    basePrice: 69,
+    basePrice: 34,
     description: 'Staff efficiency tracking'
   },
   
@@ -148,25 +148,25 @@ const features: Feature[] = [
   { 
     category: 'Analytics', 
     name: 'Real-Time Insights', 
-    basePrice: 99,
+    basePrice: 48,
     description: 'Live business analytics'
   },
   { 
     category: 'Analytics', 
     name: 'Custom Reports', 
-    basePrice: 89,
+    basePrice: 43,
     description: 'Tailored business reporting'
   },
   { 
     category: 'Analytics', 
     name: 'Predictive Analysis', 
-    basePrice: 129,
+    basePrice: 62,
     description: 'Future trend forecasting'
   },
   { 
     category: 'Analytics', 
     name: 'Data Visualization', 
-    basePrice: 69,
+    basePrice: 34,
     description: 'Interactive data dashboards'
   },
   
@@ -174,25 +174,25 @@ const features: Feature[] = [
   { 
     category: 'Security', 
     name: 'Fraud Detection', 
-    basePrice: 129,
+    basePrice: 62,
     description: 'AI-powered security monitoring'
   },
   { 
     category: 'Security', 
     name: 'Compliance Agents', 
-    basePrice: 119,
+    basePrice: 58,
     description: 'Automated compliance checks'
   },
   { 
     category: 'Security', 
     name: 'Data Encryption', 
-    basePrice: 99,
+    basePrice: 48,
     description: 'Enhanced data protection'
   },
   { 
     category: 'Security', 
     name: 'Access Control', 
-    basePrice: 89,
+    basePrice: 43,
     description: 'Smart permission management'
   },
   
@@ -200,25 +200,25 @@ const features: Feature[] = [
   { 
     category: 'Automation', 
     name: 'Order Processing', 
-    basePrice: 69,
+    basePrice: 34,
     description: 'Automated order handling'
   },
   { 
     category: 'Automation', 
     name: 'Data Entry', 
-    basePrice: 49,
+    basePrice: 23,
     description: 'Automated data processing'
   },
   { 
     category: 'Automation', 
     name: 'Workflow Builder', 
-    basePrice: 99,
+    basePrice: 48,
     description: 'Custom automation flows'
   },
   { 
     category: 'Automation', 
     name: 'Task Scheduling', 
-    basePrice: 69,
+    basePrice: 34,
     description: 'Automated task management'
   },
   
@@ -226,25 +226,25 @@ const features: Feature[] = [
   { 
     category: 'Enhanced', 
     name: 'Concierge Services', 
-    basePrice: 99,
+    basePrice: 48,
     description: 'Premium customer experience'
   },
   { 
     category: 'Enhanced', 
     name: 'API Integration', 
-    basePrice: 129,
+    basePrice: 62,
     description: 'Custom API development'
   },
   { 
     category: 'Enhanced', 
     name: 'White Labeling', 
-    basePrice: 169,
+    basePrice: 80,
     description: 'Branded AI solutions'
   },
   { 
     category: 'Enhanced', 
     name: 'Priority Support', 
-    basePrice: 99,
+    basePrice: 48,
     description: '24/7 dedicated support'
   },
 ];
