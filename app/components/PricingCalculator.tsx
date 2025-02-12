@@ -355,7 +355,7 @@ export default function PricingCalculator() {
           Customize your AI toolkit with our interactive cost calculator. Select the features that match your business needs and instantly see your personalized pricing estimate.
         </p>
         <p className="text-lg text-white/80 max-w-2xl mx-auto">
-          Call us at 0468 609 702 to arrange a free consultation and demonstration.
+          Call us on <span className="text-[#c49d17] font-semibold">0468 609 702</span> to arrange a free consultation and demonstration.
         </p>
       </div>
 
