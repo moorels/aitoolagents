@@ -21,31 +21,31 @@ const teamMembers: TeamMember[] = [
   {
     name: 'Robert Morels',
     role: 'Founding Member & Software Developer',
-    description: 'As one of the founding members, Robert brings over 10 years of experience in software development and a deep-seated love for AI. He holds a Bachelor&apos;s degree in Computer Science from the University of Technology Sydney and has worked with several startups to bring their ideas to life.',
+    description: 'As one of the founding members, Robert brings over 23 years of experience in software development and a deep-seated love for AI. He holds a Bachelors degree in Computer Science from the University of Technology Sydney and has worked with several startups to bring their ideas to life.',
     imageUrl: '/team/Robert.jpg'
   },
   {
     name: 'Sophia White',
     role: 'AI Research Lead',
-    description: 'With a Master&apos;s degree in Artificial Intelligence from Monash University, Sophia is our go-to expert on all things AI. Her background includes roles at Google and IBM, where she developed and deployed machine learning models to solve complex business problems.',
+    description: 'With a Masters degree in Artificial Intelligence from Monash University, Sophia is our go-to expert on all things AI. Her background includes roles at Google and IBM, where she developed and deployed machine learning models to solve complex business problems.',
     imageUrl: '/team/Sophia.jpg'
   },
   {
     name: 'Ethan Brown',
     role: 'AI Solutions Architect',
-    description: 'Ethan combines his Bachelor&apos;s degree in Computer Science with a wealth of experience in AI solutions for retail businesses. His work has been recognized by both local startups and Fortune 500 companies, making him a key player on our team.',
+    description: 'Ethan combines his Bachelors degree in Computer Science with a wealth of experience in AI solutions for retail businesses. His work has been recognized by both local startups and Fortune 500 companies, making him a key player on our team.',
     imageUrl: '/team/Ethan.jpg'
   },
   {
     name: 'Morgan Lee',
     role: 'Project Manager & Software Engineer',
-    description: 'Morgan&apos;s journey began at the University of New South Wales, where she earned her degree in Information Technology. Her extensive background in software engineering and project management has made her an invaluable asset to our team, ensuring that every client receives the best possible solution.',
+    description: 'Morgan, our project manager, has journey began at the University of New South Wales, where she earned her degree in Information Technology. Her extensive background in software engineering and project management has made her an invaluable asset to our team, ensuring that every client receives the best possible solution.',
     imageUrl: '/team/Morgan.jpg'
   },
   {
     name: 'Brett Doherty',
     role: 'AI Development Specialist',
-    description: 'Brett, our AI development specialist, holds a Bachelor&apos;s in Computer Science from Macquarie University complements her natural affinity for AI. She has worked across various sectors, including healthcare and finance, helping businesses leverage data-driven insights to drive growth.',
+    description: 'Brett, our AI development specialist, holds a Bachelors in Computer Science from Macquarie University complements her natural affinity for AI. She has worked across various sectors, including healthcare and finance, helping businesses leverage data-driven insights to drive growth.',
     imageUrl: '/team/Brett.jpg'
   }
 ];
@@ -142,7 +142,7 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div className="bg-gray-800/50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Innovation First</h3>
-                  <p className="text-gray-300">We&apos;re passionate about pushing the boundaries of what&apos;s possible with AI, constantly exploring new technologies and approaches to solve complex business challenges.</p>
+                  <p className="text-gray-300">Were passionate about pushing the boundaries of whats possible with AI, constantly exploring new technologies and approaches to solve complex business challenges.</p>
                 </div>
                 <div className="bg-gray-800/50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Human-Centered Design</h3>
@@ -218,15 +218,15 @@ export default function AboutPage() {
               <div className="space-y-6">
                 <div className="bg-gray-800/50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Australian Impact</h3>
-                  <p className="text-gray-300">We&apos;re dedicated to transforming the Australian business landscape through innovative AI solutions.</p>
+                  <p className="text-gray-300">Were dedicated to transforming the Australian business landscape through innovative AI solutions.</p>
                 </div>
                 <div className="bg-gray-800/50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Sustainable Solutions</h3>
-                  <p className="text-gray-300">We&apos;re committed to developing AI solutions that not only drive business success but also promote environmental sustainability and responsible resource usage.</p>
+                  <p className="text-gray-300">Were committed to developing AI solutions that not only drive business success but also promote environmental sustainability and responsible resource usage.</p>
                 </div>
                 <div className="bg-gray-800/50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold mb-3 text-[#c49d17]">Community Building</h3>
-                  <p className="text-gray-300">We&apos;re building a vibrant community of AI-powered businesses, fostering knowledge sharing and collaborative innovation across industries.</p>
+                  <p className="text-gray-300">Were building a vibrant community of AI-powered businesses, fostering knowledge sharing and collaborative innovation across industries.</p>
                 </div>
               </div>
             </div>
@@ -314,7 +314,7 @@ export default function AboutPage() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xl text-gray-300 leading-relaxed mb-8">
-            Together, we bring together a wealth of experience, creativity, and innovation to offer bespoke AI solutions that are tailored to the unique needs of our clients. Whether you&apos;re looking to enhance customer service with chatbots, optimize your operations through process automation, or gain deeper insights from your data, we&apos;re here to make it happen.
+            Together, we bring together a wealth of experience, creativity, and innovation to offer bespoke AI solutions that are tailored to the unique needs of our clients. Whether your looking to enhance customer service with chatbots, optimize your operations through process automation, or gain deeper insights from your data, were here to make it happen.
           </p>
           <p className="text-2xl font-bold text-[#c49d17]">
             Join us as we continue to shape the future of AI in business across Australia!
