@@ -4,6 +4,7 @@ import FloatingImage from './components/FloatingImage';
 import ClientCarousel from './components/ClientCarousel';
 import Chat from './components/Chat'
 import Link from 'next/link'
+import ScrollToTop from './components/ScrollToTop';
 
 import BorderWave from './components/BorderWave';
 import MovingWaves from './components/MovingWaves';
@@ -104,6 +105,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <ScrollToTop />
     </main>
   );
 }

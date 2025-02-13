@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import AICharts from '../components/AICharts';
 import ZoomableImage from '../components/ZoomableImage';
+import ScrollToTop from '../components/ScrollToTop';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -502,6 +503,7 @@ export default function AIAgentsExplainedPage() {
           </a>
         </div>
       </motion.section>
+      <ScrollToTop />
     </div>
   );
 }
