@@ -3,6 +3,7 @@
 import { FaGlobe, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import FloatingImage from './FloatingImage';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -83,6 +84,14 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center mt-4">
                 ABN <div className="pl-2 text-[#dfb406]">79 338 920 277</div>
+                </div>
+                <div className="flex items-center mt-2 space-x-4">
+                  <Link href="/privacy-policy" className="text-yellow-500 hover:text-orange-500 transition-colors">
+                    Privacy Policy
+                  </Link>
+                  <Link href="/customer-agreement" className="text-yellow-500 hover:text-orange-500 transition-colors">
+                    Customer Agreement
+                  </Link>
                 </div>
               </div>
               
