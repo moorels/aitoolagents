@@ -107,7 +107,7 @@ export default function CustomerAgreement() {
                       </li>
                       <li className="flex items-start space-x-3">
                         <span className="text-yellow-400 mt-1">•</span>
-                        <span className="flex-1">The word "including" means "including but not limited to"</span>
+                        <span className="flex-1">The word including means including but not limited to</span>
                       </li>
                       <li className="flex items-start space-x-3">
                         <span className="text-yellow-400 mt-1">•</span>
