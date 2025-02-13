@@ -30,52 +30,52 @@ export default function CustomerAgreement() {
                   <h3 className="text-lg sm:text-xl font-semibold mb-6 text-yellow-500">1.1 Definitions</h3>
                   <div className="grid gap-6 sm:grid-cols-2">
                     <div className="bg-gray-900/50 rounded-lg p-4">
-                      <p className="font-semibold text-yellow-400 mb-2">"AI Services"</p>
+                      <p className="font-semibold text-yellow-400 mb-2">AI Services</p>
                       <p className="text-sm sm:text-base leading-relaxed">The artificial intelligence and machine learning services provided by AI Business Tools Australia, including but not limited to natural language processing, computer vision, predictive analytics, and automated decision-making systems</p>
                     </div>
                     
                     <div className="bg-gray-900/50 rounded-lg p-4">
-                      <p className="font-semibold text-yellow-400 mb-2">"AI Models"</p>
+                      <p className="font-semibold text-yellow-400 mb-2">AI Models</p>
                       <p className="text-sm sm:text-base leading-relaxed">The machine learning models, algorithms, neural networks, and any associated weights, parameters, or configurations used to provide the AI Services</p>
                     </div>
                     
                     <div className="bg-gray-900/50 rounded-lg p-4">
-                      <p className="font-semibold text-yellow-400 mb-2">"API"</p>
+                      <p className="font-semibold text-yellow-400 mb-2">API</p>
                       <p className="text-sm sm:text-base leading-relaxed">The application programming interface, including all endpoints, documentation, and associated tools provided for accessing and integrating with the AI Services</p>
                     </div>
                     
                     <div className="bg-gray-900/50 rounded-lg p-4">
-                      <p className="font-semibold text-yellow-400 mb-2">"Training Data"</p>
+                      <p className="font-semibold text-yellow-400 mb-2">Training Data</p>
                       <p className="text-sm sm:text-base leading-relaxed">Any data, including text, images, audio, video, or structured data, provided by the Customer for training or fine-tuning AI Models</p>
                     </div>
                     
                     <div className="bg-gray-900/50 rounded-lg p-4">
-                      <p className="font-semibold text-yellow-400 mb-2">"Output Data"</p>
+                      <p className="font-semibold text-yellow-400 mb-2">Output Data</p>
                       <p className="text-sm sm:text-base leading-relaxed">Any results, predictions, generations, or insights produced by the AI Services in response to Customer inputs or queries</p>
                     </div>
                     
                     <div className="bg-gray-900/50 rounded-lg p-4">
-                      <p className="font-semibold text-yellow-400 mb-2">"Service Credits"</p>
+                      <p className="font-semibold text-yellow-400 mb-2">Service Credits</p>
                       <p className="text-sm sm:text-base leading-relaxed">Credits issued for service level breaches, calculated as a percentage of monthly service fees</p>
                     </div>
                     
                     <div className="bg-gray-900/50 rounded-lg p-4">
-                      <p className="font-semibold text-yellow-400 mb-2">"Intellectual Property Rights"</p>
+                      <p className="font-semibold text-yellow-400 mb-2">Intellectual Property Rights</p>
                       <p className="text-sm sm:text-base leading-relaxed">Includes all patents, trademarks, copyrights, trade secrets, know-how, database rights, and any other intellectual property rights recognized by law</p>
                     </div>
                     
                     <div className="bg-gray-900/50 rounded-lg p-4">
-                      <p className="font-semibold text-yellow-400 mb-2">"Authorized Users"</p>
+                      <p className="font-semibold text-yellow-400 mb-2">Authorized Users</p>
                       <p className="text-sm sm:text-base leading-relaxed">Employees, contractors, or agents of the Customer who are authorized to access and use the AI Services</p>
                     </div>
                     
                     <div className="bg-gray-900/50 rounded-lg p-4">
-                      <p className="font-semibold text-yellow-400 mb-2">"Service Tier"</p>
+                      <p className="font-semibold text-yellow-400 mb-2">Service Tier</p>
                       <p className="text-sm sm:text-base leading-relaxed">The specific level of AI Services subscribed to by the Customer, including associated features, limitations, and performance guarantees</p>
                     </div>
                     
                     <div className="bg-gray-900/50 rounded-lg p-4">
-                      <p className="font-semibold text-yellow-400 mb-2">"Confidential Information"</p>
+                      <p className="font-semibold text-yellow-400 mb-2">Confidential Information</p>
                       <p className="text-sm sm:text-base leading-relaxed">Any non-public information disclosed by either party in connection with this agreement</p>
                     </div>
                   </div>

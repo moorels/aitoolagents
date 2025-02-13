@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
               <div className="bg-gray-800/30 rounded-lg p-4 sm:p-6">
                 <div className="space-y-4 text-gray-200">
                   <p>1.1. AI Business Tools Australia respects your right to privacy and is committed to safeguarding the privacy of our customers and website visitors. We adhere to the Australian Privacy Principles contained in the Privacy Act 1988 (Cth). This policy sets out how we collect and treat your personal information.</p>
-                  <p>1.2. "Personal information" is information we hold which is identifiable as being about you.</p>
+                  <p>1.2. Personal information is information we hold which is identifiable as being about you.</p>
                 </div>
               </div>
             </section>
