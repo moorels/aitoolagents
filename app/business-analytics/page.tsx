@@ -14,8 +14,11 @@ import {
   RadialLinearScale,
   Filler,
 } from 'chart.js';
-import { Bar, Pie, Line, Radar, Doughnut } from 'react-chartjs-2';
-import { motion } from 'framer-motion';
+import { Bar, Pie, Line, Doughnut } from 'react-chartjs-2';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { FaArrowUp } from 'react-icons/fa';
+import ScrollToTop from '../components/ScrollToTop';
 
 ChartJS.register(
   CategoryScale,
@@ -74,6 +77,17 @@ const radarOptions = {
 };
 
 export default function BusinessAnalytics() {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollButton(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const revenueGrowthData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [
@@ -808,6 +822,8 @@ export default function BusinessAnalytics() {
           </div>
         </motion.div>
       </div>
+
+      <ScrollToTop />
     </div>
   );
 }

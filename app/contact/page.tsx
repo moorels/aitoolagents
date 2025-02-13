@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { supabase } from '../lib/supabase';
 import Image from 'next/image';
+import ScrollToTop from '../components/ScrollToTop';
 
 interface ContactFormData {
   firstName: string;
@@ -373,6 +374,7 @@ export default function ContactPage() {
           )}
         </form>
       </div>
+      <ScrollToTop />
     </div>
   );
 }

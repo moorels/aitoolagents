@@ -9,6 +9,7 @@ import { BiBrain } from 'react-icons/bi';
 import { AiOutlineTeam } from 'react-icons/ai';
 import { IoLanguage } from 'react-icons/io5';
 import { RiCustomerService2Line } from 'react-icons/ri';
+import ScrollToTop from '../components/ScrollToTop';
 
 export default function DemoPage() {
   const router = useRouter();
@@ -196,6 +197,7 @@ export default function DemoPage() {
           </motion.div>
         </div>
       </motion.div>
+      <ScrollToTop />
     </div>
   );
 }

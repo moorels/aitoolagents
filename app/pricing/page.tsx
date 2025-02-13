@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import PricingCalculator from '../components/PricingCalculator';
 import MovingWaves from '../components/MovingWaves';
 import Link from 'next/link';
+import ScrollToTop from '../components/ScrollToTop';
 
 interface PricingTier {
   name: string;
@@ -205,6 +206,7 @@ export default function PricingPage() {
           </div>
         </div>
       </div>
+      <ScrollToTop />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 'use client'
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
+import ScrollToTop from '../../components/ScrollToTop';
 
 export default function CustomerCarePage() {
   return (
@@ -49,6 +50,7 @@ export default function CustomerCarePage() {
       <div className="fixed bottom-8 right-8 z-50">
         <Chat />
       </div>
+      <ScrollToTop />
     </div>
   );
 }

@@ -2,6 +2,7 @@
 import ServicePageTemplate from '../../components/ServicePageTemplate';
 import Chat from '../../components/Chat';
 import ServiceMetricsChart from '../../components/ServiceMetricsChart';
+import ScrollToTop from '../../components/ScrollToTop';
 
 export default function EmployeeTrainingPage() {
   return (
@@ -51,6 +52,7 @@ export default function EmployeeTrainingPage() {
       <div className="fixed bottom-8 right-8 z-50">
         <Chat />
       </div>
+      <ScrollToTop />
     </div>
   );
 }

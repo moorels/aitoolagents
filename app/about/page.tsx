@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Chat from '../components/Chat';
 import StatisticsCharts from '../components/StatisticsCharts';
+import ScrollToTop from '../components/ScrollToTop';
 
 interface TeamMember {
   name: string;
@@ -326,6 +327,7 @@ export default function AboutPage() {
       <div className="fixed bottom-8 right-8 z-50">
         <Chat />
       </div>
+      <ScrollToTop />
     </div>
   );
 }
