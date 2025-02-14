@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
+import ScrollToTop from '../components/ScrollToTop';
 
 export default function CustomerAgreement() {
   return (
@@ -1047,6 +1048,7 @@ export default function CustomerAgreement() {
             </section>
           </div>
         </motion.div>
+        <ScrollToTop />
       </div>
     </div>
   );

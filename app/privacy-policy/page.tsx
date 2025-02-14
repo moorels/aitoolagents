@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion';
+import ScrollToTop from '../components/ScrollToTop';
 
 export default function PrivacyPolicy() {
   return (
@@ -339,6 +340,7 @@ export default function PrivacyPolicy() {
           </div>
         </motion.div>
       </div>
+      <ScrollToTop />
     </div>
   );
 }
