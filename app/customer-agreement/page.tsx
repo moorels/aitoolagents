@@ -1048,6 +1048,7 @@ export default function CustomerAgreement() {
             </section>
           </div>
         </motion.div>
+        <ScrollToTop />
       </div>
       <ScrollToTop />
     </div>
