@@ -93,7 +93,7 @@ export default function TypewriterText({ text = defaultText, delay = 35 }: Typew
         {displayText}
       </div>
       {showServices && (
-        <div className="text-[15px] text-gray-300 mt-8">
+        <div className="text-[25px] text-gray-300 mt-8">
           <TypeWriter 
             messages={services} 
             typingSpeed={1} 

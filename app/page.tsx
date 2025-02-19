@@ -25,7 +25,8 @@ export default function Home() {
           </div>
         <div className="text-center mt-12 text-xl md:text-2xl font-thin px-4">
           Transform Your Business with Smart Automation.
-          <div className="mt-4 align-center text-lg md:text-xl px-2">Discover how AI agents can streamline your operations and enhance customer experiences.</div>
+          <div className="mt-4 align-center text-lg md:text-xl px-2 mb-8">Discover how AI agents can streamline your operations and enhance customer experiences.</div>
+          <a href="/contact" className="text-[#c49d17] hover:underline">Call us for a free consultation and demonstration</a>
           <div className="relative mt-2 h-[100px] w-full max-w-[800px] mx-auto group">
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
               
@@ -50,13 +51,16 @@ export default function Home() {
                 <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
               </span>
             </Link>
-          </div>
-          <div className=" align-center text-[15px] md:text-[25px] px-2 mt-20">Welcome to AI Tool Agents Australia Business Solutions, your trusted partner in the future of AI.</div>
+           
          
-        <div className="mt-4 align-center text-[15px] md:text-[25px] px-2">Where innovation meets intelligence, and possibilities are limitless.</div>
+          </div>
+          <div className=" align-center text-[25px] md:text-[25px] px-2 mt-28">Welcome to AI Tool Agents Australia Business Solutions, your trusted partner in the future of AI.</div>
+         
+        <div className="mt-4 align-center text-[25px] md:text-[25px] px-2">Where innovation meets intelligence, and possibilities are limitless.</div>
         
+        
+        <div className="mt-4 align-center text-[25px] md:text-[25px] px-2"> Our company can offer a variety of business service solutions to its clients.</div>
         </div>
-        <div className="mt-4 align-center text-[15px] md:text-[15px] px-2"> Our company can offer a variety of business service solutions to its clients.</div>
           <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center px-16 gap-[200px]">
             
             <div className="hidden md:block">
@@ -71,7 +75,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mt-4 align-center text-[15px] md:text-[15px] px-2">Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries.</div>
+          
           
           <motion.section 
         className="py-4 px-4 sm:px-6 lg:px-8 bg-gray-900/50"
@@ -79,7 +83,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        
+        <div className="text-2xl font-bold mb-6 text-[#c49d17] text-center mt-4">Our solutions can significantly enhance operational efficiency, improve customer satisfaction, and drive business growth for a wide range of industries.</div>
         <h2 className="text-2xl font-bold mb-6 text-[#c49d17] text-center mt-4">Below are some examples of Basic Workflow Agents we&apos;ve created for our existing customers.</h2>
         <TabView />
         <div className="max-w-3xl mx-auto text-center">
