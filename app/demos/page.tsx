@@ -24,6 +24,75 @@ export default function DemoPage() {
       >
         <h1 className="text-4xl font-bold mb-8">AI Tool Agents and Chatbots Demos</h1>
         
+        <h2 className="text-3xl font-bold mb-6">Demo Website Examples</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            onClick={() => router.push('/demos/website1')}
+            className="bg-gray-800 p-6 rounded-lg border border-blue-500/20 cursor-pointer"
+          >
+            <h3 className="text-xl font-semibold mb-4">Car Mechanic Demo</h3>
+            <p className="text-gray-300">
+              Demo Booking System for a car mechanic workshop.
+            </p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            onClick={() => router.push('/demos/website2')}
+            className="bg-gray-800 p-6 rounded-lg border border-blue-500/20 cursor-pointer"
+          >
+            <h3 className="text-xl font-semibold mb-4">AI Chat Interface</h3>
+            <p className="text-gray-300">
+              Modern AI chatbot interface demonstration.
+            </p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            onClick={() => router.push('/demos/website3')}
+            className="bg-gray-800 p-6 rounded-lg border border-blue-500/20 cursor-pointer"
+          >
+            <h3 className="text-xl font-semibold mb-4">Business Analytics</h3>
+            <p className="text-gray-300">
+              Advanced business metrics dashboard.
+            </p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            onClick={() => router.push('/demos/website4')}
+            className="bg-gray-800 p-6 rounded-lg border border-blue-500/20 cursor-pointer"
+          >
+            <h3 className="text-xl font-semibold mb-4">E-commerce Bot</h3>
+            <p className="text-gray-300">
+              AI-powered shopping assistant demo.
+            </p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            onClick={() => router.push('/demos/website5')}
+            className="bg-gray-800 p-6 rounded-lg border border-blue-500/20 cursor-pointer"
+          >
+            <h3 className="text-xl font-semibold mb-4">Language Learning</h3>
+            <p className="text-gray-300">
+              Interactive language learning platform.
+            </p>
+          </motion.div>
+
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            onClick={() => router.push('/demos/website6')}
+            className="bg-gray-800 p-6 rounded-lg border border-blue-500/20 cursor-pointer"
+          >
+            <h3 className="text-xl font-semibold mb-4">Customer Support</h3>
+            <p className="text-gray-300">
+              AI customer service demonstration.
+            </p>
+          </motion.div>
+        </div>
+        <h2 className="text-3xl font-bold mb-6">Chatbot Contextualization Examples</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <motion.div
             whileHover={{ scale: 1.05 }}
