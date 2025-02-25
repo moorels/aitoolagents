@@ -6,12 +6,13 @@ interface ClientCarouselProps {
   speed?: number; // pixels per second
 }
 
-const ClientCarousel: React.FC<ClientCarouselProps> = ({ speed = 50 }) => {
+const ClientCarousel: React.FC<ClientCarouselProps> = ({ speed = 30 }) => { 
   const [images, setImages] = useState<string[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number>();
   const positionRef = useRef<number>(0);
   const directionRef = useRef<1 | -1>(1); // 1 for right, -1 for left
+  const lastTimeRef = useRef<number>(0);
 
   useEffect(() => {
     const loadImages = async () => {
@@ -34,39 +35,50 @@ const ClientCarousel: React.FC<ClientCarouselProps> = ({ speed = 50 }) => {
   useEffect(() => {
     if (!containerRef.current || images.length === 0) return;
 
-    let lastTime = performance.now();
     const maxScroll = containerRef.current.scrollWidth / 3;
+    let prevPosition = positionRef.current;
 
-    const animate = () => {
-      const currentTime = performance.now();
-      const delta = currentTime - lastTime;
-      lastTime = currentTime;
+    const animate = (timestamp: number) => {
+      if (!lastTimeRef.current) {
+        lastTimeRef.current = timestamp;
+        animationRef.current = requestAnimationFrame(animate);
+        return;
+      }
 
-      // Update position based on direction
-      positionRef.current += directionRef.current * (speed * delta) / 1000;
+      const deltaTime = timestamp - lastTimeRef.current;
+      const clampedDelta = Math.min(deltaTime, 32); 
 
-      // Check bounds and reverse direction if needed
+      const targetPosition = positionRef.current + (directionRef.current * speed * clampedDelta) / 1000;
+      
+      positionRef.current = prevPosition + (targetPosition - prevPosition) * 0.3;
+      prevPosition = positionRef.current;
+
       if (positionRef.current <= -maxScroll) {
         positionRef.current = -maxScroll;
-        directionRef.current = 1; // Start moving right
+        directionRef.current = 1; 
+        prevPosition = positionRef.current;
       } else if (positionRef.current >= 0) {
         positionRef.current = 0;
-        directionRef.current = -1; // Start moving left
+        directionRef.current = -1; 
+        prevPosition = positionRef.current;
       }
 
       if (containerRef.current) {
-        containerRef.current.style.transform = `translateX(${positionRef.current}px)`;
+        containerRef.current.style.transform = `translate3d(${positionRef.current}px, 0, 0)`;
       }
 
+      lastTimeRef.current = timestamp;
       animationRef.current = requestAnimationFrame(animate);
     };
 
+    lastTimeRef.current = 0;
     animationRef.current = requestAnimationFrame(animate);
 
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          lastTime = performance.now();
+          lastTimeRef.current = 0;
+          prevPosition = positionRef.current;
           animationRef.current = requestAnimationFrame(animate);
         } else if (animationRef.current) {
           cancelAnimationFrame(animationRef.current);

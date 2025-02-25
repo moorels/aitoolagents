@@ -10,6 +10,9 @@
   justify-content: center;
   border: 3px solid #c49d17;
   border-radius: 4px;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .scrollingWrapper {
@@ -18,7 +21,10 @@
   align-items: center;
   will-change: transform;
   transform-style: preserve-3d;
-  transition: transform 0.1s linear;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 .scrollingWrapper:hover {
@@ -43,4 +49,7 @@
   -webkit-user-select: none;
   will-change: transform;
   flex-shrink: 0;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
