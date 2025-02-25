@@ -3,7 +3,7 @@ import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./styles/fonts.css";
 import Navbar from './components/Navbar'
-import NavbarCubeContainer from './components/NavbarCubeContainer'
+
 import Footer from './components/Footer'
 import { generateHomeMetadata } from './metadata-config';
 import { AuthProvider } from './contexts/AuthContext';
@@ -36,7 +36,7 @@ export default function RootLayout({
           <AuthProvider>
             <Providers>
               <div className="fixed top-0 left-0 right-0 z-50">
-                <NavbarCubeContainer />
+                
                 <Navbar />
               </div>
               <main className="pt-24 min-h-screen">{children}</main>

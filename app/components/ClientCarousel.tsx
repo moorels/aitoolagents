@@ -8,16 +8,14 @@ interface ClientCarouselProps {
 
 const ClientCarousel: React.FC<ClientCarouselProps> = ({ speed = 50 }) => {
   const [images, setImages] = useState<string[]>([]);
-  const [displayImages, setDisplayImages] = useState<string[]>([]);
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const animationFrameRef = useRef<number>();
-  const lastTimeRef = useRef<number>(0);
-  const offsetRef = useRef<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number>();
+  const positionRef = useRef<number>(0);
+  const directionRef = useRef<1 | -1>(1); // 1 for right, -1 for left
 
-  // Load initial images
   useEffect(() => {
     const loadImages = async () => {
-      const imageCount = 19;
+      const imageCount = 15;
       const imageList: string[] = [];
       for (let i = 1; i <= imageCount; i++) {
         try {
@@ -33,122 +31,70 @@ const ClientCarousel: React.FC<ClientCarouselProps> = ({ speed = 50 }) => {
     loadImages();
   }, []);
 
-  // Set up display images when original images load
   useEffect(() => {
-    if (images.length === 0) return;
-    // Create a display set that's 3x the original length for smooth looping
-    setDisplayImages([...images, ...images, ...images]);
-  }, [images]);
+    if (!containerRef.current || images.length === 0) return;
 
-  // Animation effect
-  useEffect(() => {
-    if (!scrollRef.current || displayImages.length === 0) return;
+    let lastTime = performance.now();
+    const maxScroll = containerRef.current.scrollWidth / 3;
 
-    const animate = (timestamp: number) => {
-      if (!lastTimeRef.current) lastTimeRef.current = timestamp;
-      const deltaTime = timestamp - lastTimeRef.current;
-      
-      // Update position
-      offsetRef.current -= (speed * deltaTime) / 1000;
-      
-      if (scrollRef.current) {
-        const singleSetWidth = scrollRef.current.scrollWidth / 3;
-        
-        // If we've scrolled past one complete set, reset to the middle set
-        if (Math.abs(offsetRef.current) >= singleSetWidth) {
-          offsetRef.current += singleSetWidth;
-        }
-        
-        scrollRef.current.style.transform = `translate3d(${offsetRef.current}px, 0, 0)`;
+    const animate = () => {
+      const currentTime = performance.now();
+      const delta = currentTime - lastTime;
+      lastTime = currentTime;
+
+      // Update position based on direction
+      positionRef.current += directionRef.current * (speed * delta) / 1000;
+
+      // Check bounds and reverse direction if needed
+      if (positionRef.current <= -maxScroll) {
+        positionRef.current = -maxScroll;
+        directionRef.current = 1; // Start moving right
+      } else if (positionRef.current >= 0) {
+        positionRef.current = 0;
+        directionRef.current = -1; // Start moving left
       }
-      
-      lastTimeRef.current = timestamp;
-      animationFrameRef.current = requestAnimationFrame(animate);
+
+      if (containerRef.current) {
+        containerRef.current.style.transform = `translateX(${positionRef.current}px)`;
+      }
+
+      animationRef.current = requestAnimationFrame(animate);
     };
 
-    // Start the animation
-    animationFrameRef.current = requestAnimationFrame(animate);
+    animationRef.current = requestAnimationFrame(animate);
 
-    // Intersection Observer to pause animation when not in view
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            lastTimeRef.current = 0;
-            animationFrameRef.current = requestAnimationFrame(animate);
-          } else if (animationFrameRef.current) {
-            cancelAnimationFrame(animationFrameRef.current);
-            animationFrameRef.current = undefined;
-          }
-        });
+        if (entries[0].isIntersecting) {
+          lastTime = performance.now();
+          animationRef.current = requestAnimationFrame(animate);
+        } else if (animationRef.current) {
+          cancelAnimationFrame(animationRef.current);
+        }
       },
       { threshold: 0.1 }
     );
 
-    if (scrollRef.current) {
-      observer.observe(scrollRef.current);
-    }
+    observer.observe(containerRef.current);
 
     return () => {
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
       }
-      if (scrollRef.current) {
-        observer.unobserve(scrollRef.current);
-      }
+      observer.disconnect();
     };
-  }, [speed, displayImages]);
-
-  // Pause animation on hover
-  const handleMouseEnter = () => {
-    if (animationFrameRef.current) {
-      cancelAnimationFrame(animationFrameRef.current);
-      animationFrameRef.current = undefined;
-    }
-  };
-
-  // Resume animation on mouse leave
-  const handleMouseLeave = () => {
-    if (!animationFrameRef.current) {
-      lastTimeRef.current = 0;
-      animationFrameRef.current = requestAnimationFrame((timestamp) => {
-        lastTimeRef.current = timestamp;
-        animate(timestamp);
-      });
-    }
-  };
-
-  const animate = (timestamp: number) => {
-    if (!lastTimeRef.current) lastTimeRef.current = timestamp;
-    const deltaTime = timestamp - lastTimeRef.current;
-    
-    offsetRef.current -= (speed * deltaTime) / 1000;
-    if (scrollRef.current) {
-      const singleSetWidth = scrollRef.current.scrollWidth / 3;
-      if (Math.abs(offsetRef.current) >= singleSetWidth) {
-        offsetRef.current += singleSetWidth;
-      }
-      scrollRef.current.style.transform = `translate3d(${offsetRef.current}px, 0, 0)`;
-    }
-    
-    lastTimeRef.current = timestamp;
-    animationFrameRef.current = requestAnimationFrame(animate);
-  };
+  }, [speed, images]);
 
   return (
-    <div 
-      className={styles.carouselContainer}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div ref={scrollRef} className={styles.scrollingWrapper}>
-        {displayImages.map((img, index) => (
+    <div className={styles.carouselContainer}>
+      <div ref={containerRef} className={styles.scrollingWrapper}>
+        {images.map((img, index) => (
           <img
-            key={`${index}-${img}`}
+            key={index}
             src={img}
-            alt={`Client ${index % images.length + 1}`}
+            alt={`Client ${index + 1}`}
             className={styles.clientImage}
-            loading={index < images.length ? "eager" : "lazy"}
+            loading="eager"
             decoding="async"
           />
         ))}
