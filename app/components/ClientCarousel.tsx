@@ -6,7 +6,7 @@ interface ClientCarouselProps {
   speed?: number; // pixels per second
 }
 
-const ClientCarousel: React.FC<ClientCarouselProps> = ({ speed = 80 }) => { 
+const ClientCarousel: React.FC<ClientCarouselProps> = ({ speed = 40 }) => { 
   const [images, setImages] = useState<string[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number>();
