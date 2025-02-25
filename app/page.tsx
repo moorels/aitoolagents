@@ -6,7 +6,7 @@ import Chat from './components/Chat'
 import Link from 'next/link'
 import ScrollToTop from './components/ScrollToTop';
 
-import BorderWave from './components/BorderWave';
+
 import MovingWaves from './components/MovingWaves';
 import TabView from './components/TabView';
 import { motion } from 'framer-motion';
