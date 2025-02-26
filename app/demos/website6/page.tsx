@@ -14,7 +14,7 @@ export default function Website6Demo() {
         animate={{ opacity: 1 }}
         whileHover={{ scale: 1.05 }}
         onClick={() => router.back()}
-        className="absolute top-4 right-4 z-10 mt-24 mr-8 bg-black text-yellow-500 px-4 py-2 rounded-lg border border-4 border-yellow-500 hover:bg-gray-900 transition-colors"
+        className="absolute top-4 left-4 z-10 mt-24 mr-8 bg-black text-yellow-500 px-4 py-2 rounded-lg border border-4 border-yellow-500 hover:bg-gray-900 transition-colors"
       >
         Back to Demos →
       </motion.button>
