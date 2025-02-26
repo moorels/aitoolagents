@@ -19,7 +19,7 @@ export default function Website2Demo() {
         Back to Demos →
       </motion.button>
       <iframe 
-        src="https://chat-demo-example.vercel.app"
+        src="https://gift-store-xi.vercel.app"
         className="w-full h-full border-0"
         allow="fullscreen"
       />

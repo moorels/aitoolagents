@@ -42,9 +42,9 @@ export default function DemoPage() {
             onClick={() => router.push('/demos/website2')}
             className="bg-gray-800 p-6 rounded-lg border border-blue-500/20 cursor-pointer"
           >
-            <h3 className="text-xl font-semibold mb-4">AI Chat Interface</h3>
+            <h3 className="text-xl font-semibold mb-4">AI Powered Gift Shop</h3>
             <p className="text-gray-300">
-              Modern AI chatbot interface demonstration.
+              Modern AI powered gift shop demo.
             </p>
           </motion.div>
 
