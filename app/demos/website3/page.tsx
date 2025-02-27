@@ -19,7 +19,7 @@ export default function Website3Demo() {
         Back to Demos →
       </motion.button>
       <iframe 
-        src="https://analytics-demo-example.vercel.app"
+        src="https://yoga-omega-rouge.vercel.app"
         className="w-full h-full border-0"
         allow="fullscreen"
       />
