@@ -19,7 +19,7 @@ export default function Website5Demo() {
         Back to Demos →
       </motion.button>
       <iframe 
-        src="https://language-learning-demo.vercel.app"
+        src="https://learnology-nexus.vercel.app/"
         className="w-full h-full border-0"
         allow="fullscreen"
       />
