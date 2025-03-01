@@ -19,7 +19,7 @@ export default function Website6Demo() {
         Back to Demos →
       </motion.button>
       <iframe 
-        src="https://customer-support-demo.vercel.app"
+        src="https://metallic-horizon.vercel.app"
         className="w-full h-full border-0"
         allow="fullscreen"
       />
